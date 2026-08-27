@@ -5,12 +5,20 @@
     </div>
   <% else %>
     <div class="main-bar">
-      <div class="main-bar__logo">
-        <div class="main-bar__logo-desktop">
-          <%= render partial: "layouts/decidim/logo", locals: { organization: current_organization } %>
-        </div>
-        <div class="main-bar__logo-mobile">
-          <%= render partial: "layouts/decidim/logo_mobile", locals: { organization: current_organization } %>
+      <div class="kur-brand-group">
+        <button type="button" class="kur-sidebar-toggle"
+                data-controller="toggle" data-toggle-toggle-value="kur-sidebar kur-sidebar-overlay"
+                aria-controls="kur-sidebar" aria-expanded="false"
+                aria-label="<%= t("layouts.decidim.header.main_menu") %>">
+          <%= icon "menu-line" %>
+        </button>
+        <div class="main-bar__logo">
+          <div class="main-bar__logo-desktop">
+            <%= render partial: "layouts/decidim/logo", locals: { organization: current_organization } %>
+          </div>
+          <div class="main-bar__logo-mobile">
+            <%= render partial: "layouts/decidim/logo_mobile", locals: { organization: current_organization } %>
+          </div>
         </div>
       </div>
       <% if current_user&.ephemeral? %>

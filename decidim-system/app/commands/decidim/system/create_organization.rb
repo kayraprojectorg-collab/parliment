@@ -80,9 +80,9 @@ module Decidim
 
       def default_colors
         {
-          primary: "#53bf40",
-          tertiary: "#bf4053",
-          secondary: "#4053bf"
+          primary: "#127C82",
+          secondary: "#0A4A4E",
+          tertiary: "#F2C14E"
         }
       end
 

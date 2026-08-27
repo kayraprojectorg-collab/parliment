@@ -1,0 +1,363 @@
+// Kurultay theme — Parliament of the Turkic World
+// Institutional visual layer for Decidim, loaded after the core styles through
+// the application override entrypoint. Written as plain CSS so it never depends
+// on the Tailwind build pipeline and cannot disrupt installation or upgrades.
+
+:root {
+  --kur-deep: #0a4a4e;
+  --kur-teal: #127c82;
+  --kur-gold: #f2c14e;
+  --kur-green: #149e5a;
+  --kur-mint: #e3f1f0;
+  --kur-sky: #2f7fb0;
+  --kur-ink: #123c40;
+  --kur-surface: #ffffff;
+
+  --kur-radius: 12px;
+  --kur-shadow: 0 6px 20px rgb(10 74 78 / 8%);
+  --kur-shadow-lg: 0 14px 40px rgb(10 74 78 / 14%);
+
+  // Faint Seljuk eight-pointed star (two overlaid squares) for dark surfaces.
+  --kur-star-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1.1'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Solid gold eight-pointed star used as an institutional accent mark.
+@mixin kur-star($size, $color: var(--kur-gold)) {
+  content: "";
+  display: inline-block;
+  width: $size;
+  height: $size;
+  flex: none;
+  background-color: $color;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 61 26 85 15 74 39 98 50 74 61 85 85 61 74 50 98 39 74 15 85 26 61 2 50 26 39 15 15 39 26Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 61 26 85 15 74 39 98 50 74 61 85 85 61 74 50 98 39 74 15 85 26 61 2 50 26 39 15 15 39 26Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* ---------- Header ---------------------------------------------------- */
+
+header #header-container {
+  background-color: var(--kur-deep);
+  background-image: var(--kur-star-texture);
+  border-bottom: 3px solid var(--kur-gold);
+}
+
+header .main-bar {
+  color: #fff;
+}
+
+header .main-bar__links-desktop {
+  --tw-divide-opacity: 0.25;
+}
+
+header .main-bar__links-desktop__item,
+header .main-bar__language-chooser-desktop,
+header .main-bar__menu-mobile,
+header .main-bar__links-mobile__trigger {
+  color: #fff;
+  fill: #fff;
+}
+
+header .main-bar__links-desktop__item:hover {
+  background-color: var(--kur-teal);
+  color: #fff;
+}
+
+header .main-bar__links-desktop__item-account {
+  background-color: var(--kur-gold);
+  color: var(--kur-deep);
+}
+
+header .main-bar__search form {
+  background-color: rgb(255 255 255 / 12%);
+  border-color: rgb(255 255 255 / 25%);
+}
+
+header .main-bar__search input[type="text"],
+header .main-bar__search input[type="text"]::placeholder {
+  color: #fff;
+}
+
+header .main-bar__search button[type="submit"] svg {
+  fill: var(--kur-gold);
+}
+
+// Breadcrumb bar sits under the gold line on a clean light surface.
+#menu-bar-container .menu-bar {
+  background-color: var(--kur-surface);
+  box-shadow: var(--kur-shadow);
+}
+
+/* ---------- Sidebar (institutional side menu) ------------------------- */
+
+.kur-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kur-sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.kur-sidebar-toggle:hover {
+  background-color: var(--kur-teal);
+}
+
+.kur-sidebar-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentcolor;
+}
+
+// The drawer complements the existing mobile menu, so its trigger is desktop-only.
+@media (max-width: 1023px) {
+  .kur-sidebar-toggle {
+    display: none;
+  }
+}
+
+// Author display rules would otherwise defeat the [hidden] attribute the
+// toggle controller relies on, so keep hidden state authoritative.
+.kur-sidebar[hidden],
+.kur-sidebar__overlay[hidden] {
+  display: none;
+}
+
+.kur-sidebar__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background-color: rgb(10 74 78 / 55%);
+  backdrop-filter: blur(2px);
+  animation: kur-fade 0.2s ease;
+}
+
+.kur-sidebar {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: 61;
+  display: flex;
+  flex-direction: column;
+  width: min(88vw, 340px);
+  background-color: var(--kur-deep);
+  background-image: var(--kur-star-texture);
+  color: #fff;
+  box-shadow: var(--kur-shadow-lg);
+  animation: kur-slide-in 0.25s ease;
+  overflow-y: auto;
+}
+
+[dir="rtl"] .kur-sidebar {
+  animation-name: kur-slide-in-rtl;
+}
+
+.kur-sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.kur-sidebar__header::before {
+  @include kur-star(1.75rem);
+}
+
+.kur-sidebar__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kur-sidebar__subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--kur-gold);
+}
+
+.kur-sidebar__close {
+  margin-inline-start: auto;
+  color: #fff;
+}
+
+.kur-sidebar__close svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentcolor;
+}
+
+.kur-sidebar__section {
+  padding: 1rem 0.75rem;
+}
+
+.kur-sidebar__label {
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kur-gold);
+}
+
+.kur-sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kur-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 8px;
+  color: rgb(255 255 255 / 90%);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kur-sidebar nav a:hover,
+.kur-sidebar nav a.main-nav__link--active {
+  background-color: rgb(255 255 255 / 8%);
+  color: #fff;
+}
+
+.kur-sidebar nav a:hover {
+  box-shadow: inset 3px 0 0 var(--kur-gold);
+}
+
+.kur-sidebar__cta {
+  margin: auto 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: var(--kur-green);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.kur-sidebar__cta:hover {
+  filter: brightness(1.06);
+  color: #fff;
+}
+
+@keyframes kur-slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes kur-slide-in-rtl {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes kur-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- Content surface & cards ----------------------------------- */
+
+#content {
+  background-color: var(--kur-mint);
+}
+
+#content .card__grid,
+#content .card__list,
+#content .card__highlight {
+  background-color: var(--kur-surface);
+  border-top: 3px solid var(--kur-teal);
+  border-radius: var(--kur-radius);
+  box-shadow: var(--kur-shadow);
+  --tw-ring-color: transparent;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#content .card__grid:hover,
+#content .card__list:hover,
+#content .card__highlight:hover {
+  box-shadow: var(--kur-shadow-lg);
+  transform: translateY(-2px);
+  --tw-ring-color: transparent;
+}
+
+#content .card__list {
+  border-inline-start: 0;
+  padding-block: 0.75rem;
+}
+
+/* ---------- Headings & links ------------------------------------------ */
+
+#content h1,
+#content h2,
+#content h3,
+.hero__title {
+  color: var(--kur-ink);
+}
+
+#content h1,
+#content h2 {
+  font-weight: 700;
+}
+
+.hero__title {
+  color: #fff;
+}
+
+/* ---------- Statistics band (dark, gold figures) ---------------------- */
+
+.statistic {
+  background-color: var(--kur-deep);
+  background-image: var(--kur-star-texture);
+  border-color: transparent;
+  border-radius: var(--kur-radius);
+}
+
+.statistic__title,
+.statistic__second-number {
+  color: rgb(255 255 255 / 80%);
+}
+
+.statistic__icon {
+  color: var(--kur-gold);
+}
+
+.statistic__number {
+  color: var(--kur-gold);
+  font-weight: 800;
+}
+
+/* ---------- Footer ---------------------------------------------------- */
+
+footer .main-footer {
+  background-color: var(--kur-deep);
+  background-image: var(--kur-star-texture);
+  border-top: 3px solid var(--kur-gold);
+}
+
+footer .mini-footer {
+  background-color: #062f32;
+}
+
+/* ---------- Section accent marker ------------------------------------- */
+
+.kur-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kur-section-title::before {
+  @include kur-star(1.1rem);
+}
