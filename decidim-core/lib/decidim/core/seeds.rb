@@ -129,18 +129,10 @@ module Decidim
         smtp_label = ENV.fetch("SMTP_FROM_LABEL", ::Faker::X.unique.screen_name)
         smtp_email = ENV.fetch("SMTP_FROM_EMAIL", ::Faker::Internet.email)
 
-        primary_color, secondary_color, tertiary_color = [
-          ["#bf4044", "#09780e", "#3584e4"],
-          ["#09780e", "#4448bb", "#da565b"],
-          ["#bf4086", "#487511", "#5384ac"],
-          ["#086263", "#811380", "#abac53"],
-          ["#5340bf", "#a82c2c", "#40bf53"]
-        ].sample
-
         colors = {
-          primary: primary_color,
-          secondary: secondary_color,
-          tertiary: tertiary_color
+          primary: "#127C82",
+          secondary: "#0A4A4E",
+          tertiary: "#F2C14E"
         }
 
         Decidim::Organization.first || Decidim::Organization.create!(
