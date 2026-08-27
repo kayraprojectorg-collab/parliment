@@ -1,2 +1,7 @@
 // Application specific styles: https://docs.decidim.org/en/customize/styles/
 @use "stylesheets/decidim/decidim_application";
+
+// Kurultay institutional theme. Imported at the gem-owned override entrypoint
+// so it ships with the distribution and is not shadowed by the empty
+// decidim_application.scss the generator copies into each application.
+@use "stylesheets/decidim/kurultay";
