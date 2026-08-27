@@ -17,20 +17,19 @@
   --kur-shadow: 0 6px 20px rgb(10 74 78 / 8%);
   --kur-shadow-lg: 0 14px 40px rgb(10 74 78 / 14%);
 
-  // Faint Seljuk eight-pointed star (two overlaid squares) for dark surfaces.
-  --kur-star-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1.1'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E");
+  // Faint single Seljuk eight-pointed star ({8/3} octagram) for dark surfaces.
+  --kur-star-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='58' height='58' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='2.6' stroke-linejoin='round' d='M50 8 79.7 79.7 8 50 79.7 20.3 50 92 20.3 20.3 92 50 20.3 79.7Z'/%3E%3C/svg%3E");
 }
 
-// Solid gold eight-pointed star used as an institutional accent mark.
-@mixin kur-star($size, $color: var(--kur-gold)) {
+// Institutional seal: a gold line-art Seljuk star ({8/3} octagram) inside a
+// ring — reads as an emblem, not a sun.
+@mixin kur-star($size) {
   content: "";
   display: inline-block;
   width: $size;
   height: $size;
   flex: none;
-  background-color: $color;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 61 26 85 15 74 39 98 50 74 61 85 85 61 74 50 98 39 74 15 85 26 61 2 50 26 39 15 15 39 26Z'/%3E%3C/svg%3E") center / contain no-repeat;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 61 26 85 15 74 39 98 50 74 61 85 85 61 74 50 98 39 74 15 85 26 61 2 50 26 39 15 15 39 26Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23F2C14E' stroke-width='4' stroke-linejoin='round'%3E%3Ccircle cx='50' cy='50' r='46'/%3E%3Cpath d='M50 8 79.7 79.7 8 50 79.7 20.3 50 92 20.3 20.3 92 50 20.3 79.7Z'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* ---------- Header ---------------------------------------------------- */
