@@ -1,0 +1,25 @@
+<div id="kur-sidebar-overlay" class="kur-sidebar__overlay" hidden
+     data-controller="toggle" data-toggle-toggle-value="kur-sidebar kur-sidebar-overlay"></div>
+
+<aside id="kur-sidebar" class="kur-sidebar" hidden role="dialog" aria-modal="true"
+       aria-label="<%= t("layouts.decidim.header.main_menu") %>">
+  <div class="kur-sidebar__header">
+    <span class="kur-sidebar__title">
+      <%= current_organization_name %>
+      <span class="kur-sidebar__subtitle"><%= t("layouts.decidim.header.main_menu") %></span>
+    </span>
+    <button type="button" class="kur-sidebar__close"
+            data-controller="toggle" data-toggle-toggle-value="kur-sidebar kur-sidebar-overlay"
+            aria-label="<%= t("close", scope: "layouts.decidim.header") %>">
+      <%= icon "close-line" %>
+    </button>
+  </div>
+
+  <div class="kur-sidebar__section">
+    <%= main_menu.render %>
+  </div>
+
+  <% unless current_user %>
+    <%= link_to t("sign_up", scope: "decidim.login_modal"), decidim.new_user_registration_path, class: "kur-sidebar__cta" %>
+  <% end %>
+</aside>

@@ -18,6 +18,9 @@ end
       <%= render partial: "layouts/decidim/offline_banner" %>
       <%= render partial: "layouts/decidim/admin_links" if current_user && allowed_to?(:read, :admin_dashboard) %>
       <%= render partial: "layouts/decidim/header/main" %>
+      <% if !current_user&.ephemeral? && !content_for?(:focus_mode) %>
+        <%= render partial: "layouts/decidim/header/sidebar" %>
+      <% end %>
     </div>
     <div id="menu-bar-container">
       <% if !current_user&.ephemeral? && !content_for?(:focus_mode) %>

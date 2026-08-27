@@ -115,9 +115,9 @@ module Decidim
             command.call
             organization = Organization.last
 
-            expect(organization.colors["primary"]).to eq("#53bf40")
-            expect(organization.colors["tertiary"]).to eq("#bf4053")
-            expect(organization.colors["secondary"]).to eq("#4053bf")
+            expect(organization.colors["primary"]).to eq("#127C82")
+            expect(organization.colors["tertiary"]).to eq("#F2C14E")
+            expect(organization.colors["secondary"]).to eq("#0A4A4E")
           end
 
           describe "#encrypted_smtp_settings" do
