@@ -314,6 +314,19 @@ header .main-bar__search button[type="submit"] svg {
   color: #fff;
 }
 
+// Hero fallback: keep the white title legible even before a background image
+// is attached (homepage hero and participatory-space hero).
+.hero__container,
+[data-process-hero] {
+  background-color: var(--kur-deep);
+  background-size: cover;
+  background-position: center;
+}
+
+[data-process-hero] .participatory-space__hero-text :is(h1, .participatory-space__hero-slogan) {
+  color: #fff;
+}
+
 /* ---------- Statistics band (dark, gold figures) ---------------------- */
 
 .statistic {
