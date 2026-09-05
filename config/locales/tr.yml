@@ -424,6 +424,136 @@ tr:
             comments_blocked: Yorumlar engellendi
             likes_blocked: Beğeniler engellendi
             likes_enabled: Beğeniler etkin
+      proposals:
+        actions:
+          amend: Değişiklik öner
+          comment: Yorum
+          create: Öneri oluştur
+          like: Beğen
+          vote: Oy ver
+          vote_comment: Yorumu oyla
+          withdraw: Geri çek
+        name: Öneriler
+        settings:
+          global:
+            amendments_enabled: Değişiklik önerileri etkin
+            amendments_enabled_help: Etkinse, her adım için Değişiklik önerisi özelliklerini
+              yapılandırın.
+            amendments_wizard_help_text: Değişiklik önerisi sihirbazı yardım metni
+            announcement: Duyuru
+            attachments_allowed: Eklere izin ver
+            attachments_allowed_help: Bu seçenek etkinleştirildiğinde öneriler varsayılan
+              olarak ızgara modunda görünür ve ilk görsel kartta yer alır.
+            can_accumulate_votes_beyond_threshold: Oylar eşiğin ötesinde biriktirilebilir
+            clear_all: Tümünü temizle
+            collaborative_drafts_enabled: İş birlikçi taslaklar etkin
+            collaborative_drafts_enabled_help: İş birlikçi Taslaklar özelliği Decidim
+              v0.32'de kaldırılacaktır. Kullanan kuruluşlar yeni öneri ortak yazarlığı
+              özelliğine geçebilir.
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            default_sort_order: Varsayılan öneri sıralaması
+            default_sort_order_help: Otomatik; oylar etkinse önerilerin rastgele sıralanacağı,
+              oylar engellenmişse en çok oy alana göre sıralanacağı anlamına gelir.
+            default_sort_order_options:
+              automatic: Otomatik
+              most_commented: En çok yorum yapılan
+              most_followed: En çok takip edilen
+              most_liked: En çok beğenilen
+              most_voted: En çok oylanan
+              random: Rastgele
+              recent: Yeni
+              with_more_authors: Daha çok yazarı olan
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            edit_time: Öneriler, bu süre geçmeden yazarları tarafından düzenlenebilir
+            edit_time_units:
+              days: Gün
+              hours: Saat
+              minutes: Dakika
+            geocoding_enabled: Haritalar etkin
+            minimum_votes_per_user: Kullanıcı başına minimum oy
+            new_proposal_body_template: Yeni öneri içerik şablonu
+            new_proposal_body_template_help: Yeni Önerilerin sahip olacağı önceden
+              doldurulmuş metni tanımlayabilirsiniz
+            new_proposal_help_text: Yeni öneri yardım metni
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            official_proposals_enabled: Resmi öneriler etkin
+            participatory_texts_enabled: Katılımcı metinler etkin
+            participatory_texts_enabled_readonly: Mevcut öneriler varsa bu ayarla
+              etkileşime giremezsiniz. Bu özelliği etkinleştirmek istiyorsanız lütfen
+              yeni bir `Öneriler bileşeni` oluşturun; devre dışı bırakmak istiyorsanız
+              `Katılımcı Metinler` menüsünde tüm içe aktarılan önerileri atın.
+            proposal_answering_enabled: Öneri yanıtlama etkin
+            proposal_edit_time: Öneri düzenleme
+            proposal_edit_time_choices:
+              infinite: Önerilerin sınırsız süre boyunca düzenlenmesine izin ver
+              limited: Önerilerin belirli bir zaman aralığında düzenlenmesine izin
+                ver
+            proposal_edit_time_unit_options:
+              days: Gün
+              hours: Saat
+              minutes: Dakika
+            proposal_length: Maksimum öneri içerik uzunluğu
+            proposal_limit: Katılımcı başına öneri sınırı
+            proposal_wizard_step_1_help_text: Öneri sihirbazı "Oluştur" adımı yardım
+              metni
+            proposal_wizard_step_2_help_text: Öneri sihirbazı "Yayınla" adımı yardım
+              metni
+            resources_permissions_enabled: İşlem izinleri her öneri için ayarlanabilir
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+            threshold_per_proposal: Öneri başına eşik
+            vote_limit: Katılımcı başına oy sınırı
+          step:
+            amendment_creation_enabled: Değişiklik önerisi oluşturma etkin
+            amendment_creation_enabled_help: Katılımcı önerilerde değişiklik önerebilir.
+            amendment_promotion_enabled: Değişiklik önerisi yükseltme etkin
+            amendment_promotion_enabled_help: Değişiklik önerisi yazarları, reddedilen
+              değişiklik önerisini Öneriye yükseltebilir.
+            amendment_reaction_enabled: Değişiklik önerisi tepkisi etkin
+            amendment_reaction_enabled_help: Öneri yazarları, Katılımcının değişiklik
+              önerilerini kabul edebilir veya reddedebilir.
+            amendments_visibility: Değişiklik önerileri görünürlüğü
+            amendments_visibility_choices:
+              all: Değişiklik önerileri herkese görünür
+              participants: Değişiklik önerileri yalnızca yazarlarına görünür
+            amendments_visibility_help: '"Değişiklik önerileri yalnızca yazarlarına
+              görünür" seçeneği seçilirse, katılımcının yapılan değişiklik önerilerini
+              görmek için giriş yapmış olması gerekir.'
+            announcement: Duyuru
+            answers_with_costs: Öneri yanıtlarında maliyetleri etkinleştir
+            comments_blocked: Yorumlar engellendi
+            creation_enabled: Katılımcılar öneri oluşturabilir
+            creation_enabled_readonly: Katılımcı Metinler işlevini etkinleştirdiğinizde
+              bu ayar devre dışı kalır. Önerileri katılımcı metin olarak yüklemek
+              için Katılımcı Metinler düğmesine tıklayın ve talimatları izleyin.
+            default_sort_order: Varsayılan öneri sıralaması
+            default_sort_order_help: Otomatik; oylar etkinse önerilerin rastgele sıralanacağı,
+              oylar engellenmişse en çok oy alana göre sıralanacağı anlamına gelir.
+            default_sort_order_options:
+              automatic: Otomatik
+              most_commented: En çok yorum yapılan
+              most_followed: En çok takip edilen
+              most_liked: En çok beğenilen
+              most_voted: En çok oylanan
+              random: Rastgele
+              recent: Yeni
+              with_more_authors: Daha çok yazarı olan
+            likes_blocked: Beğeniler engellendi
+            likes_enabled: Beğeniler etkin
+            proposal_answering_enabled: Öneri yanıtlama etkin
+            publish_answers_immediately: Öneri yanıtlarını hemen yayınla
+            publish_answers_immediately_help_html: Bu etkin değilken herhangi bir
+              öneriyi yanıtlarsanız, onları seçip yayınlama işlemini kullanarak elle
+              yayınlamanız gerekeceğini unutmayın. Bunun nasıl çalıştığına dair daha
+              fazla bilgi için <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication"
+              target="_blank">önerilerin yanıtları belge sayfasına</a> bakın.
+            votes_blocked: Oylar engellendi
+            votes_enabled: Oylar etkin
+            votes_hidden: Oylar gizli (oylar etkinse, bunu işaretlemek oy sayısını
+              gizler)
     download_your_data:
       help:
         comment_votes:
@@ -456,6 +586,8 @@ tr:
         debates: Tartışmalar dışa aktarması
         responses: Yanıtlar dışa aktarması
         survey_user_responses: Anket kullanıcı yanıtları
+        proposal_comments: Öneri yorumları dışa aktarması
+        proposals: Öneriler dışa aktarması
     events:
       comments:
         comment_by_followed_user:
@@ -572,6 +704,183 @@ tr:
           email_subject: "%{participatory_space_title} içinde yeni gönderi yayınlandı"
           notification_title: <a href="%{resource_path}">%{resource_title}</a> gönderisi
             %{participatory_space_title} içinde yayınlandı
+      proposals:
+        accepted_coauthorship:
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisinin
+            ortak yazarı olarak eklendiniz.
+        coauthor_accepted_invite:
+          notification_title: <a href="%{coauthor_path}">%{coauthor_name}</a>, <a
+            href="%{resource_path}">%{resource_title}</a> önerisinin ortak yazarı
+            olma davetinizi kabul etti.
+        coauthor_invited:
+          actions:
+            accept: Kabul et
+            decline: Reddet
+          email_intro: '"%{resource_title}" önerisinin ortak yazarı olmaya davet edildiniz.
+            Daveti bu sayfada kabul edebilir veya reddedebilirsiniz:'
+          email_outro: Bu bildirimi, önerinin yazarı ortak yazar olarak katkılarınızı
+            takdir etmek istediği için aldınız.
+          email_subject: '"%{resource_title}" önerisinin ortak yazarı olmaya davet
+            edildiniz'
+          notification_title: <a href="%{author_path}">%{author_name}</a>, sizi <a
+            href="%{resource_path}">%{resource_title}</a> önerisinin ortak yazarı
+            olarak davet etmek istiyor.
+        coauthor_rejected_invite:
+          notification_title: <a href="%{coauthor_path}">%{coauthor_name}</a>, <a
+            href="%{resource_path}">%{resource_title}</a> önerisinin ortak yazarı
+            olma davetinizi reddetti.
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name}, <a href="%{resource_url}">%{resource_title}</a>
+            iş birlikçi taslağına katkıda bulunan olarak erişmek üzere kabul edildi.'
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olduğunuz için aldınız.
+          email_subject: "%{requester_name}, %{resource_title} içeriğine katkıda bulunan
+            olarak erişmek üzere kabul edildi."
+          notification_title: <a href="%{requester_path}">%{requester_name}</a>, <a
+            href="%{resource_path}">%{resource_title}</a> iş birlikçi taslağına <strong>katkıda
+            bulunan olarak erişmek üzere kabul edildi</strong>.
+        collaborative_draft_access_rejected:
+          email_intro: '%{requester_name}, <a href="%{resource_url}">%{resource_title}</a>
+            iş birlikçi taslağına katkıda bulunan olarak erişmek üzere reddedildi.'
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olduğunuz için aldınız.
+          email_subject: "%{requester_name}, %{resource_title} iş birlikçi taslağına
+            katkıda bulunan olarak erişmek üzere reddedildi."
+          notification_title: <a href="%{requester_path}">%{requester_name}</a>, <a
+            href="%{resource_path}">%{resource_title}</a> iş birlikçi taslağına <strong>katkıda
+            bulunan olarak erişmek üzere reddedildi</strong>.
+        collaborative_draft_access_requested:
+          email_intro: '%{requester_name}, katkıda bulunan olarak erişim istedi. <a
+            href="%{resource_url}">%{resource_title}</a> iş birlikçi taslak sayfasından
+            <strong>isteği kabul edebilir veya reddedebilirsiniz</strong>.'
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olduğunuz için aldınız.
+          email_subject: "%{requester_name}, %{resource_title} içeriğine katkıda bulunmak
+            için erişim istedi."
+          notification_title: <a href="%{requester_path}">%{requester_name}</a>, <a
+            href="%{resource_path}">%{resource_title}</a> iş birlikçi taslağına katkıda
+            bulunmak için erişim istedi. Lütfen <strong>isteği kabul edin veya reddedin</strong>.
+        collaborative_draft_access_requester_accepted:
+          email_intro: <a href="%{resource_url}">%{resource_title}</a> iş birlikçi
+            taslağına katkıda bulunan olarak erişmek üzere kabul edildiniz.
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olmayı istediğiniz için aldınız.
+          email_subject: "%{resource_title} içeriğinin katkıcısı olarak kabul edildiniz."
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> iş
+            birlikçi taslağına <strong>katkıda bulunan olarak erişmek üzere kabul
+            edildiniz</strong>.
+        collaborative_draft_access_requester_rejected:
+          email_intro: <a href="%{resource_url}">%{resource_title}</a> iş birlikçi
+            taslağına katkıda bulunan olarak erişmek üzere reddedildiniz.
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olmayı istediğiniz için aldınız.
+          email_subject: "%{resource_title} içeriğinin katkıcısı olarak reddedildiniz."
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> iş
+            birlikçi taslağına <strong>katkıda bulunan olarak erişmek üzere reddedildiniz</strong>.
+        collaborative_draft_withdrawn:
+          email_intro: <a href="%{author_url}">%{author_name}</a>, <a href="%{resource_url}">%{resource_title}</a>
+            iş birlikçi taslağını geri çekti.
+          email_outro: Bu bildirimi <a href="%{resource_url}">%{resource_title}</a>
+            içeriğinin katkıcısı olduğunuz için aldınız.
+          email_subject: "%{author_name}, %{resource_title} iş birlikçi taslağını
+            geri çekti."
+          notification_title: <a href="%{author_path}">%{author_name}</a>, <a href="%{resource_path}">%{resource_title}</a>
+            iş birlikçi taslağını <strong>geri çekti</strong>.
+        creation_enabled:
+          email_intro: 'Artık %{participatory_space_title} içinde yeni öneriler oluşturabilirsiniz!
+            Şu sayfada katılmaya başlayın:'
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} içinde öneriler artık kullanılabilir"
+          notification_title: Artık <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içinde <a href="%{resource_path}">yeni öneriler</a> sunabilirsiniz.
+        liking_enabled:
+          email_intro: "%{participatory_space_title} içinde önerileri beğenebilirsiniz!
+            Şu sayfada katılmaya başlayın:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} için öneri beğenme başladı"
+          notification_title: Artık <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içinde <a href="%{resource_path}">önerileri beğenmeye</a> başlayabilirsiniz.
+        proposal_mentioned:
+          email_intro: '"%{mentioned_proposal_title}" önerinizden <a href="%{resource_url}">bu
+            alandaki</a> yorumlarda bahsedildi.'
+          email_outro: Bu bildirimi "%{resource_title}" içeriğinin yazarı olduğunuz
+            için aldınız.
+          email_subject: '"%{mentioned_proposal_title}" önerinizden bahsedildi'
+          notification_title: '"%{mentioned_proposal_title}" önerinizden <a href="%{resource_path}">bu
+            alandaki</a> yorumlarda bahsedildi.'
+        proposal_merged:
+          email_intro: 'Bir yönetici "%{resource_title}" önerinizi birleştirdi, bu
+            sayfada inceleyin:'
+          email_outro: Bu bildirimi önerinin yazarı olduğunuz için aldınız.
+          email_subject: "%{resource_title} önerisi birleştirildi"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisi
+            bir yönetici tarafından birleştirildi.
+        proposal_published:
+          email_intro: 'Takip ettiğiniz %{author_name}, "%{resource_title}" adlı yeni
+            bir öneri yayınladı. Göz atın ve katkıda bulunun:'
+          email_outro: Bu bildirimi %{author_name} kullanıcısını takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: '%{author_name} tarafından yeni öneri "%{resource_title}"'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisi
+            <a href="%{author_path}">%{author_name}</a> tarafından yayınlandı.
+        proposal_published_for_space:
+          email_intro: '"%{resource_title}" önerisi, takip ettiğiniz "%{participatory_space_title}"
+            içine eklendi.'
+          email_outro: Bu bildirimi "%{participatory_space_title}" takip ettiğiniz
+            için aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: '%{participatory_space_title} içine yeni öneri "%{resource_title}"
+            eklendi'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisi
+            %{author} tarafından %{participatory_space_title} içine eklendi.
+          notification_title_official: <a href="%{resource_path}">%{resource_title}</a>
+            resmi önerisi %{participatory_space_title} içine eklendi.
+        proposal_state_changed:
+          affected_user:
+            email_intro: '"%{resource_title}" önerisinin durumu "%{state}" olarak
+              değişti. Yanıtı bu sayfada okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: Önerinizin durumu değişti (%{state})
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> önerinizin
+              durumu "%{state}" olarak değişti.
+          follower:
+            email_intro: '"%{resource_title}" önerisinin durumu "%{state}" olarak
+              değişti. Yanıtı bu sayfada okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" takip ettiğiniz için aldınız.
+              Önceki bağlantıdan takipten çıkabilirsiniz.
+            email_subject: Takip ettiğiniz bir önerinin durumu değişti (%{state})
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisinin
+              durumu "%{state}" olarak değişti.
+        proposal_state_changed_for_authors:
+          affected_user:
+            email_intro: '"%{resource_title}" önerisinin durumu "%{state}" olarak
+              değişti. Yanıtı bu sayfada okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: Önerinizin durumu değişti (%{state})
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> önerinizin
+              durumu "%{state}" olarak değişti.
+        proposal_update_taxonomies:
+          email_intro: 'Bir yönetici "%{resource_title}" önerinizin taksonomilerini
+            güncelledi, bu sayfada inceleyin:'
+          email_outro: Bu bildirimi önerinin yazarı olduğunuz için aldınız.
+          email_subject: "%{resource_title} önerisinin taksonomileri güncellendi"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> önerisinin
+            taksonomileri bir yönetici tarafından güncellendi.
+        rejected_coauthorship:
+          notification_title: <a href="%{author_path}">%{author_name}</a> tarafından
+            <a href="%{resource_path}">%{resource_title}</a> önerisinin ortak yazarı
+            olma davetini reddettiniz.
+        voting_enabled:
+          email_intro: "%{participatory_space_title} içinde önerileri oylayabilirsiniz!
+            Şu sayfada katılmaya başlayın:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} için öneri oylama başladı"
+          notification_title: Artık <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içinde <a href="%{resource_path}">önerileri oylamaya</a> başlayabilirsiniz
     debates:
       actions:
         close: Kapat
@@ -686,6 +995,32 @@ tr:
             katılın!
           unearned_another: Bu katılımcı henüz hiçbir tartışmaya katılmadı.
           unearned_own: Henüz hiçbir tartışmaya katılmadınız.
+        accepted_proposals:
+          description: Bu rozet, yeni önerilerle etkin biçimde katıldığınızda ve bunlar
+            kabul edildiğinde verilir.
+          description_another: Bu katılımcının %{score} kabul edilmiş önerisi vardı.
+          description_own: "%{score} öneriniz kabul edildi."
+          name: Kabul edilen öneriler
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} önerinizin daha
+            kabul edilmesini sağlayın!
+          unearned_another: Bu katılımcının henüz kabul edilmiş önerisi yok.
+          unearned_own: Henüz hiçbir öneriniz kabul edilmedi.
+        proposal_votes:
+          description: Bu rozet, başkalarının önerilerini oyladığınızda verilir.
+          description_another: Bu katılımcı %{score} öneriyi oyladı.
+          description_own: "%{score} öneriyi oyladınız."
+          name: Öneri oyları
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} öneriyi daha oylayın!
+          unearned_another: Bu katılımcı henüz hiçbir öneriyi oylamadı.
+          unearned_own: Henüz hiçbir öneriyi oylamadınız.
+        proposals:
+          description: Bu rozet, yeni önerilerle etkin biçimde katıldığınızda verilir.
+          description_another: Bu katılımcı %{score} öneri oluşturdu.
+          description_own: "%{score} öneri oluşturdunuz."
+          name: Öneriler
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} öneri daha oluşturun!
+          unearned_another: Bu katılımcı henüz hiçbir öneri oluşturmadı.
+          unearned_own: Henüz hiçbir öneri oluşturmadınız.
     open_data:
       help:
         debate_comments:
@@ -757,11 +1092,68 @@ tr:
           title: Gönderinin başlığı
           updated_at: Bu gönderinin son güncellendiği tarih
           url: Bu gönderinin URL'si
+        proposal_comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        proposals:
+          address: Önerinin fiziksel bir konumu varsa adresi
+          answer: Yanıtlanmışsa öneriye verilen yanıt
+          answered_at: Bu önerinin yanıtlandığı tarih
+          attachments: Bu önerinin sahip olduğu ek sayısı
+          author: Bu önerinin yazarının verileri
+          body: Öneri içeriği
+          coauthorships_count: Önerinin temsil ettiği ortak yazarlık sayısı
+          comments: Bu önerinin sahip olduğu yorum sayısı
+          component: Önerinin ait olduğu bileşen
+          cost: Söz konusu önerinin toplam maliyeti
+          cost_report: Öneri için bir maliyet raporu
+          created_at: Önerinin oluşturulduğu tarih
+          created_in_meeting: Önerinin bir toplantıda oluşturulup oluşturulmadığı
+          execution_period: Önerinin baştan sona yürüdüğü dönem
+          follows_count: Bu önerinin sahip olduğu takipçi sayısı
+          id: Öneri için benzersiz tanımlayıcı
+          is_amend: Bu önerinin başka bir öneride değişiklik önerisi olup olmadığı
+          latitude: Önerinin fiziksel bir konumu varsa enlemi
+          likes: Bu önerinin sahip olduğu beğeni sayısı
+          longitude: Önerinin fiziksel bir konumu varsa boylamı
+          meeting_urls: Bu önerinin sunulduğu veya tartışıldığı toplantıların URL'leri
+          original_proposal: Bu bir değişiklik önerisiyse özgün önerinin referansı
+          participatory_space: Bu önerinin hangi alana (ör. Katılım Süreci veya Meclis)
+            ait olduğu
+          published_at: Bu önerinin yayınlandığı tarih
+          reference: Kaynağın bu platformdaki benzersiz tanımlayıcısı
+          related_proposals: Bu öneriyle ilişkili öneriler
+          state: Bu önerinin durumu (ör. "Kabul edildi")
+          state_published_at: Yayınlandığında önerinin durumunun zaman damgası
+          taxonomies: Bu önerinin ait olduğu taksonomiler
+          title: Öneri başlığı
+          updated_at: Önerinin son güncellendiği tarih
+          url: Bu önerinin bulunabileceği URL
+          votes: Bu önerinin sahip olduğu oy sayısı
+          withdrawn: Bu önerinin geri çekilip çekilmediği
+          withdrawn_at: Bu önerinin ne zaman geri çekildiği
     statistics:
       debates_count: Tartışmalar
       debates_count_tooltip: Yapılan tartışmaların sayısı.
       posts_count: Gönderiler
       posts_count_tooltip: Yayınlanan güncelleme veya blog gönderilerinin sayısı.
+      participatory_space_proposals_count: Öneriler
+      proposals_accepted: Kabul edilen öneriler
+      proposals_count: Öneriler
+      proposals_count_tooltip: Sunulan önerilerin ve bunlara verilen oyların toplam
+        sayısı.
+      votes: 'Oylar:'
+      votes_count: Oylar
     blogs:
       actions:
         author_id: Gönderiyi şu adla oluştur
@@ -919,6 +1311,312 @@ tr:
         session_token: Kullanıcı tanımlayıcısı
         unregistered: Kayıtsız
         user_status: Kullanıcı durumu
+    application:
+      geocoding:
+        not_configured: Coğrafi kodlama yapılandırılmamış!
+    participatory_spaces:
+      highlighted_proposals:
+        see_all: Tüm önerileri gör
+    proposals:
+      actions:
+        answer_proposal: Öneriyi yanıtla
+        cancel_coauthor_invitation: Ortak yazar davetini iptal et
+        cancel_coauthor_invitation_confirm: Ortak yazar davetini iptal etmek istediğinizden
+          emin misiniz?
+        delete_proposal_state_confirm: Bu durumu silmek istediğinizden emin misiniz?
+        destroy: Durumu sil
+        edit_proposal: Öneriyi düzenle
+        edit_proposal_state: Durumu düzenle
+        import: Başka bir bileşenden önerileri içe aktar
+        mark_as_coauthor: Ortak yazar olarak işaretle
+        mark_as_coauthor_confirm: Bu kullanıcıyı ortak yazar olarak işaretlemek istediğinizden
+          emin misiniz? Alıcı, daveti kabul etmek veya reddetmek için bir bildirim
+          alacaktır.
+        new: Yeni öneri
+        new_proposal_state: Yeni durum
+        participatory_texts: Katılımcı metinler
+        show: Öneriyi göster
+        title: İşlemler
+      admin_log:
+        evaluation_assignment:
+          create: "%{user_name}, %{resource_name} önerisini bir değerlendiriciye atadı"
+          delete: "%{user_name}, %{proposal_title} önerisinden bir değerlendiriciyi
+            kaldırdı"
+        proposal:
+          answer: "%{user_name}, %{space_name} alanında %{resource_name} önerisini
+            yanıtladı"
+          create: "%{user_name}, %{space_name} içinde %{merged_count} önerinin birleştirilmesiyle
+            %{resource_name} önerisini oluşturdu"
+          publish_answer: "%{user_name}, %{space_name} alanında %{resource_name} önerisinin
+            yanıtını yayınladı"
+          restore: "%{user_name}, %{space_name} alanında %{resource_name} önerisini
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} alanında %{resource_name} önerisini
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} alanında %{resource_name} resmi önerisini
+            güncelledi"
+        proposal_note:
+          create: "%{user_name}, %{space_name} alanında %{resource_name} önerisine
+            özel bir not bıraktı"
+      answers:
+        accepted: Kabul edildi
+        evaluating: Değerlendiriliyor
+        not_answered: Yanıtlanmadı
+        rejected: Reddedildi
+        withdrawn: Geri çekildi
+      application_helper:
+        filter_origin_values:
+          all: Tümü
+          meetings: Toplantılar
+          official: Resmi
+          participants: Katılımcılar
+        filter_state_values:
+          all: Tümü
+          not_answered: Yanıtlanmadı
+        filter_type_values:
+          all: Tümü
+          amendments: Değişiklik önerileri
+          proposals: Öneriler
+      content_blocks:
+        highlighted_proposals:
+          name: Öneriler
+      create:
+        error: Öneri kaydedilirken bir sorun oluştu.
+        success: Öneri başarıyla oluşturuldu. Taslak olarak kaydedildi.
+      creation:
+        imported_text: Şu öneri oldu
+        merged_text: Şu öneri oldular
+        splitted_text: Şu öneri oldu
+        text: Bu öneri oluşturuldu
+      destroy_draft:
+        error: İş birlikçi taslak silinirken bir sorun oluştu.
+        success: Öneri taslağı başarıyla silindi.
+      exit_modal:
+        cancel: İptal
+        exit: Devam et
+        message: Oylarınızın dikkate alınması için farklı öneriler arasında %{number}
+          oy daha vermeniz gerekiyor.
+        title: "%{number} oyunuzun kaldığını unutmayın"
+      forms:
+        errors:
+          device_not_supported: Cihazınız konum hizmetlerini desteklemiyor. Lütfen
+            adresi elle girin.
+          no_device_location: Üzgünüz, konumunuzu algılayamadık. Lütfen adresi elle
+            girin.
+        locating: Konum belirleniyor...
+        use_my_location: Mevcut konumumu kullan
+      invite_coauthors:
+        cancel:
+          error: Ortak yazar daveti iptal edilirken bir sorun oluştu.
+          success: Ortak yazar daveti başarıyla iptal edildi.
+        create:
+          error: Ortak yazar davet edilirken bir sorun oluştu.
+          success: "%{author_name} ortak yazar olarak başarıyla davet edildi."
+        destroy:
+          error: Davet reddedilirken bir sorun oluştu.
+          success: Davet reddedildi.
+        update:
+          error: Davet kabul edilirken bir sorun oluştu.
+          success: Davet kabul edildi.
+      last_activity:
+        new_proposal: 'Yeni öneri:'
+        proposal_updated: 'Öneri güncellendi:'
+      models:
+        proposal:
+          fields:
+            comments: Yorumlar
+            evaluator: Değerlendirici
+            evaluators: Değerlendiriciler
+            id: Kimlik
+            notes: Notlar
+            official_proposal: Resmi öneri
+            published_answer: Yayınlanan yanıt
+            published_at: Yayınlanma tarihi
+            state: Durum
+            taxonomies: Taksonomiler
+            title: Başlık
+            votes: Oylar
+        proposal_state:
+          css_class: CSS sınıfı
+          title: Durum
+      new:
+        limit_reached: Sınırı aştığınız için yeni öneri oluşturamazsınız.
+      participatory_text_proposal:
+        alternative_title: Şu anda katılımcı metin yok
+        buttons:
+          amend: Değişiklik öner
+          comment: Yorum
+      proposal_votes:
+        create:
+          error: Öneri oylanırken bir sorun oluştu.
+      proposals:
+        dynamic_map_instructions:
+          description: Koordinatlar 'önizleme' düğmesine tıklandığında güncellenecektir.
+            Ancak adres değişmez.
+          instructions: Noktayı harita üzerinde taşıyabilirsiniz.
+        edit:
+          add_attachments: Ek ekle
+          back: Geri
+          edit_attachments: Ekleri düzenle
+          send: Gönder
+          title: Öneriyi düzenle
+        edit_draft:
+          discard: Bu taslağı at
+          discard_confirmation: Bu öneri taslağını atmak istediğinizden emin misiniz?
+          send: Önizleme
+          title: Öneri taslağını düzenle
+        edit_form_fields:
+          marker_added: İşaretçi haritaya eklendi.
+        filters:
+          activity: Etkinliğim
+          all: Tümü
+          amendment_type: Tür
+          my_proposals: Önerilerim
+          origin: Köken
+          related_to: İlişkili
+          scope: Kapsam
+          search: Ara
+          state: Durum
+          taxonomy_filters: Filtreler
+          type: Tür
+          voted: Oylanan
+        index:
+          click_here: Tüm önerileri gör
+          count:
+            one: "%{count} öneri"
+            other: "%{count} öneri"
+          grid_mode: Izgara modu
+          list_mode: Liste modu
+          new_proposal: Yeni öneri
+          see_all: Tüm önerileri gör
+          see_all_withdrawn: Geri çekilen tüm önerileri gör
+          text_banner: Yazarları tarafından geri çekilen önerilerin listesini görüntülüyorsunuz.
+            %{go_back_link}.
+        new:
+          send: Devam et
+          title: Yeni öneri oluştur
+        orders:
+          label: 'Önerileri şuna göre sırala:'
+          most_commented: En çok yorum yapılan
+          most_followed: En çok takip edilen
+          most_liked: En çok beğenilen
+          most_voted: En çok oylanan
+          random: Rastgele
+          recent: Yeni
+          with_more_authors: Daha çok yazarı olan
+        participatory_texts:
+          view_index:
+            document_index: Belge dizini
+        placeholder:
+          address: Atatürk Bulvarı No 15, Çankaya, Ankara
+        preview:
+          announcement_body: Öneriniz taslak olarak kaydedildi. Sitede görünmesi için
+            yayınlanması gerekir.
+          announcement_title: Öneriniz henüz yayınlanmadı
+          modify: Öneriyi değiştir
+          proposal_edit_before_minutes:
+            one: Bu öneriyi, yayınlandıktan sonraki ilk dakika içinde düzenleyebileceksiniz.
+              Bu süre geçtikten sonra öneriyi düzenleyemezsiniz.
+            other: Bu öneriyi, yayınlandıktan sonraki ilk %{count} dakika içinde düzenleyebileceksiniz.
+              Bu süre geçtikten sonra öneriyi düzenleyemezsiniz.
+          publish: Yayınla
+          title: Önerinizi yayınlayın
+        proposals:
+          empty: Henüz öneri yok.
+          empty_filters: Bu ölçütlere uyan öneri yok.
+        show:
+          answer: Yanıt
+          changes_at_title: '"%{title}" için değişiklik önerisi'
+          edit_proposal: Düzenle
+          estimated_cost: Tahmini maliyet
+          hidden_likes_count:
+            one: ve %{count} kişi daha
+            other: ve %{count} kişi daha
+          link_to_promoted_emendation_help_text: Bu öneri, yükseltilmiş bir değişiklik
+            önerisidir
+          link_to_promoted_emendation_text: Reddedilen değişiklik önerisini gör.
+          link_to_proposal_from_emendation_help_text: Bu, reddedilen bir değişiklik
+            önerisidir
+          link_to_proposal_from_emendation_text: Öneriyi gör
+          proposal_accepted_reason: 'Bu öneri şu nedenle kabul edildi:'
+          proposal_in_evaluation_reason: Bu öneri değerlendiriliyor
+          proposal_rejected_reason: 'Bu öneri şu nedenle reddedildi:'
+          withdraw_btn_hint: Henüz oy almadıysanız, fikrinizi değiştirmeniz halinde
+            önerinizi geri çekebilirsiniz. Öneri silinmez, geri çekilen öneriler listesinde
+            görünür.
+          withdraw_confirmation_html: Bu öneriyi geri çekmek istediğinizden emin misiniz?<br><br><strong>Bu
+            işlem iptal edilemez!</strong>
+          withdraw_proposal: Geri çek
+        update:
+          title: Öneriyi güncelle
+        vote_button:
+          already_voted: Oylandı
+          already_voted_hover: Oyu geri çek
+          maximum_votes_reached: Oy sınırına ulaşıldı
+          no_votes_remaining: Kalan oy yok
+          vote: Oy ver
+          votes_blocked: Oy ver
+        votes_count:
+          count:
+            one: Oy
+            other: Oylar
+        voting_rules:
+          already_vote:
+            description: Desteklerinizin dikkate alınması için farklı öneriler arasında
+              hâlâ %{number} destek vermeniz gerektiğini unutmayın.
+            see_other_proposals: Diğer önerileri gör
+            title: "%{number} desteğiniz kaldı"
+          can_accumulate_votes_beyond_threshold:
+            description: Her öneri %{limit} oydan fazlasını biriktirebilir
+          minimum_votes_per_user:
+            description: Desteklerinizin dikkate alınması için farklı öneriler arasında
+              en az %{votes} destek dağıtmanız gerekir.
+          proposal_limit:
+            description: En fazla %{limit} öneri oluşturabilirsiniz.
+          success: Oylarınız başarıyla kabul edildi
+          threshold_per_proposal:
+            description: Doğrulanmak için önerilerin %{limit} oya ulaşması gerekir.
+          title: Katılım kuralları
+          vote_limit:
+            description: En fazla %{limit} öneriyi destekleyebilirsiniz.
+            votes: Kalan %{number} oy
+        wizard_aside:
+          back: Geri
+          back_from_step_1: Önerilere dön
+          back_from_step_2: Düzenlemeye dön
+        wizard_steps:
+          current_step: Geçerli adım
+          step_1: Önerinizi oluşturun
+          step_2: Önerinizi yayınlayın
+          title: Öneri oluşturma adımları
+      proposals_picker:
+        choose_proposals: Önerileri seçin
+        no_proposals: Arama ölçütlerinize uyan öneri yok veya hiç öneri yok.
+      publish:
+        error: Öneri yayınlanırken bir sorun oluştu.
+        success: Öneri başarıyla yayınlandı.
+      publish_answers:
+        success: Öneri yanıtları başarıyla yayınlandı.
+      update:
+        error: Öneri kaydedilirken bir sorun oluştu.
+        success: Öneri başarıyla güncellendi.
+      update_draft:
+        error: İş birlikçi taslak kaydedilirken bir sorun oluştu.
+        success: Öneri taslağı başarıyla güncellendi.
+      versions:
+        index:
+          title: Sürümler
+      withdraw:
+        errors:
+          has_votes: Bu öneri zaten oy aldığı için geri çekilemez.
+    resource_links:
+      copied_from_component:
+        proposal_proposal: İlişkili öneriler
+      included_projects:
+        project_result: 'Bu projede görünen sonuçlar:'
+      included_proposals:
+        proposal_project: 'Bu projelerde görünen öneri:'
+        proposal_result: 'Bu sonuçlarda görünen öneri:'
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -1244,6 +1942,13 @@ tr:
       decidim/debates/creation_disabled_event: Tartışmalar devre dışı
       decidim/debates/creation_enabled_event: Tartışma oluşturma etkin
       decidim/blogs/create_post_event: Yeni blog gönderisi
+      decidim/proposals/admin/update_proposal_taxonomies_event: Öneri taksonomileri
+        değiştirildi
+      decidim/proposals/creation_enabled_event: Öneri oluşturma etkin
+      decidim/proposals/liking_enabled_event: Öneri beğenme etkin
+      decidim/proposals/proposal_mentioned_event: Öneriden bahsedildi
+      decidim/proposals/publish_proposal_event: Öneri yayınlandı
+      decidim/proposals/voting_enabled_event: Öneri oylama etkin
     attributes:
       debate:
         closed_at: Kapatılma zamanı
@@ -1269,6 +1974,60 @@ tr:
         body: Yanıt
         choices: Seçenekler
         selected_choices: Seçilen seçenekler
+      collaborative_draft:
+        address: Adres
+        body: İçerik
+        decidim_scope_id: Kapsam
+        has_address: Adresi var
+        scope_id: Kapsam
+        state: Durum
+        title: Başlık
+      evaluation_assignment:
+        admin_log:
+          evaluator_role_id: Değerlendirici adı
+      import_participatory_text:
+        document: Belge
+      proposal:
+        address: Adres
+        answer: Yanıt
+        answered_at: Yanıtlanma tarihi
+        body: İçerik
+        decidim_proposals_proposal_state_id: Durum
+        decidim_scope_id: Kapsam
+        has_address: Adresi var
+        latitude: Enlem
+        longitude: Boylam
+        scope_id: Kapsam
+        state: Durum
+        title: Başlık
+      proposal_answer:
+        answer: Yanıt
+        cost: Maliyet
+        cost_report: Maliyet raporu
+        execution_period: Uygulama dönemi
+      proposal_state:
+        announcement_title: Yanıt başlığı
+        bg_color: Arka plan rengi
+        colors:
+          blue: Mavi
+          gray: Gri
+          green: Yeşil
+          orange: Turuncu
+          pink: Pembe
+          purple: Mor
+          red: Kırmızı
+          yellow: Sarı
+        text_color: Metin rengi
+      proposals_copy:
+        copy_proposals: Bunun, seçilen bileşendeki tüm önerileri geçerli bileşene
+          aktaracağını ve bu işlemin geri alınamayacağını anlıyorum.
+        origin_component_id: Önerilerin kopyalanacağı bileşen
+      proposals_file_import:
+        file: Dosya
+      proposals_import:
+        import_proposals: Önerileri içe aktar
+        keep_answers: Durumları ve yanıtları koru
+        keep_authors: Özgün yazarları koru
     errors:
       models:
         questionnaire:
@@ -1282,6 +2041,30 @@ tr:
             choices:
               missing: tamamlanmadı
               too_many: En fazla %{count} seçebilirsiniz.
+        participatory_text:
+          attributes:
+            document:
+              allowed_file_content_types: 'Geçersiz belge türü. Yalnızca şu uzantılara
+                sahip dosyalara izin verilir: %{types}'
+        proposal:
+          attributes:
+            add_attachments:
+              needs_to_be_reattached: Yeniden eklenmesi gerekiyor
+            body:
+              cant_be_equal_to_template: şablonla aynı olamaz
+              identical: VE başlık aynı olamaz
+            title:
+              identical: VE içerik aynı olamaz
+        proposals_merge:
+          attributes:
+            base:
+              not_official: Resmi değil
+              voted: Oy veya beğeni almış
+        proposals_split:
+          attributes:
+            base:
+              not_official: Resmi değil
+              voted: Oy veya beğeni almış
   activerecord:
     models:
       decidim/comments/comment:
@@ -1296,6 +2079,28 @@ tr:
       decidim/blogs/post:
         one: Gönderi
         other: Gönderiler
+      decidim:
+        proposals:
+          proposal:
+            budget_text: <span class="resource-link">%{link} önerisi oluşturuldu</span>
+            import_from_proposal_text: 'Şu öneri oldu: %{link}'
+            import_to_proposal_text: Bu öneri <span "resource-link">%{link} oluşturuldu</span>
+            merge_from_proposal_text: 'Şu öneri oldu: %{link}'
+            merge_to_proposal_text: 'Bu öneri oluşturuldu: %{link}'
+            split_from_proposal_text: 'Şu öneri oldu: %{link}'
+            split_to_proposal_text: 'Bu öneri oluşturuldu: %{link}'
+      decidim/proposals/collaborative_draft:
+        one: İş birlikçi taslak
+        other: İş birlikçi taslaklar
+      decidim/proposals/proposal:
+        one: Öneri
+        other: Öneriler
+      decidim/proposals/proposal_note:
+        one: Not
+        other: Notlar
+      decidim/proposals/proposal_vote:
+        one: Oy
+        other: Oylar
   errors:
     messages:
       cannot_have_comments: yorum içeremez
