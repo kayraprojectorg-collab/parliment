@@ -44,6 +44,19 @@ header .main-bar {
   color: #fff;
 }
 
+// Site title (text wordmark shown when no logo image is set). The .main-bar__logo
+// carries a `prose` class whose link colour is dark, so force it light here.
+header .main-bar__logo a,
+header .main-bar__logo a span {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header .main-bar__logo a:hover span {
+  color: var(--kur-gold);
+}
+
 header .main-bar__links-desktop {
   --tw-divide-opacity: 0.25;
 }
@@ -80,10 +93,11 @@ header .main-bar__search button[type="submit"] svg {
   fill: var(--kur-gold);
 }
 
-// Breadcrumb bar sits under the gold line on a clean light surface.
-#menu-bar-container .menu-bar {
-  background-color: var(--kur-surface);
-  box-shadow: var(--kur-shadow);
+// Breadcrumb bar: its links and arrows are white by design, so paint the bar
+// deep teal (not the mid-tone primary) for a strong, legible contrast.
+#menu-bar-container .menu-bar__container {
+  background-color: var(--kur-deep);
+  background-image: var(--kur-star-texture);
 }
 
 /* ---------- Sidebar (institutional side menu) ------------------------- */
@@ -298,33 +312,29 @@ header .main-bar__search button[type="submit"] svg {
 
 /* ---------- Headings & links ------------------------------------------ */
 
-#content h1,
-#content h2,
-#content h3,
-.hero__title {
-  color: var(--kur-ink);
-}
-
-#content h1,
-#content h2 {
+#content :is(h1, h2) {
   font-weight: 700;
 }
 
-.hero__title {
+// Brand heading colour, scoped to cards only — cards are always light, so this
+// can never darken a heading that sits on a dark ground.
+#content :is(.card__grid, .card__list, .card__highlight) :is(h2, h3, .card__list-title) {
+  color: var(--kur-ink);
+}
+
+// Hero titles sit on a dark ground and must stay white. Anchored with #content
+// so no other #content rule can override them back to a dark colour.
+#content .hero__title,
+#content [data-process-hero] :is(h1, .participatory-space__hero-text, .participatory-space__hero-slogan) {
   color: #fff;
 }
 
-// Hero fallback: keep the white title legible even before a background image
-// is attached (homepage hero and participatory-space hero).
+// Hero fallback background so the white title is legible without an image.
 .hero__container,
 [data-process-hero] {
   background-color: var(--kur-deep);
   background-size: cover;
   background-position: center;
-}
-
-[data-process-hero] .participatory-space__hero-text :is(h1, .participatory-space__hero-slogan) {
-  color: #fff;
 }
 
 /* ---------- Statistics band (dark, gold figures) ---------------------- */
