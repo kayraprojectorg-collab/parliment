@@ -554,6 +554,38 @@ tr:
             votes_enabled: Oylar etkin
             votes_hidden: Oylar gizli (oylar etkinse, bunu işaretlemek oy sayısını
               gizler)
+      meetings:
+        actions:
+          comment: Yorum
+          join: Katıl
+          reply_poll: Ankete yanıt ver
+          vote_comment: Yorumu oyla
+        name: Toplantılar
+        settings:
+          global:
+            announcement: Duyuru
+            clear_all: Tümünü temizle
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            creation_enabled_for_participants: Katılımcılar toplantı oluşturabilir
+            default_registration_terms: Varsayılan kayıt şartları
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            enable_pads_creation: Pad oluşturmayı etkinleştir
+            maps_enabled: Haritalar etkin
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            registration_code_enabled: Kayıt kodu ve QR etkin
+            resources_permissions_enabled: İşlem izinleri her toplantı için ayarlanabilir
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+            terms_and_conditions_url_for_meeting_creators: Toplantı oluşturanlar için
+              şartlar ve koşullar URL'si
+          step:
+            announcement: Duyuru
+            comments_blocked: Yorumlar engellendi
+            creation_enabled_for_participants: Katılımcılar tarafından toplantı oluşturma
+              etkin
     download_your_data:
       help:
         comment_votes:
@@ -581,6 +613,23 @@ tr:
           questionnaire: Yanıtlanan anket
           response: Soruya verilen yanıt
           user: Anketi yanıtlayan kullanıcı
+        invites:
+          accepted_at: Bu davetin kabul edildiği tarih ve saat
+          created_at: Bu davetin oluşturulduğu tarih ve saat
+          id: Bu davetin benzersiz tanımlayıcısı
+          meeting: Bu davetin gerçekleştiği toplantı
+          rejected_at: Bu davetin reddedildiği tarih ve saat
+          sent_at: Bu davetin gönderildiği tarih ve saat
+          updated_at: Bu davetin son güncellendiği tarih ve saat
+        registrations:
+          code: Kayıt kodu
+          created_at: Bu kaydın oluşturulduğu tarih ve saat
+          id: Kaydın benzersiz tanımlayıcısı
+          meeting: Kullanıcının kaydolduğu toplantı
+          public_participation: Bu katılımın herkese açık gösterilip gösterilmediği
+          updated_at: Bu kaydın son güncellendiği tarih ve saat
+          user: Kaydı yapan kullanıcı
+          validated_at: Bu kaydın doğrulandığı tarih ve saat
       show:
         debate_comments: Tartışma yorumları dışa aktarması
         debates: Tartışmalar dışa aktarması
@@ -588,6 +637,8 @@ tr:
         survey_user_responses: Anket kullanıcı yanıtları
         proposal_comments: Öneri yorumları dışa aktarması
         proposals: Öneriler dışa aktarması
+        meeting_comments: Toplantı yorumları dışa aktarması
+        meetings: Toplantılar dışa aktarması
     events:
       comments:
         comment_by_followed_user:
@@ -881,6 +932,98 @@ tr:
           email_subject: "%{participatory_space_title} için öneri oylama başladı"
           notification_title: Artık <a href="%{participatory_space_url}">%{participatory_space_title}</a>
             içinde <a href="%{resource_path}">önerileri oylamaya</a> başlayabilirsiniz
+      meetings:
+        meeting_closed:
+          affected_user:
+            email_intro: '"%{resource_title}" toplantınız kapatıldı. Sonuçları sayfasından
+              okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" toplantısını düzenlediğiniz
+              için aldınız.
+            email_subject: '"%{resource_title}" toplantısı kapatıldı'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+              kapatıldı.
+          follower:
+            email_intro: '"%{resource_title}" toplantısı kapatıldı. Sonuçları sayfasından
+              okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz
+              için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+            email_subject: '"%{resource_title}" toplantısı kapatıldı'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+              kapatıldı.
+        meeting_created:
+          button_text: Toplantıya kaydol
+          email_intro: '"%{resource_title}" toplantısı, takip ettiğiniz "%{participatory_space_title}"
+            içine eklendi.'
+          email_outro: Bu bildirimi "%{participatory_space_title}" takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: "%{participatory_space_title} içine yeni toplantı eklendi"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            %{participatory_space_title} içine eklendi
+        meeting_registration_confirmed:
+          notification_title: <a href="%{resource_url}">%{resource_title}</a> toplantısı
+            için kaydınız onaylandı. Kayıt kodunuz %{registration_code}.
+        meeting_registrations_over_percentage:
+          email_intro: '"%{resource_title}" toplantısı için ayrılan kontenjan %{percentage}%
+            üzerinde.'
+          email_outro: Bu bildirimi toplantının katılım alanının yöneticisi olduğunuz
+            için aldınız.
+          email_subject: '"%{resource_title}" toplantısı için ayrılan kontenjan %{percentage}%
+            üzerinde'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            için ayrılan kontenjan %{percentage}% üzerinde.
+        meeting_updated:
+          email_intro: '"%{resource_title}" toplantısı %{changed_fields} değişiklikleriyle
+            güncellendi. Yeni sürümü sayfasından okuyabilirsiniz:'
+          email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: '"%{resource_title}" toplantısı güncellendi'
+          field_names:
+            address: adres
+            end_time: bitiş zamanı
+            location: konum
+            start_time: başlangıç zamanı
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            %{changed_fields} değişiklikleriyle güncellendi.
+        meeting_waitlist_added:
+          notification_title: <a href="%{resource_url}">%{resource_title}</a> toplantısının
+            bekleme listesine eklendiniz.
+        registration_code_validated:
+          email_intro: '"%{resource_title}" toplantısı için "%{registration_code}"
+            kayıt kodunuz doğrulandı.'
+          email_outro: Bu bildirimi "%{resource_title}" toplantısı için kayıt kodunuz
+            doğrulandığı için aldınız.
+          email_subject: '"%{resource_title}" toplantısı için "%{registration_code}"
+            kayıt kodunuz doğrulandı'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            için "%{registration_code}" kayıt kodunuz doğrulandı.
+        registration_marked_as_attendee:
+          email_intro: '"%{resource_title}" toplantısı için kaydınız katılan olarak
+            işaretlendi.'
+          email_outro: Bu bildirimi "%{resource_title}" toplantısı için kaydınız katılan
+            olarak işaretlendiği için aldınız.
+          email_subject: '"%{resource_title}" toplantısı için kaydınız katılan olarak
+            işaretlendi'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            için kaydınız katılan olarak işaretlendi.
+        registrations_enabled:
+          email_intro: '"%{resource_title}" toplantısı kayıtları etkinleştirdi. Sayfasında
+            kaydolabilirsiniz:'
+          email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: '"%{resource_title}" toplantısı kayıtları etkinleştirdi.'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            kayıtları etkinleştirdi.
+        upcoming_meeting:
+          default_body: '"{{meeting_title}}" toplantısı {{before_hours}} saatten az
+            bir süre içinde başlayacak.'
+          email_intro: '"%{resource_title}" toplantısı %{reminders_before_hours} saatten
+            az bir süre içinde başlayacak.'
+          email_outro: Bu bildirimi %{resource_title} toplantısını takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: '"%{resource_title}" toplantısı %{reminders_before_hours}
+            saatten az bir süre içinde başlayacak.'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
+            %{reminders_before_hours} saatten az bir süre içinde başlayacak.
     debates:
       actions:
         close: Kapat
@@ -1021,6 +1164,15 @@ tr:
           next_level_in: Bir sonraki seviyeye ulaşmak için %{score} öneri daha oluşturun!
           unearned_another: Bu katılımcı henüz hiçbir öneri oluşturmadı.
           unearned_own: Henüz hiçbir öneri oluşturmadınız.
+        attended_meetings:
+          description: Bu rozet, birkaç yüz yüze toplantıya katıldığınızda verilir.
+          description_another: Bu katılımcı %{score} toplantıya katıldı.
+          description_own: "%{score} toplantıya katıldınız."
+          name: Katılınan toplantılar
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} toplantıya daha
+            katılın!
+          unearned_another: Bu katılımcı henüz hiçbir toplantıya katılmadı.
+          unearned_own: Henüz hiçbir toplantıya katılmadınız.
     open_data:
       help:
         debate_comments:
@@ -1142,6 +1294,72 @@ tr:
           votes: Bu önerinin sahip olduğu oy sayısı
           withdrawn: Bu önerinin geri çekilip çekilmediği
           withdrawn_at: Bu önerinin ne zaman geri çekildiği
+        meeting_comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          comments: Toplantının yorum verileri
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        meetings:
+          address: Yüz yüzeyse ve fiziksel bir konumu varsa toplantının adresi
+          attachments: Bu toplantıdaki ek sayısı
+          attendees: Bu toplantıya katılan kişi sayısı
+          attending_organizations: Toplantıya katılan kuruluşlar
+          audio_url: Toplantının ses kaydı
+          author: Bu toplantının yazarının verileri
+          available_slots: Bir toplantıda mevcut kontenjan sayısı
+          closed_at: Toplantının kapatıldığı tarih
+          closing_report: Kapatılan toplantının raporu
+          closing_visible: Toplantının görünürlüğü
+          comments: Toplantının yorum verileri
+          component: Toplantının ait olduğu bileşen
+          contributions: Bu toplantıda katılanlar tarafından yapılan katkı sayısı
+          created_at: Toplantının oluşturulduğu tarih
+          customize_registration_email: Kayıtta özel bir e-postaya izin verme yeteneği
+          decidim_author_type: Toplantı yazarının yazar türü
+          description: Toplantının açıklaması
+          end_time: Bu toplantının bittiği tarih ve saat
+          follows_count: Toplantının sahip olduğu takip sayısı
+          id: Toplantının benzersiz tanımlayıcısı
+          iframe_access_level: Toplantının iframe erişim düzeyi
+          iframe_embed_type: Toplantıya gömülü iframe türü
+          latitude: Toplantının enlemi
+          location: Toplantının konumu
+          location_hints: Toplantının gerçekleştiği konuma dair bir ipucu
+          longitude: Toplantının boylamı
+          online_meeting_url: Çevrimiçi toplantının URL'si
+          organizations: Bu toplantıya katılan kuruluşlar
+          participatory_space: Bu toplantının hangi alana (ör. Katılım Süreci veya
+            Meclis) ait olduğu
+          private_meeting: Toplantının özel olup olmadığını belirtmek için
+          published: Toplantının ne zaman yayınlandığı
+          reference: Kaynağın bu platformdaki benzersiz tanımlayıcısı
+          registration_form_enabled: Kayıt formunun etkin olup olmadığı
+          registration_terms: Toplantıya katılmadan önce kabul edilen şartlar
+          registration_type: Toplantının kayıt türü
+          registration_url: Toplantı kaydının URL'si
+          registrations_enabled: Kayıtlara izin verilip verilmediği
+          related_proposals: Bu toplantıyla ilişkili öneriler
+          related_results: Bu toplantıyla ilişkili sonuçlar
+          reserved_slots: Toplantının sahip olduğu ayrılmış kontenjan sayısı
+          start_time: Bu toplantının başladığı tarih ve saat
+          taxonomies: Bu toplantının ait olduğu taksonomiler
+          title: Toplantının başlığı
+          transparent: Toplantının üye olmayanlar için görünürlüğü
+          type_of_meeting: Toplantı türü
+          updated_at: Toplantının son güncellendiği zaman
+          url: Toplantının URL'si
+          video_url: Toplantının video kaydı
+          withdrawn: Bu toplantının geri çekilip çekilmediği
+          withdrawn_at: Bu toplantının ne zaman geri çekildiği
     statistics:
       debates_count: Tartışmalar
       debates_count_tooltip: Yapılan tartışmaların sayısı.
@@ -1154,6 +1372,11 @@ tr:
         sayısı.
       votes: 'Oylar:'
       votes_count: Oylar
+      attendees_count: Toplantı katılanları
+      meetings_count: Toplantılar
+      meetings_count_tooltip: Hem çevrimiçi hem de yüz yüze gerçekleşen toplantıların
+        sayısı.
+      participatory_space_meetings_count: Toplantılar
     blogs:
       actions:
         author_id: Gönderiyi şu adla oluştur
@@ -1311,12 +1534,19 @@ tr:
         session_token: Kullanıcı tanımlayıcısı
         unregistered: Kayıtsız
         user_status: Kullanıcı durumu
+      meetings:
+        attendees_count_help_text: Yüz yüze, çevrimiçi veya hibrit olsun, toplantınızdaki
+          toplam katılan sayısını eklemeyi unutmayın.
     application:
       geocoding:
         not_configured: Coğrafi kodlama yapılandırılmamış!
     participatory_spaces:
       highlighted_proposals:
         see_all: Tüm önerileri gör
+      highlighted_meetings:
+        past_meetings: Geçmiş toplantılar
+        see_all: Tüm toplantıları gör
+        upcoming_meetings: Yaklaşan toplantılar
     proposals:
       actions:
         answer_proposal: Öneriyi yanıtla
@@ -1617,6 +1847,363 @@ tr:
       included_proposals:
         proposal_project: 'Bu projelerde görünen öneri:'
         proposal_result: 'Bu sonuçlarda görünen öneri:'
+      meetings_through_proposals:
+        meeting_result: 'İlişkili sonuçlar:'
+        result_meeting: 'İlişkili toplantılar:'
+      proposals_from_meeting:
+        meeting_proposal: 'İlişkili öneriler:'
+        proposal_meeting: 'İlişkili toplantılar:'
+    meetings:
+      actions:
+        agenda: Gündem
+        close: Kapat
+        confirm_delete_meeting: Bu toplantıyı silmek istediğinizden emin misiniz?
+        confirm_unpublish_meeting: Bu toplantının yayınını kaldırmak istediğinizden
+          emin misiniz?
+        deleted_meetings_info: Silinen toplantılar çöp kutusundan geri getirilebilir.
+        edit: Düzenle
+        invalid_destroy:
+          proposals_count:
+            one: 'Bu toplantı, kendisiyle ilişkili %{count} öneri olduğu için silinemez:'
+            other: 'Bu toplantı, kendisiyle ilişkili %{count} öneri olduğu için silinemez:'
+        manage_poll: Anketi yönet
+        mark_as_attendee: Katılan olarak işaretle
+        new_meeting: Yeni toplantı
+        preview: Önizleme
+        registrations: Kayıtlar
+        title: İşlemler
+        view_deleted_meetings: Silinen toplantıları görüntüle
+      admin_log:
+        invite:
+          create: "%{user_name}, %{space_name} alanında %{attendee_name} kişisini
+            %{resource_name} toplantısına katılmaya davet etti"
+          deleted: "%{user_name}, %{space_name} alanında %{attendee_name} kişisinin
+            %{resource_name} toplantısına katılma davetini geri aldı"
+          update: "%{user_name}, %{space_name} alanında %{attendee_name} kişisini
+            %{resource_name} toplantısına katılmaya davet etti"
+        meeting:
+          close: "%{user_name}, %{space_name} alanında %{resource_name} toplantısını
+            kapattı"
+          create: "%{user_name}, %{space_name} alanında %{resource_name} toplantısını
+            oluşturdu"
+          delete: "%{user_name}, %{space_name} alanında %{resource_name} toplantısını
+            sildi"
+          export_registrations: "%{user_name}, %{space_name} alanında %{resource_name}
+            toplantısının kayıtlarını dışa aktardı"
+          restore: "%{user_name}, %{space_name} alanında %{resource_name} toplantısını
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} alanındaki %{resource_name} toplantısını
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} alanında %{resource_name} toplantısını
+            güncelledi"
+          value_types:
+            organizer_presenter:
+              not_found: 'Düzenleyen veritabanında bulunamadı (Kimlik: %{id})'
+        questionnaire:
+          update: "%{user_name}, %{meeting_name} toplantısının anketini güncelledi"
+      application_helper:
+        filter_meeting_space_values:
+          all: Tümü
+      calendar:
+        meeting_to_event:
+          read_more: Bu toplantı hakkında daha fazla bilgi edinin
+      calendar_modal:
+        calendar_url: Takvim URL'si
+        copy_calendar_url: Kopyala
+        copy_calendar_url_clarification: Takvim URL'sini panoya kopyala
+        copy_calendar_url_copied: Kopyalandı!
+        copy_calendar_url_description: Yayınlanan tüm toplantıları takvim uygulamanızda
+          veya sağlayıcınızda görebilirsiniz. "URL'den yeni takvim ekle" seçeneğini
+          kullanarak bu URL'yi takviminize kopyalayıp yapıştırın.
+        copy_calendar_url_explanation: Etkin filtreler olduğundan bir toplantı seçkisini
+          dışa aktardığınızı unutmayın. Tümünü dışa aktarmak istiyorsanız önce tüm
+          filtreleri sıfırlayın.
+        copy_calendar_url_message: URL panoya başarıyla kopyalandı.
+        export_calendar: Takvimi dışa aktar
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          body: <a href="%{meeting_path}">"%{meeting_title}"</a> toplantısının kapatılması
+            bekleniyor. Lütfen "Toplantıyı kapat" düğmesini kullanarak toplantının
+            bir raporunu ekleyin.
+          greetings: Saygılarımızla,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+          hello: Merhaba %{username},
+          subject: Artık "%{meeting_title}" toplantısını bir raporla kapatabilirsiniz
+      conference_venues: Konferans Mekanları
+      content_blocks:
+        upcoming_meetings:
+          name: Yaklaşan toplantılar
+      directory:
+        meetings:
+          index:
+            meetings: Toplantılar
+            space_type: Katılım alanı
+      iframe_access_level:
+        all: Tüm ziyaretçiler
+        registered: Bu toplantıya kayıtlı katılımcılar
+        signed_in: Yalnızca giriş yapmış katılımcılar
+      iframe_embed_type:
+        embed_in_meeting_page: Toplantı sayfasına göm
+        none: Hiçbiri
+        open_in_live_event_page: Canlı etkinlik sayfasında aç
+        open_in_new_tab: URL'yi yeni sekmede aç
+      last_activity:
+        meeting_updated: 'Toplantı güncellendi:'
+        new_meeting: 'Yeni toplantı:'
+      layouts:
+        live_event:
+          close: kapat
+      mailer:
+        invite_join_meeting_mailer:
+          invite:
+            subject: Bir toplantıya katılma daveti
+        registration_mailer:
+          confirmation:
+            subject: Toplantı kaydınız onaylandı
+      meeting:
+        not_allowed: Bu toplantıyı görüntüleme izniniz yok.
+      meeting_closes:
+        edit:
+          back: Geri
+          close: Toplantıyı kapat
+          title: Toplantıyı kapat
+      meetings:
+        calendar_modal:
+          add_to_calendar: Takvime ekle
+          apple: Apple takvimine ekle
+          full_details_html: Tüm ayrıntılar için %{link} adresine gidin
+          google: Google takvimine ekle
+          outlook: Outlook takvimine ekle
+        count:
+          meetings_count:
+            one: "%{count} toplantı"
+            other: "%{count} toplantı"
+        create:
+          invalid: Bu toplantı oluşturulurken bir sorun oluştu.
+          success: Toplantıyı başarıyla oluşturdunuz.
+        edit:
+          back: Geri
+          title: Toplantınızı Düzenleyin
+          update: Güncelle
+        filters:
+          activity: Etkinliğim
+          all: Tümü
+          category: Kategori
+          date: Tarih
+          date_values:
+            all: Tümü
+            past: Geçmiş
+            upcoming: Yaklaşan
+          my_meetings: Toplantılarım
+          origin: Köken
+          origin_values:
+            all: Tümü
+            official: Resmi
+            participants: Katılımcılar
+          search: Ara
+          type: Tür
+          type_values:
+            all: Tümü
+            hybrid: Hibrit
+            in_person: Yüz yüze
+            online: Çevrimiçi
+        form:
+          address_help: 'Adres: konumu bulmak için Geocoder tarafından kullanılır'
+          available_slots_help: Sınırsız kontenjanınız varsa 0 bırakın
+          disclaimer: 'Sorumluluk reddi: Harici bir kayıt sistemi kullanarak, %{organization}
+            düzenleyicilerinin kullanıcıların harici hizmete sağladığı verilerden
+            sorumlu olmadığının farkındasınız.'
+          iframe_embed_type_html: 'Yalnızca birkaç hizmet şu alan adlarından toplantı
+            veya canlı etkinlikte gömmeye izin verir: %{domains}'
+          location_help: 'Konum: kullanıcılara buluşulacak yeri belirten mesaj'
+          location_hints_help: 'Konum ipuçları: ek bilgi. Örnek: yüz yüze toplantıysa
+            binanın katı veya kısıtlı erişimli çevrimiçi toplantıysa toplantı parolası.'
+          online_meeting_url_help: 'Bağlantı: katılımcıların toplantınıza doğrudan
+            bağlanmasını sağlar'
+          registration_url_help: 'Bağlantı: katılımcıların kayıt için kullandığınız
+            harici hizmete gitmesini sağlar'
+          select_a_meeting_type: Lütfen bir toplantı türü seçin
+          select_a_registration_type: Lütfen bir kayıt türü seçin
+          select_an_iframe_access_level: Lütfen bir iframe erişim düzeyi seçin
+        index:
+          click_here: Tüm toplantıları gör
+          new_meeting: Yeni toplantı
+          see_all: Tüm toplantıları gör
+          see_all_withdrawn: Geri çekilen tüm toplantıları gör
+          text_banner: Yazarları tarafından geri çekilen toplantıların listesini görüntülüyorsunuz.
+            %{go_back_link}.
+        meeting:
+          close_meeting: Kapat
+          edit_close_meeting: Toplantı raporunu düzenle
+          edit_meeting: Düzenle
+          join_meeting: Toplantıya katıl
+          reply_poll: Ankete yanıt ver
+          view_poll: Anketi görüntüle
+        meetings:
+          no_meetings_warning: Arama ölçütlerinize uyan toplantı yok veya planlanmış
+            hiçbir toplantı yok.
+          upcoming_meetings_warning: Şu anda planlanmış toplantı yok, ancak burada
+            geçmiş tüm toplantıları listelenmiş bulabilirsiniz.
+        new:
+          back: Geri
+          create: Oluştur
+          title: Yeni toplantı oluştur
+        registration_confirm:
+          cancel: İptal
+          confirm: Onayla
+        show:
+          attendees: Katılan sayısı
+          contributions: Katkı sayısı
+          join: Kaydol
+          join_waitlist: Bekleme listesine katıl
+          leave: Kaydınızı iptal edin
+          leave_confirmation: Bu toplantı için kaydınızı iptal etmek istediğinizden
+            emin misiniz?
+          leave_waitlist: Bekleme listesinden ayrıl
+          leave_waitlist_confirmation: Bu toplantının bekleme listesinden ayrılmak
+            istediğinizden emin misiniz?
+          link_available_soon: Bağlantı yakında kullanılabilir
+          link_closed: Toplantıya katılma bağlantısı, başlamadan birkaç dakika önce
+            kullanılabilir olacaktır
+          live_event: Bu toplantı şu anda gerçekleşiyor
+          meeting_minutes: Toplantı Tutanağı
+          micro_camera_permissions_warning: Aşağıdaki düğmeye tıkladığınızda mikrofon
+            ve/veya kamera izinleri istenecek ve görüntülü toplantıya katılacaksınız
+          no_slots_available: Kontenjan yok
+          organizations: Katılan kuruluşlar
+          pending_address: Konum yakında duyurulacaktır.
+          redirect_notice: Bu toplantı başka bir alanın parçası olduğundan %{current_space_name}
+            alanına taşındınız. <br>İsterseniz <a href="%{previous_space_url}">%{previous_space_name}</a>
+            alanına geri dönebilirsiniz.
+          registration_and_qr_code: Kayıt ve QR Kodu
+          registration_code: 'Kayıt kodu: %{code}'
+          registration_code_help_text: Kaydınız ve QR kodunuz
+          registration_state:
+            validated: DOĞRULANDI
+            validation_pending: DOĞRULAMA BEKLENİYOR
+          remaining_slots:
+            one: "%{count} kontenjan kaldı"
+            other: "%{count} kontenjan kaldı"
+          visit_finished: Geçmiş toplantıyı görüntüle
+          waitlist:
+            description: Bir yer açılırsa kaydınızı otomatik olarak işleyecek ve sizi
+              e-postayla bilgilendireceğiz.
+            status: Bekleme listesindesiniz
+          withdraw_btn_hint: Fikrinizi değiştirmeniz halinde toplantınızı geri çekebilirsiniz.
+            Toplantı silinmez, geri çekilen toplantılar listesinde görünür.
+          withdraw_confirmation_html: Bu toplantıyı geri çekmek istediğinizden emin
+            misiniz?<br><br><strong>Bu işlem iptal edilemez!</strong>
+          withdraw_meeting: Geri çek
+        update:
+          invalid: Toplantı güncellenirken bir sorun oluştu.
+          success: Toplantıyı başarıyla güncellediniz.
+      models:
+        invite:
+          fields:
+            email: E-posta
+            name: Ad
+            sent_at: Gönderilme zamanı
+            status: Durum
+          status:
+            accepted: Kabul edildi (%{at})
+            rejected: Reddedildi (%{at})
+            sent: Gönderildi
+        meeting:
+          fields:
+            closed: Kapatıldı
+            end_time: Bitiş tarihi
+            map: Harita
+            official_meeting: Resmi toplantı
+            published: Yayınlandı
+            start_time: Başlangıç tarihi
+            taxonomies: Taksonomiler
+            title: Başlık
+        registration:
+          actions: İşlemler
+          fields:
+            email: E-posta
+            name: Ad
+            status: Durum
+          status:
+            attended: Katıldı
+            not_attended: Katılmadı
+      polls:
+        questions:
+          closed_question:
+            announcement: Bu sorunun yanıtları kapatıldı.
+            question: Soru
+            question_results: Sonuçlar
+          index:
+            empty_questions: Bu toplantı boyunca bazı sorular gönderilecek ve bunları
+              yanıtlayabileceksiniz. Burada görüntülenecekler.
+          index_admin:
+            edit: Yönetim panelinde düzenle
+            question: Soru
+            received_response: alınan yanıt
+            received_responses: alınan yanıtlar
+            results: Sonuçlar
+            send: Gönder
+            sent: Gönderildi
+            statuses:
+              closed: Sonuçlar gönderildi (kapalı)
+              published: Gönderildi (açık)
+              unpublished: Gönderilmeyi bekliyor
+          published_question:
+            max_choices_alert: Çok fazla seçenek seçildi
+            question: Soru
+            question_replied: Soru yanıtlandı
+            reply_question: Soruyu yanıtla
+        responses:
+          index:
+            administrate: Yönet
+            title: Anket
+          index_admin:
+            back_to_meeting: Toplantıya dön
+            title: Anketi yönet
+            view_poll: Anketi görüntüle
+      public_participants_list:
+        attending_participants: Katılımcılar
+        hidden_participants_count:
+          one: ve %{count} kişi daha
+          other: ve %{count} kişi daha
+        show_less: Daha az göster
+        show_more: Daha fazla göster
+      read_more: "(devamını oku)"
+      registration_mailer:
+        confirmation:
+          confirmed_html: <a href="%{url}">%{title}</a> toplantısı için kaydınız onaylandı.
+          details: Toplantının ayrıntılarını ekte bulacaksınız.
+          registration_code: Kayıt kodunuz %{code}. Lütfen katılımınızı doğrulamak
+            için aşağıdaki QR kodunu bir yöneticiye gösterin.
+      registration_type:
+        on_different_platform: Farklı bir platformda
+        on_this_platform: Bu platformda
+        registration_disabled: Kayıt devre dışı
+      registrations:
+        create:
+          invalid: Bu toplantıya katılırken bir sorun oluştu.
+          success: Toplantıya başarıyla katıldınız. Bu toplantıya kaydolduğunuz için,
+            hakkında güncelleme olursa bilgilendirileceksiniz.
+        decline_invitation:
+          invalid: Davet reddedilirken bir sorun oluştu.
+          success: Daveti başarıyla reddettiniz.
+        destroy:
+          invalid: Bu toplantıdan ayrılırken bir sorun oluştu.
+          success: Toplantıdan başarıyla ayrıldınız.
+        waitlist:
+          invalid: Bekleme listesine katılırken bir sorun oluştu.
+          success: Toplantı bekleme listesine başarıyla katıldınız. Kaydınız kesinleştirilirse
+            bilgilendirileceksiniz.
+      type_of_meeting:
+        hybrid: Hibrit
+        in_person: Yüz yüze
+        online: Çevrimiçi
+      types:
+        private_meeting: Özel toplantı
+        transparent: Şeffaf
+        withdraw: Geri çekildi
+      withdraw:
+        error: Toplantı geri çekilirken bir sorun oluştu.
+        success: Toplantı başarıyla geri çekildi.
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -1714,6 +2301,8 @@ tr:
         instruction: 'Hesabınızın kilidini açmak için aşağıdaki bağlantıya tıklayın:'
         message: Hesabınız çok sayıda başarısız giriş denemesi nedeniyle kilitlendi.
         subject: Kilit açma talimatları
+      join_meeting:
+        subject: Bir toplantıya katılma daveti
     omniauth_callbacks:
       add_tos_errors: Hesap oluşturmak için hizmet şartları kabul edilmelidir.
       failure: '%{kind} hesabından kimliğiniz doğrulanamadı çünkü "%{reason}".'
@@ -1949,6 +2538,13 @@ tr:
       decidim/proposals/proposal_mentioned_event: Öneriden bahsedildi
       decidim/proposals/publish_proposal_event: Öneri yayınlandı
       decidim/proposals/voting_enabled_event: Öneri oylama etkin
+      decidim/meetings/close_meeting_event: Toplantı kapatıldı
+      decidim/meetings/create_meeting_event: Toplantı
+      decidim/meetings/meeting_registrations_enabled_event: Kayıtlar etkin
+      decidim/meetings/meeting_registrations_over_percentage_event: Kayıtlar sınırın
+        üzerinde
+      decidim/meetings/upcoming_meeting_event: Yaklaşan toplantı
+      decidim/meetings/update_meeting_event: Toplantı güncellendi
     attributes:
       debate:
         closed_at: Kapatılma zamanı
@@ -2028,6 +2624,59 @@ tr:
         import_proposals: Önerileri içe aktar
         keep_answers: Durumları ve yanıtları koru
         keep_authors: Özgün yazarları koru
+      close_meeting:
+        attendees_count: Katılan sayısı
+        attending_organizations: Katılan kuruluşların listesi
+        audio_url: Ses URL'si
+        closing_report: Tutanak
+        closing_visible: Görünür
+        contributions_count: Katkı sayısı
+        proposal_ids: Toplantıda oluşturulan öneriler
+        video_url: Video URL'si
+      meeting:
+        address: Adres
+        available_slots: Bu toplantı için mevcut kontenjan
+        customize_registration_email: Kayıt e-postasını özelleştir
+        decidim_category_id: Kategori
+        decidim_scope_id: Kapsam
+        description: Açıklama
+        end_time: Bitiş zamanı
+        id: Kimlik
+        iframe_access_level: Iframe erişim düzeyi
+        iframe_embed_type: Iframe gömme türü
+        iframe_embed_type_html: Yalnızca birkaç hizmet "Toplantı sayfasına göm" veya
+          "Canlı etkinlik sayfasında aç" seçeneğine izin verir. Mobil cihazlarda "Toplantı
+          sayfasına göm" seçeneğinde, ekran farklı boyutlar aldığından aslında "Canlı
+          etkinlik sayfasında aç" gibi çalışacağını unutmayın.
+        location: Konum
+        location_hints: Konum ipuçları
+        online_meeting_url: Çevrimiçi toplantı URL'si
+        organizer_gid: Şu adla oluştur
+        organizer_id: Düzenleyen
+        private_meeting: Özel toplantı
+        registration_email_custom_content: Kayıt e-postası özel içeriği
+        registration_form_enabled: Kayıt formu etkin
+        registration_terms: Kayıt şartları
+        registration_type: Kayıt türü
+        registration_url: Kayıt URL'si
+        registrations_enabled: Kayıtlar etkin
+        reserved_slots: Bu toplantı için ayrılan kontenjan
+        start_time: Başlangıç zamanı
+        title: Başlık
+        transparent: Şeffaf
+        type_of_meeting: Tür
+      meeting_agenda:
+        title: Başlık
+        visible: Görünür
+      meeting_agenda_items:
+        description: Açıklama
+        duration: Süre
+        title: Başlık
+      meeting_registration_invite:
+        email: E-posta
+        name: Ad
+      validate_registration_code:
+        code: Kod
     errors:
       models:
         questionnaire:
@@ -2065,6 +2714,23 @@ tr:
             base:
               not_official: Resmi değil
               voted: Oy veya beğeni almış
+        meeting:
+          attributes:
+            iframe_embed_type:
+              not_embeddable: Bu URL toplantı veya canlı etkinlik sayfasına gömülemez.
+            online_meeting_url:
+              url_format: Geçerli bir URL olmalıdır
+        meeting_agenda:
+          attributes:
+            base:
+              too_many_minutes: Öğelerin süresi toplantı süresini %{count} dakika
+                aşıyor.
+              too_many_minutes_child: Öğe alt öğelerinin süresi, "%{parent_title}"
+                gündem öğesinin üst süresini %{count} dakika aşıyor.
+        meeting_registration_invite:
+          attributes:
+            email:
+              already_invited: Bu e-posta hesabı zaten davet edildi.
   activerecord:
     models:
       decidim/comments/comment:
@@ -2089,6 +2755,9 @@ tr:
             merge_to_proposal_text: 'Bu öneri oluşturuldu: %{link}'
             split_from_proposal_text: 'Şu öneri oldu: %{link}'
             split_to_proposal_text: 'Bu öneri oluşturuldu: %{link}'
+        meetings:
+          meeting:
+            text: 'Bu toplantıda tartışıldı: %{link}'
       decidim/proposals/collaborative_draft:
         one: İş birlikçi taslak
         other: İş birlikçi taslaklar
@@ -2101,6 +2770,15 @@ tr:
       decidim/proposals/proposal_vote:
         one: Oy
         other: Oylar
+      decidim/meetings/meeting:
+        one: Toplantı
+        other: Toplantılar
+      decidim/meetings/minutes:
+        one: Tutanak
+        other: Tutanaklar
+      decidim/meetings/registration:
+        one: Kayıt
+        other: Kayıtlar
   errors:
     messages:
       cannot_have_comments: yorum içeremez
