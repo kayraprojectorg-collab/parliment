@@ -8,7 +8,7 @@ module Decidim
       include Decidim::LocalizedLocalesHelper
 
       def title
-        "Decidim"
+        "Kurultay"
       end
 
       def current_admin?(admin)
