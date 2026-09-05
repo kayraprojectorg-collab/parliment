@@ -361,7 +361,7 @@ en:
           success: The secret key is configured correctly.
       titles:
         dashboard: Dashboard
-        decidim: Decidim
+        decidim: Kurultay
   layouts:
     decidim:
       system:
