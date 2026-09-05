@@ -119,6 +119,8 @@ tr:
         placeholder_email: merhaba@ornek.org
     menu:
       home: Ana sayfa
+      processes: Süreçler
+      assemblies: Meclisler
     pages:
       home:
         extended:
@@ -639,6 +641,8 @@ tr:
         proposals: Öneriler dışa aktarması
         meeting_comments: Toplantı yorumları dışa aktarması
         meetings: Toplantılar dışa aktarması
+        participatory_processes: Katılım Süreçleri dışa aktarması
+        assemblies: Meclisler dışa aktarması
     events:
       comments:
         comment_by_followed_user:
@@ -1024,6 +1028,49 @@ tr:
             saatten az bir süre içinde başlayacak.'
           notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı
             %{reminders_before_hours} saatten az bir süre içinde başlayacak.
+      participatory_process:
+        role_assigned:
+          email_intro: '"%{resource_title}" katılım süreci için %{role} olarak atandınız.'
+          email_outro: Bu bildirimi "%{resource_title}" katılım sürecinin %{role}
+            rolünde olduğunuz için aldınız.
+          email_subject: '"%{resource_title}" için %{role} olarak atandınız.'
+          notification_title: <a href="%{resource_url}">%{resource_title}</a> katılım
+            süreci için %{role} olarak atandınız.
+        step_activated:
+          email_intro: "%{resource_title} aşaması artık %{participatory_space_title}
+            için etkin. Şu sayfadan görebilirsiniz:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} için bir güncelleme"
+          notification_title: '%{resource_title} aşaması artık <a href="%{resource_path}">%{participatory_space_title}</a>
+            için etkin'
+        step_changed:
+          email_intro: "%{participatory_space_title} içindeki %{resource_title} aşamasının
+            tarihleri güncellendi. Şu sayfadan görebilirsiniz:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} için bir güncelleme"
+          notification_title: <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içindeki <a href="%{resource_path}">%{resource_title}</a> aşamasının tarihleri
+            güncellendi.
+      assemblies:
+        create_assembly_member:
+          email_intro: <a href="%{resource_url}">%{resource_name}</a> meclisinin bir
+            yöneticisi sizi üyelerinden biri olarak ekledi.
+          email_outro: Bu bildirimi bir meclise davet edildiğiniz için aldınız. Katkıda
+            bulunmak için <a href="%{resource_url}">meclis sayfasına</a> bakın!
+          email_subject: "%{resource_name} meclisinin üyesi olmaya davet edildiniz!"
+          notification_title: <a href="%{resource_path}">%{resource_name}</a> Meclisinin
+            üyesi olarak kaydedildiniz. Katkıda bulunmak için <a href="%{resource_path}">meclis
+            sayfasına</a> bakın!
+      assembly:
+        role_assigned:
+          email_intro: '"%{resource_title}" meclisi için %{role} olarak atandınız.'
+          email_outro: Bu bildirimi "%{resource_title}" meclisinin %{role} rolünde
+            olduğunuz için aldınız.
+          email_subject: '"%{resource_title}" için %{role} olarak atandınız.'
+          notification_title: <a href="%{resource_url}">%{resource_title}</a> meclisi
+            için %{role} olarak atandınız.
     debates:
       actions:
         close: Kapat
@@ -1360,6 +1407,84 @@ tr:
           video_url: Toplantının video kaydı
           withdrawn: Bu toplantının geri çekilip çekilmediği
           withdrawn_at: Bu toplantının ne zaman geri çekildiği
+        participatory_processes:
+          access_mode: Erişim modu. Sürecin açık, kısıtlı veya şeffaf olup olmadığı.
+          area: Sürecin gerçekleştiği alan
+          component_settings: Sürecin bileşen ayarları
+          created_at: Bu alanın oluşturulduğu tarih
+          description: Sürecin uzun açıklaması
+          developer_group: Sürecin geliştirici grubu. Bu, süreci destekleyen kuruluştur.
+          end_date: Sürecin bitiş tarihi
+          follows_count: Bu alanı takip eden kullanıcı sayısı
+          id: Bu sürecin benzersiz tanımlayıcısı
+          local_area: Sürecin yerel alanı. Bu, sürecin gerçekleştiği kuruluş alanıdır.
+          meta_scope: Sürecin kapsam meta verisi
+          participatory_process_group: Varsa sürecin grubu
+          participatory_process_type: Sürecin türü
+          participatory_scope: Sürecin katılım kapsamı
+          participatory_structure: Sürecin katılım yapısı. Bu, sürecin nasıl karara
+            bağlandığıdır.
+          promoted: Sürecin öne çıkarılıp çıkarılmadığı
+          published_at: Bu alanın yayınlandığı tarih
+          reference: Alanın benzersiz referansı
+          remote_hero_image_url: Süreç ana görselinin URL'si
+          scope: Sürecin kapsamı
+          scopes_enabled: Kapsamların etkin olup olmadığı
+          short_description: Sürecin kısa açıklaması
+          slug: Süreç kısaltması (tanımlama amacıyla, URL için kullanılır)
+          start_date: Sürecin başlangıç tarihi
+          subtitle: Sürecin alt başlığı
+          target: Sürecin hedefi. Bu, sürece katılmaya çağrılanlardır.
+          title: Süreç başlığı
+          updated_at: Bu alanın son güncellendiği tarih
+          url: Alanın URL'si
+        assemblies:
+          access_mode: Erişim modu. Meclisin açık, kısıtlı veya şeffaf olup olmadığı.
+          area: Meclisin alanı
+          assembly_type: Meclisin türü
+          closing_date: Meclisin kapanış tarihi
+          closing_date_reason: Meclisin neden kapatıldığı
+          component_settings: Meclisin bileşen ayarları
+          composition: Meclisin bileşimi
+          created_at: Bu alanın oluşturulduğu tarih
+          created_by: Bu meclisi kimin oluşturduğu
+          created_by_other: Meclisin diğer oluşturanı
+          creation_date: Bu meclisin oluşturulma tarihi
+          decidim_scope_id: Meclisin kapsamı
+          description: Meclisin uzun açıklaması
+          developer_group: Meclisin geliştirici grubu
+          duration: Meclisin süresi
+          facebook_handler: Facebook için sosyal medya kullanıcı adı
+          follows_count: Bu alanı takip eden kullanıcı sayısı
+          github_handler: GitHub için sosyal medya kullanıcı adı
+          id: Bu meclisin benzersiz tanımlayıcısı
+          included_at: Meclisin dâhil edildiği tarih
+          instagram_handler: Instagram için sosyal medya kullanıcı adı
+          internal_organisation: Bu meclisin iç örgütlenmesi
+          is_transparent: Meclisin şeffaf olup olmadığı
+          local_area: Meclisin yerel alanı
+          meta_scope: Meclisin kapsam meta verisi
+          participatory_scope: Meclisin katılım kapsamı
+          participatory_structure: Meclisin katılım yapısı
+          promoted: Meclisin öne çıkarılıp çıkarılmadığı
+          published_at: Bu alanın yayınlandığı tarih
+          purpose_of_action: Meclisin eylem amacı
+          reference: Alanın benzersiz referansı
+          remote_banner_image_url: Meclis afiş görselinin URL'si
+          remote_hero_image_url: Meclis ana görselinin URL'si
+          scope: Meclisin kapsamı
+          scopes_enabled: Kapsamların etkin olup olmadığı
+          short_description: Meclisin kısa açıklaması
+          special_features: Bu meclisin hangi özel özelliklere sahip olduğu
+          subtitle: Meclisin alt başlığı
+          target: Meclisin hedefi
+          taxonomies: Projenin taksonomileri
+          title: Meclisin başlığı
+          twitter_handler: Twitter için sosyal medya kullanıcı adı
+          updated_at: Bu alanın son güncellendiği tarih
+          url: Alanın URL'si
+          youtube_handler: YouTube için sosyal medya kullanıcı adı
+          slug: Meclis kısaltması (tanımlama amacıyla, URL için kullanılır)
     statistics:
       debates_count: Tartışmalar
       debates_count_tooltip: Yapılan tartışmaların sayısı.
@@ -1377,6 +1502,11 @@ tr:
       meetings_count_tooltip: Hem çevrimiçi hem de yüz yüze gerçekleşen toplantıların
         sayısı.
       participatory_space_meetings_count: Toplantılar
+      processes_count: Süreçler
+      processes_count_tooltip: Herkese açık olan katılım süreçlerinin sayısı.
+      assemblies_count: Meclisler
+      assemblies_count_tooltip: Ortak kararların alındığı herkese açık meclislerin
+        sayısı.
     blogs:
       actions:
         author_id: Gönderiyi şu adla oluştur
@@ -2204,6 +2334,522 @@ tr:
       withdraw:
         error: Toplantı geri çekilirken bir sorun oluştu.
         success: Toplantı başarıyla geri çekildi.
+    admin_log:
+      participatory_process:
+        create: "%{user_name}, %{resource_name} katılım sürecini oluşturdu"
+        duplicate: "%{user_name}, %{resource_name} katılım sürecini çoğalttı"
+        export: "%{user_name}, %{resource_name} katılım sürecini dışa aktardı"
+        import: "%{user_name}, %{resource_name} katılım sürecini içe aktardı"
+        publish: "%{user_name}, %{resource_name} katılım sürecini yayınladı"
+        publish_all_members: "%{user_name}, %{resource_name} katılım sürecinin tüm
+          üyelerini yayınladı"
+        restore: "%{user_name}, %{resource_name} katılım sürecini geri getirdi"
+        soft_delete: "%{user_name}, %{resource_name} katılım sürecini çöp kutusuna
+          taşıdı"
+        unpublish: "%{user_name}, %{resource_name} katılım sürecinin yayınını kaldırdı"
+        unpublish_all_members: "%{user_name}, %{resource_name} katılım sürecinin tüm
+          üyelerinin yayınını kaldırdı"
+        update: "%{user_name}, %{resource_name} katılım sürecini güncelledi"
+      participatory_process_group:
+        create: "%{user_name}, %{resource_name} katılım süreci grubunu oluşturdu"
+        unpublish: "%{user_name}, %{resource_name} katılım süreci grubunun yayınını
+          kaldırdı"
+        update: "%{user_name}, %{resource_name} katılım süreci grubunu güncelledi"
+      participatory_process_step:
+        activate: "%{user_name}, %{space_name} katılım sürecinde %{resource_name}
+          aşamasını etkinleştirdi"
+        create: "%{user_name}, %{space_name} katılım sürecinde %{resource_name} aşamasını
+          oluşturdu"
+        delete: "%{user_name}, %{space_name} katılım sürecinde %{resource_name} aşamasını
+          sildi"
+        update: "%{user_name}, %{space_name} katılım sürecinde %{resource_name} aşamasını
+          güncelledi"
+      participatory_process_user_role:
+        create: "%{user_name}, %{resource_name} katılımcısını %{space_name} katılım
+          sürecine davet etti"
+        delete: "%{user_name}, %{resource_name} katılımcısını %{space_name} katılım
+          sürecinden kaldırdı"
+        update: "%{user_name}, %{space_name} katılım sürecinde %{resource_name} katılımcısının
+          rolünü değiştirdi"
+      assembly:
+        create: "%{user_name}, %{resource_name} meclisini oluşturdu"
+        duplicate: "%{user_name}, %{resource_name} meclisini çoğalttı"
+        export: "%{user_name}, %{resource_name} meclisini dışa aktardı"
+        import: "%{user_name}, %{resource_name} meclisini içe aktardı"
+        publish: "%{user_name}, %{resource_name} meclisini yayınladı"
+        publish_all_members: "%{user_name}, %{resource_name} meclisinin tüm üyelerini
+          yayınladı"
+        restore: "%{user_name}, %{resource_name} meclisini geri getirdi"
+        soft_delete: "%{user_name}, %{resource_name} meclisini çöp kutusuna taşıdı"
+        unpublish: "%{user_name}, %{resource_name} meclisinin yayınını kaldırdı"
+        unpublish_all_members: "%{user_name}, %{resource_name} meclisinin tüm üyelerinin
+          yayınını kaldırdı"
+        update: "%{user_name}, %{resource_name} meclisini güncelledi"
+      assembly_member:
+        create: "%{user_name}, %{space_name} meclisinde %{resource_name} üyesini oluşturdu"
+        delete: "%{user_name}, %{space_name} meclisinden %{resource_name} üyesini
+          kaldırdı"
+        update: "%{user_name}, %{space_name} meclisinde %{resource_name} üyesini güncelledi"
+      assembly_setting:
+        update: "%{user_name}, meclisler ayarlarını güncelledi"
+      assembly_type:
+        create: "%{user_name}, %{resource_name} meclis türünü oluşturdu"
+        delete: "%{user_name}, %{resource_name} meclis türünü kaldırdı"
+        publish: "%{user_name}, %{resource_name} meclis türünü yayınladı"
+        unpublish: "%{user_name}, %{resource_name} meclis türünün yayınını kaldırdı"
+        update: "%{user_name}, %{resource_name} meclis türünü güncelledi"
+      assembly_user_role:
+        create: "%{user_name}, %{resource_name} kişisini %{space_name} meclisine davet
+          etti"
+        delete: "%{user_name}, %{resource_name} katılımcısını %{space_name} meclisinden
+          kaldırdı"
+        update: "%{user_name}, %{space_name} meclisinde %{resource_name} kişisinin
+          rolünü değiştirdi"
+    help:
+      participatory_spaces:
+        participatory_processes:
+          contextual: "<p>Bir <strong>katılım süreci</strong>, belirli bir konu üzerinde
+            tanımlama yapmak ve karar almak amacıyla bir dizi katılım etkinliğidir
+            (ör. önce bir anket doldurmak, sonra öneriler sunmak, bunları yüz yüze
+            veya sanal toplantılarda tartışmak ve son olarak önceliklendirmek).</p>
+            <p>Katılım süreçlerine örnekler: komite üyelerinin seçildiği bir süreç
+            (önce adaylıklar sunulur, sonra tartışılır ve son olarak bir adaylık seçilir),
+            katılımcı bütçeler (öneriler yapılır, ekonomik olarak değerlendirilir
+            ve mevcut parayla oylanır), stratejik planlama süreci, bir yönetmelik
+            veya normun iş birlikçi taslağının hazırlanması, bir kentsel alanın tasarımı
+            veya bir kamu politikası planının üretimi.</p>\n"
+          page: "<p>Bir <strong>katılım süreci</strong>, belirli bir konu üzerinde
+            tanımlama yapmak ve karar almak amacıyla bir dizi katılım etkinliğidir
+            (ör. önce bir anket doldurmak, sonra öneriler sunmak, bunları yüz yüze
+            veya sanal toplantılarda tartışmak ve son olarak önceliklendirmek).</p>
+            <p>Katılım süreçlerine örnekler: komite üyelerinin seçildiği bir süreç
+            (önce adaylıklar sunulur, sonra tartışılır ve son olarak bir adaylık seçilir),
+            katılımcı bütçeler (öneriler yapılır, ekonomik olarak değerlendirilir
+            ve mevcut parayla oylanır), stratejik planlama süreci, bir yönetmelik
+            veya normun iş birlikçi taslağının hazırlanması, bir kentsel alanın tasarımı
+            veya bir kamu politikası planının üretimi.</p>\n"
+          title: Katılım süreci nedir?
+        assemblies:
+          contextual: "<p>Bir <strong>meclis</strong>, kuruluşun belirli bir alanı
+            veya kapsamı hakkında karar almak için düzenli olarak toplanan bir grup
+            kuruluş üyesidir.</p> <p>Meclisler toplantılar düzenler; bazıları özel,
+            bazıları açıktır. Açıksa, bunlara katılmak mümkündür (örneğin: kapasite
+            izin veriyorsa katılmak, gündeme madde eklemek veya bu organın aldığı
+            öneriler ve kararlar hakkında yorum yapmak).</p> <p>Örnekler: genel kurul
+            (yılda bir kez toplanıp kuruluşun ana eylem çizgilerini ve yürütme organlarını
+            oyla belirleyen), bir eşitlik danışma konseyi (kuruluşta toplumsal cinsiyet
+            ilişkilerini nasıl iyileştireceğine dair öneriler yapmak için iki ayda
+            bir toplanan), bir değerlendirme komisyonu (bir süreci izlemek için her
+            ay toplanan) veya bir güvence organı (karar alma prosedürlerini iyileştirmek
+            için olayları, suistimalleri veya önerileri toplayan) meclis örnekleridir.</p>\n"
+          page: "<p>Bir <strong>meclis</strong>, kuruluşun belirli bir alanı veya
+            kapsamı hakkında karar almak için düzenli olarak toplanan bir grup kuruluş
+            üyesidir.</p> <p>Meclisler toplantılar düzenler; bazıları özel, bazıları
+            açıktır. Açıksa, bunlara katılmak mümkündür (örneğin: kapasite izin veriyorsa
+            katılmak, gündeme madde eklemek veya bu organın aldığı öneriler ve kararlar
+            hakkında yorum yapmak).</p> <p>Örnekler: genel kurul (yılda bir kez toplanıp
+            kuruluşun ana eylem çizgilerini ve yürütme organlarını oyla belirleyen),
+            bir eşitlik danışma konseyi (kuruluşta toplumsal cinsiyet ilişkilerini
+            nasıl iyileştireceğine dair öneriler yapmak için iki ayda bir toplanan),
+            bir değerlendirme komisyonu (bir süreci izlemek için her ay toplanan)
+            veya bir güvence organı (karar alma prosedürlerini iyileştirmek için olayları,
+            suistimalleri veya önerileri toplayan) meclis örnekleridir.</p>\n"
+          title: Meclis nedir?
+    participatory_process_groups:
+      content_blocks:
+        extra_data:
+          developer_group: Destekleyen
+          name: Meta veri
+          participatory_scope: Ne karara bağlanır
+          participatory_structure: Nasıl karar verilir
+          target: Kimler katılır
+        html:
+          name: HTML bloğu
+        html_1:
+          name: Birinci HTML bloğu
+        html_2:
+          name: İkinci HTML bloğu
+        html_3:
+          name: Üçüncü HTML bloğu
+        main_data:
+          name: Başlık ve açıklama
+        participatory_processes:
+          active: Etkin katılım süreçleri
+          name: Katılım süreçleri
+        stats:
+          name: İstatistikler
+        title:
+          meta_scope: Kapsam
+          participatory_processes:
+            one: 1 süreç
+            other: "%{count} süreç"
+      related_processes:
+        help: Seçilen tüm süreçler, halihazırda başka gruplara atanmış olanlar da
+          dâhil olmak üzere bu gruba atanacaktır.
+      show:
+        title: Katılım süreci grupları
+    participatory_process_steps:
+      index:
+        process_steps: Süreç aşamaları
+    participatory_processes:
+      content_blocks:
+        democratic_quality_stats:
+          automatic_metrics:
+            description: Bu göstergeler platform verilerinden otomatik olarak elde
+              edilir.
+            indicators:
+              hybridization: Melezleşme
+              hybridization_tooltip: Bu gösterge, süreç boyunca çevrimiçi ve çevrimdışı
+                alanlar arasındaki birleşim düzeyini ölçer
+              influence: Yurttaş etkisi
+              influence_tooltip: Bu gösterge, kabul edilen öneriler ve sürecin çıktıları
+                üzerindeki yurttaş etkisi düzeyini ölçer.
+              traceability: İzlenebilirlik
+              traceability_tooltip: Bu gösterge, katılım sürecinin şeffaflığını ve
+                izlenebilirliğini ölçer. Katılımcıların önerilerin gelişimini ne kadar
+                kolay takip edebildiğini ve yayımlanan kayıtlar aracılığıyla kurumsal
+                eylemleri ne kadar doğrulayabildiğini yansıtır.
+              transparency: Yanıt verebilirlik
+              transparency_tooltip: Bu gösterge, kuruluşun katılımcı girdisine yanıt
+                verebilirlik düzeyini ölçer. Resmi yanıtlar ve uygulanan kararlar
+                aracılığıyla etkileşimlerini yansıtır.
+            name: Otomatik ölçütler
+          global_score:
+            description_html: Aşağıda, bu katılım sürecinin demokratik kalitesini
+              değerlendirmek için kullanılan bir dizi gösterge yer almaktadır. Nasıl
+              hesaplandıklarına dair daha fazla ayrıntı için <a href="%{info_url}">demokratik
+              kalite göstergeleri bilgi sayfasına</a> bakın.
+            name: Genel puan
+            note: "*Gösterge değerleri 1 ile 5 arasında bir ölçekte ölçülür; burada
+              1 en düşük, 5 en yüksek kalite göstergesini temsil eder."
+            tooltip: Tüm boyutların ortalaması olarak hesaplanır
+          name: Kalite göstergesi
+          qualitative_metrics:
+            description: Bu göstergeler, platform yöneticileri tarafından doldurulan
+              bir öz değerlendirme anketinin yanıtlarından elde edilir.
+            indicators:
+              citizen_influence: Yurttaş etkisi
+              citizen_influence_tooltip: Karar alma üzerindeki katılımcı etkisinin
+                düzeyini ölçer.
+              inclusiveness: Kapsayıcılık
+              inclusiveness_tooltip: Farklı ilgili tarafların adil biçimde temsil
+                edilip edilmediğini değerlendirir.
+              informativeness: Bilgilendiricilik
+              informativeness_tooltip: Süreç içinde sağlanan açıklık ve bilgi düzeyini
+                ölçer.
+            name: Öz değerlendirme ölçütleri
+        extra_data:
+          name: Aşama ve süre
+        hero:
+          name: Ana görsel ve eylem çağrısı
+        highlighted_processes:
+          name: Öne çıkan süreçler
+        related_processes:
+          name: İlişkili süreçler
+      index:
+        title: Katılım süreçleri
+      last_activity:
+        new_participatory_process: 'Yeni katılım süreci:'
+      pages:
+        home:
+          highlighted_processes:
+            active_spaces: Etkin süreçler
+            see_all_spaces: Tüm süreçleri gör
+      participatory_processes:
+        description:
+          area_name: Alan
+          data: Süreç verileri
+          developer_group: Destekleyen grup
+          local_area: Kuruluş Alanı
+          meta_scope: Kapsam
+          participatory_scope: Ne karara bağlanır
+          participatory_structure: Nasıl karar verilir
+          target: Kimler katılır
+          title: Bu süreç hakkında
+        filters:
+          all_types: Tüm türler
+          counters:
+            active:
+              one: 1 etkin süreç
+              other: "%{count} etkin süreç"
+            all:
+              one: 1 süreç
+              other: "%{count} süreç"
+            past:
+              one: 1 geçmiş süreç
+              other: "%{count} geçmiş süreç"
+            upcoming:
+              one: 1 yaklaşan süreç
+              other: "%{count} yaklaşan süreç"
+          date: Tarih
+          explanations:
+            no_active: Etkin süreç yok.
+            no_active_nor_upcoming: Etkin veya yaklaşan süreç yok.
+            no_active_nor_upcoming_callout: Etkin veya yaklaşan süreç yok. İşte geçmiş
+              süreçlerin bir listesi.
+          filter_by: Göster
+          names:
+            active: Etkin
+            all: Tümü
+            past: Geçmiş
+            upcoming: Yaklaşan
+          see: Gör
+          type: Tür
+        show:
+          title: Bu süreç hakkında
+      show:
+        belongs_to_group: 'Bu süreç şuna aittir:'
+        related_processes: İlişkili süreçler
+        related_assemblies: İlişkili meclisler
+      static_pages:
+        democratic_quality_indicators:
+          content: |-
+            <h2>Decidim'de kalite göstergesini ölçmek için gösterge sistemi.</h2>
+
+            <h3>Giriş</h3>
+            <p>Demokratik kalite, Decidim'in temel bir ilkesidir. Bunu korumak için, platformdaki katılım süreçlerinin kalitesini değerlendirmeye yardımcı olan bir gösterge sistemi geliştirdik. Bu makale, bu göstergelerin nasıl hesaplandığını açıklar.</p>
+
+            <h3>Göstergeler Nasıl Hesaplanır?</h3>
+            <p>Kalite göstergelerini toplamak için iki yöntem tanımladık:</p>
+
+            <ol>
+              <li><strong>Otomatik Ölçütler:</strong> Bunlar doğrudan Decidim platform verilerinden hesaplanır.</li>
+              <li><strong>Öz Değerlendirme Soruları:</strong> Bunlar bir yönetici tarafından doldurulan bir forma dayanır.</li>
+            </ol>
+
+            <p>Her gösterge bir yüzde (n/toplam) olarak ifade edilir. Bu yüzde daha sonra 1'den 5'e kadar bir ölçekte bir puana dönüştürülür:</p>
+
+            <ul>
+              <li>1 = 0–20%</li>
+              <li>2 = 20–40%</li>
+              <li>3 = 40–60%</li>
+              <li>4 = 60–80%</li>
+              <li>5 = 80–100%</li>
+            </ul>
+
+            <br><br>
+            <h3>Otomatik Ölçütler</h3>
+            <p>Bu ölçütler, Decidim'de mevcut verilerden otomatik olarak hesaplanır. Her katılım süreci için değerlendirilir ve yöneticiler tarafından herkese açık hâle getirilebilir; böylece tüm katılımcılar erişebilir.</p>
+
+            <p>Dört ana gösterge tanımladık: Yurttaş Etkisi, Melezleşme, Yanıt Verebilirlik ve İzlenebilirlik:</p>
+
+            <h3>Yurttaş Etkisi</h3>
+
+            <p>Bu gösterge, kabul edilen öneriler ve sürecin çıktıları üzerindeki yurttaş etkisi düzeyini ölçer.</p>
+
+            <ul>
+              <li>
+                Öneriler üzerinde yurttaş etkisi
+                <ul>
+                  <li>Kabul edilen önerilerin yüzdesi (n/toplam)</li>
+                  <li>Toplam yurttaş önerileri içinde onaylanan <em>yurttaş</em> önerilerinin yüzdesi (onaylanan öneriler üzerinde toplam yurttaş etkisi)</li>
+                  <li>Toplam onaylanan öneriler içinde onaylanan yurttaş önerilerinin yüzdesi (onaylanan öneri üzerinde göreli yurttaş etkisi)</li>
+                </ul>
+              </li>
+              <li>
+                Çıktılar/sonuçlar üzerinde yurttaş etkisi
+                <ul>
+                  <li>Toplam sonuçlar içinde yurttaş önerilerine bağlı sonuçların yüzdesi (çıktılar üzerinde toplam yurttaş etkisi)</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Melezleşme</h3>
+
+            <p>Bu gösterge, süreç boyunca çevrimiçi ve çevrimdışı alanlar arasındaki birleşim düzeyini ölçer.</p>
+
+            <ul>
+              <li>Bir toplantı bileşeni etkin mi? (Evet=5, Hayır=0)</li>
+              <li>Yüz yüze toplantılar var mı? (Evet=5, Hayır=0)</li>
+              <li>Çevrimiçi toplantılar var mı? (Evet=5, Hayır=0)</li>
+              <li>Hibrit toplantılar var mı? (Evet=5, Hayır=0)</li>
+              <li>Toplantılardan oluşturulan öneriler var mı? (Evet=5, Hayır=0)</li>
+            </ul>
+
+            <h3>Yanıt Verebilirlik</h3>
+
+            <p>Bu gösterge, kuruluşun katılımcı girdisine yanıt verebilirlik düzeyini ölçer. Resmi yanıtlar ve uygulanan kararlar aracılığıyla etkileşimlerini yansıtır.</p>
+
+            <ul>
+              <li>Yanıtı olan önerilerin yüzdesi (n/toplam) – Öneri kurumsal yanıt verebilirliği</li>
+              <li>%100 tamamlanan sonuçların yüzdesi (n/toplam)</li>
+            </ul>
+
+            <h3>İzlenebilirlik</h3>
+
+            <p>Bu gösterge, katılım sürecinin şeffaflığını ve izlenebilirliğini ölçer. Katılımcıların önerilerin gelişimini ne kadar kolay takip edebildiğini ve yayımlanan kayıtlar aracılığıyla kurumsal eylemleri ne kadar doğrulayabildiğini yansıtır.</p>
+
+            <ul>
+              <li>Geçmişi olan öneri sayısı (n/toplam)</li>
+              <li>Önerilere bağlı sonuçların yüzdesi (n/toplam)</li>
+              <li>Tutanağı yayımlanmış olarak kapatılan toplantıların yüzdesi (n/toplam)</li>
+              <li>Açık veri modülünün etkinleştirilmesi (ikili: 0 veya 5)</li>
+              <li>Bütçelerle ilişkili önerilerin yüzdesi (n/toplam)</li>
+            </ul>
+
+            <br><br>
+            <h3>Öz Değerlendirme Ölçütleri</h3>
+
+            <p>Otomatik ölçütlere ek olarak, her katılım sürecinin niteliksel boyutlarını değerlendirmek için bir <strong>öz değerlendirme formu</strong> kullanılmasını öneriyoruz. Bu form, her sürecin sonunda platform yöneticileri tarafından doldurulacak ve yanıtlar göstergeler içerik bloğunda herkese açık olarak görüntülenecektir.</p>
+
+            <p>Bu sorular, yalnızca niceliksel verilerle değerlendirilemeyen demokratik kalite yönlerini yakalamayı amaçlar. Bu ankete verilen yanıtların platform yöneticilerinin görüşüyle yanlı olduğunu unutmamak önemlidir.</p>
+
+            <br><br>
+            <h3>Öz değerlendirme soruları</h3>
+
+            <p>Yöneticiler tarafından yanıtlanan öz değerlendirme formunu oluşturan sorular ile her yanıtla ilişkili değerler aşağıda belirtilmiştir.</p>
+
+            <h4>Bilgilendiricilik</h4>
+
+            <ol>
+              <li>Yayımlanan bilgiler, karar alma mekanizmaları (ör. oylama, uzlaşı, doğrudan müzakereler) hakkında açıklık sağlıyor mu?
+                <ul>
+                  <li>Açıklık yok = 0</li>
+                  <li>Düşük açıklık = 1</li>
+                  <li>Yeterli açıklık = 2,5</li>
+                  <li>Tam açıklık = 5</li>
+                </ul>
+              </li>
+              <li>Katılımcıların tartışılan konu üzerindeki etki kapasitesine ilişkin bilgi sağlandı mı (hem sürecin iletişiminde ve davetlerde, hem de her tartışma oturumunun başında)?
+                <ul>
+                  <li>Asla = 0</li>
+                  <li>Neredeyse hiç = 1</li>
+                  <li>Genellikle = 2,5</li>
+                  <li>Her zaman = 5</li>
+                </ul>
+              </li>
+            </ol>
+
+            <h4>Yurttaş etkisi</h4>
+
+            <ol>
+              <li>Süreçteki katılım derecesinin değerlendirilmesi
+                <ul>
+                  <li>Katılımcılar kuruluştan bilgi aldı. = 1</li>
+                  <li>Katılımcılara danışıldı veya kuruluşa geri bildirim verdiler. = 2</li>
+                  <li>Katılımcılar karar alma gücünü paylaşmaya dâhil edildi. = 3</li>
+                  <li>Katılımcılar karar almaya belirleyici biçimde dâhil edildi. = 4</li>
+                  <li>Katılımcılar karar almaya ve kaynakların yönetimine veya uygulamaya dâhil edildi. = 5</li>
+                </ul>
+              </li>
+              <li>0-5 yurttaş karar müdahalesi olan aşamaların yüzdesi.
+                <p>Süreçteki tüm aşamalar içinde (konuların seçilmesinden uygulamanın denetlenmesine kadar), halkın kaç tanesinde karar alma veya yürütme eylemi yapma yeteneği var?</p>
+                <ul>
+                  <li>0-20% = 1</li>
+                  <li>20-40% = 2</li>
+                  <li>40-60% = 3</li>
+                  <li>60-80% = 4</li>
+                  <li>80-100% = 5</li>
+                </ul>
+              </li>
+            </ol>
+
+            <h4>Kapsayıcılık</h4>
+
+            <ol>
+              <li>Süreçte, referans nüfusa göre aktörlerin ve katılımcıların çeşitlilik derecesi nasıl değerlendiriliyor?
+                <ul>
+                  <li>Hiç = 0</li>
+                  <li>Düşük = 1</li>
+                  <li>Yeterli = 2,5</li>
+                  <li>İyi = 5</li>
+                </ul>
+              </li>
+              <li>Süreç kaç dilde iletildi?
+                <ul>
+                  <li>Bir dil = 1</li>
+                  <li>Toplulukta konuşulan dillerin yarısından azı = 2,5</li>
+                  <li>Toplulukta konuşulan dillerin yarısından fazlası = 5</li>
+                </ul>
+              </li>
+              <li>Yüz yüze toplantıların mekanları hareket kısıtlılığı olan kişiler için erişilebilir miydi?
+                <ul>
+                  <li>Hayır = 0</li>
+                  <li>Kısmen = 2,5</li>
+                  <li>Evet = 5</li>
+                </ul>
+              </li>
+              <li>Katılım oturumları çeşitli zamanlarda (sabah, öğle, öğleden sonra, akşam ve hafta sonları) planlandı.
+                <ul>
+                  <li>Hayır = 0</li>
+                  <li>Kısmen = 2,5</li>
+                  <li>Evet = 5</li>
+                </ul>
+              </li>
+              <li>Katılımcılara dijital destek sunuldu mu?
+                <ul>
+                  <li>Hayır = 0</li>
+                  <li>Kısmen = 2,5</li>
+                  <li>Evet = 5</li>
+                </ul>
+              </li>
+            </ol>
+          title: Demokratik kalite göstergeleri
+    assemblies:
+      assemblies:
+        description:
+          area_name: Alan
+          closing_date: Kapanış tarihi
+          created_by: Oluşturan
+          creation_date: Oluşturulma tarihi
+          data: Meclis verileri
+          developer_group: Destekleyen grup
+          duration: Süre
+          included_at: Dâhil edilme tarihi
+          indefinite_duration: Belirsiz
+          local_area: Kuruluş Alanı
+          meta_scope: Kapsam
+          participatory_scope: Ne karara bağlanır
+          participatory_structure: Nasıl karar verilir
+          target: Kimler katılır
+          title: Bu meclis hakkında
+        filters:
+          names:
+            all: Tümü
+          type: Tür
+        show:
+          title: Bu meclis hakkında
+      content_blocks:
+        children_assemblies:
+          name: Meclisler
+        dates_metadata:
+          name: Tarih meta verisi
+        extra_data:
+          name: Tür ve süre
+        highlighted_assemblies:
+          name: Öne çıkan meclisler
+        related_assemblies:
+          name: İlişkili meclisler
+      created_by:
+        city_council: Belediye Meclisi
+        others: Diğerleri
+        public: Kamu
+      filter:
+        all: Tüm türler
+        commission: Komisyon
+        consultative_advisory: Danışma/İstişare
+        executive: Yürütme
+        government: Yönetim
+        help: 'Göster:'
+        others: Diğerleri
+        participatory: Katılımcı
+        working_group: Çalışma grubu
+      index:
+        title: Meclisler
+      last_activity:
+        new_assembly: 'Yeni meclis:'
+      pages:
+        home:
+          highlighted_assemblies:
+            active_spaces: Etkin meclisler
+            see_all_spaces: Tüm meclisleri gör
+      show:
+        duration: Süre
+        social_networks_title: Meclisi şurada ziyaret edin
+    log:
+      value_types:
+        assembly_presenter:
+          not_found: 'Meclis veritabanında bulunamadı (Kimlik: %{id})'
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -2519,6 +3165,38 @@ tr:
         notifications_settings: Bildirim ayarları
         profile: Profil
         title: Katılımcı ayarları
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Göz at
+          browse_resource: "%{resource_name} süreç grubuna göz at"
+          processes_count: 'Süreçler:'
+      participatory_process_navigation:
+        member_menu_item: Üyeler
+      participatory_processes:
+        index:
+          promoted_processes: Öne çıkan süreçler
+        participatory_process:
+          active_step: Geçerli aşama
+          more_info: Daha fazla bilgi
+          more_info_about: "%{resource_name} süreci hakkında daha fazla bilgi"
+          take_part: Katıl
+          take_part_in: "%{resource_name} sürecine katıl"
+      assemblies:
+        assembly:
+          more_info: Daha fazla bilgi
+          take_part: Katıl
+        index:
+          promoted_assemblies: Öne çıkan meclisler
+        metadata:
+          children_item:
+            one: "%{count} meclis"
+            other: "%{count} meclis"
+        order_by_assemblies:
+          assemblies:
+            one: "%{count} meclis"
+            other: "%{count} meclis"
+      assembly_navigation:
+        assembly_member_menu_item: Üyeler
   activemodel:
     models:
       decidim/comments/comment_by_followed_user_event: Yorum
@@ -2545,6 +3223,8 @@ tr:
         üzerinde
       decidim/meetings/upcoming_meeting_event: Yaklaşan toplantı
       decidim/meetings/update_meeting_event: Toplantı güncellendi
+      decidim/participatory_process_step_activated_event: Aşama etkinleştirildi
+      decidim/participatory_process_step_changed_event: Aşama değiştirildi
     attributes:
       debate:
         closed_at: Kapatılma zamanı
@@ -2677,6 +3357,130 @@ tr:
         name: Ad
       validate_registration_code:
         code: Kod
+      participatory_process:
+        announcement: Duyuru
+        area_id: Alan
+        decidim_area_id: Alan
+        description: Açıklama
+        developer_group: Destekleyen grup
+        document: Belge
+        domain: Etki alanı
+        duplicate_categories: Kategorileri çoğalt
+        duplicate_components: Bileşenleri çoğalt
+        duplicate_landing_page_blocks: Açılış sayfası bloklarını çoğalt
+        duplicate_steps: Aşamaları çoğalt
+        end_date: Bitiş tarihi
+        has_members: Bu alanın üyeleri var
+        hero_image: Ana sayfa görseli
+        import_attachments: Ekleri içe aktar
+        import_categories: Kategorileri içe aktar
+        import_components: Bileşenleri içe aktar
+        import_steps: Aşamaları içe aktar
+        local_area: Kuruluş alanı
+        meta_scope: Kapsam meta verisi
+        participatory_process_group_id: Süreçler grubu
+        participatory_scope: Ne karara bağlanır
+        participatory_structure: Nasıl karar verilir
+        promoted: Öne çıkan
+        published_at: Yayınlanma tarihi
+        related_process_ids: İlişkili süreçler
+        short_description: Kısa açıklama
+        slug: URL kısaltması
+        start_date: Başlangıç tarihi
+        subtitle: Alt başlık
+        target: Kimler katılır
+        title: Başlık
+        weight: Sıra konumu
+      participatory_process_group:
+        description: Açıklama
+        developer_group: Destekleyen grup
+        group_url: Web sitesi
+        hero_image: Görsel
+        local_area: Kuruluş alanı
+        meta_scope: Kapsam meta verisi
+        participatory_process_ids: İlişkili süreçler
+        participatory_scope: Ne karara bağlanır
+        participatory_structure: Nasıl karar verilir
+        target: Kimler katılır
+        title: Başlık
+      participatory_process_step:
+        cta_path: Eylem çağrısı yolu
+        cta_text: Eylem çağrısı metni
+        description: Açıklama
+        end_date: Bitiş tarihi
+        short_description: Kısa açıklama
+        start_date: Başlangıç tarihi
+        title: Başlık
+      participatory_process_user_role:
+        email: E-posta
+        name: Ad
+        role: Rol
+      assembly:
+        announcement: Duyuru
+        area_id: Alan
+        assembly_type: Meclis türü
+        assembly_type_other: Diğer meclis türü
+        banner_image: Afiş görseli
+        closing_date: Kapanış tarihi
+        closing_date_reason: Kapanış tarihi nedeni
+        composition: Bileşim
+        created_by: Oluşturan
+        created_by_other: Diğer oluşturan
+        creation_date: Oluşturulma tarihi
+        decidim_area_id: Alan
+        decidim_scope_id: Kapsam
+        description: Açıklama
+        developer_group: Destekleyen grup
+        document: Belge
+        domain: Etki alanı
+        duplicate_categories: Kategorileri çoğalt
+        duplicate_components: Bileşenleri çoğalt
+        duplicate_features: Özellikleri çoğalt
+        duration: Süre
+        facebook: Facebook
+        github: GitHub
+        has_members: Bu alanın üyeleri var
+        hero_image: Ana sayfa görseli
+        import_attachments: Ekleri içe aktar
+        import_categories: Kategorileri içe aktar
+        import_components: Bileşenleri içe aktar
+        included_at: Dâhil edilme tarihi
+        instagram: Instagram
+        internal_organisation: İç örgütlenme
+        is_transparent: Şeffaf mı
+        local_area: Kuruluş alanı
+        meta_scope: Kapsam meta verisi
+        parent_id: Üst meclis
+        participatory_processes_ids: İlişkili katılım süreçleri
+        participatory_scope: Ne karara bağlanır
+        participatory_structure: Nasıl karar verilir
+        promoted: Öne çıkan
+        published_at: Yayınlanma tarihi
+        purpose_of_action: Eylem amacı
+        short_description: Kısa açıklama
+        slug: URL kısaltması
+        special_features: Özel özellikler
+        subtitle: Alt başlık
+        target: Kimler katılır
+        title: Başlık
+        twitter: X
+        weight: Sıra konumu
+        youtube: YouTube
+      assembly_member:
+        birthday: Doğum günü
+        birthplace: Doğum yeri
+        ceased_date: Görevden ayrılma tarihi
+        designation_date: Atanma tarihi
+        full_name: Tam ad
+        gender: Cinsiyet
+        non_user_avatar: Avatar
+        position: Pozisyon
+        user_id: Kullanıcı veya grup
+        weight: Sıra konumu
+      assembly_user_role:
+        email: E-posta
+        name: Ad
+        role: Rol
     errors:
       models:
         questionnaire:
@@ -2731,6 +3535,20 @@ tr:
           attributes:
             email:
               already_invited: Bu e-posta hesabı zaten davet edildi.
+        participatory_process:
+          attributes:
+            document:
+              allowed_file_content_types: 'Geçersiz belge türü. Yalnızca şu uzantılara
+                sahip dosyalara izin verilir: %{types}'
+              empty: Belge boş
+              invalid_json: Belge geçerli bir JSON değil
+        assembly:
+          attributes:
+            document:
+              allowed_file_content_types: 'Geçersiz belge türü. Yalnızca şu uzantılara
+                sahip dosyalara izin verilir: %{types}.'
+              empty: Belge boş
+              invalid_json: Belge geçerli bir JSON değil
   activerecord:
     models:
       decidim/comments/comment:
@@ -2779,6 +3597,24 @@ tr:
       decidim/meetings/registration:
         one: Kayıt
         other: Kayıtlar
+      decidim/participatory_process:
+        one: Katılım süreci
+        other: Katılım süreçleri
+      decidim/participatory_process_group:
+        one: Katılım süreci grubu
+        other: Katılım süreci grupları
+      decidim/participatory_process_step:
+        one: Aşama
+        other: Aşamalar
+      decidim/assembly:
+        one: Meclis
+        other: Meclisler
+      decidim/assembly_member:
+        one: Meclis üyesi
+        other: Meclis üyeleri
+      decidim/assembly_user_role:
+        one: Meclis kullanıcı rolü
+        other: Meclis kullanıcı rolleri
   errors:
     messages:
       cannot_have_comments: yorum içeremez
