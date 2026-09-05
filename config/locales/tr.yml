@@ -1,0 +1,559 @@
+---
+tr:
+  decidim:
+    account:
+      blocked: Bu hesap, hizmet şartları ihlali nedeniyle engellenmiştir
+      delete:
+        alert: Bu işlem geri alınamaz. Hesabınızı silerseniz kimlik bilgilerinizle
+          giriş yapamazsınız. Hesabınızın silinmesi, katkılarınızın anonimleştirilmesiyle
+          sonuçlanır. Yeni bir hesap oluşturabilirsiniz, ancak bu katkılar onunla
+          ilişkilendirilmeyecektir.
+        confirm:
+          close: Pencereyi kapat
+          ok: Evet, hesabımı silmek istiyorum
+          question: Hesabınızı silmek istediğinizden emin misiniz?
+          title: Hesabımı sil
+        explanation: Lütfen hesabınızı silmek isteme nedeninizi yazın (isteğe bağlı).
+        leaving_authorizations_behind: Yetkilendirmenize bağlı bazı veriler güvenlik
+          nedeniyle saklanacaktır. Başka bir hesap oluşturup yeniden yetkilendirirseniz,
+          bu veriler yeni hesabınıza aktarılacaktır.
+      destroy:
+        error: Hesabınız silinirken bir sorun oluştu.
+        inactive_account_removal_reason: Hesap, %{inactivity_period} gün hareketsizlik
+          sonrası kaldırıldı
+        success: Hesabınız başarıyla silindi.
+      download_your_data_export:
+        export_expired: Dışa aktarmanın süresi doldu. Yeni bir dışa aktarma oluşturmayı
+          deneyin.
+        export_not_found: Eriştiğiniz dışa aktarma mevcut değil veya indirme erişiminiz
+          yok
+        file_no_exists: Dosya mevcut değil
+        notice: Verilerinizin indirilmesi şu anda devam ediyor. Tamamlandığında bir
+          e-posta alacaksınız.
+      email_change:
+        body1: Yeni e-posta adresinizi doğrulamak için %{unconfirmed_email} adresine
+          bir e-posta gönderdik.
+        body2: Doğrulama e-postasını tekrar göndermemizi ister misiniz? %{resend_link}
+          ya da %{cancel_link}.
+        cancel: iptal et
+        cancel_error: E-posta değişikliği iptal edilemedi.
+        cancel_successfully: E-posta değişikliği başarıyla iptal edildi.
+        resend_error: Doğrulama e-postası yeniden gönderilemedi.
+        resend_successfully: Doğrulama e-postası %{unconfirmed_email} adresine başarıyla
+          yeniden gönderildi.
+        send_again: Tekrar gönder
+        title: E-posta değişikliği doğrulaması
+      show:
+        available_locales_helper: Platformda gezinmek ve bildirim almak için kullanmak
+          istediğiniz dili seçin.
+        change_password: Parolayı değiştir
+        update_account: Hesabı güncelle
+      update:
+        error: Hesabınız güncellenirken bir sorun oluştu.
+        success: Hesabınız başarıyla güncellendi.
+        success_with_email_confirmation: Hesabınız başarıyla güncellendi. Yeni e-posta
+          adresinizi onaylamak için bir e-posta alacaksınız.
+    devise:
+      omniauth_registrations:
+        create:
+          email_already_exists: Başka bir hesap aynı e-posta adresini kullanıyor.
+        new:
+          complete_profile: Profili tamamla
+          nickname_help: "%{organization} içindeki takma adınız. Yalnızca harf, rakam,
+            '-' ve '_' içerebilir."
+          sign_up: Lütfen profilinizi tamamlayın
+          subtitle: Hesap oluşturmayı tamamlamak için lütfen aşağıdaki formu doldurun
+          username_help: Gönderilerinizde görünen herkese açık ad. Anonimliği güvence
+            altına almak amacıyla herhangi bir ad olabilir.
+        new_tos_fields:
+          sign_up: Hesap oluştur
+          sign_up_title: Hesabınızı oluşturmayı bitirin
+      registrations:
+        create:
+          error: Hesabınız oluşturulurken bir sorun oluştu.
+        new:
+          already_have_an_account?: Zaten bir hesabınız var mı?
+          log_in: Giriş yap
+          newsletter: Zaman zaman ilgili bilgileri içeren bir bülten al
+          newsletter_title: İletişim izni
+          sign_up: Hesap oluştur
+          subtitle: Platforma katılmak için bir hesap oluşturun.
+          terms: hizmet şartları
+          tos_agreement: Kaydolarak %{link} kabul etmiş olursunuz.
+          tos_title: Hizmet Şartları
+          username_help: Gönderilerinizde görünen herkese açık ad. Anonimliği güvence
+            altına almak amacıyla herhangi bir ad olabilir.
+      sessions:
+        new:
+          are_you_new?: Henüz kayıtlı değil misiniz?
+          register: Hesap oluştur
+          sign_in_disabled: Harici bir hesapla erişebilirsiniz.
+          sign_up_disabled: Hesap oluşturma devre dışı; erişmek için mevcut bir hesabı
+            kullanabilirsiniz.
+        user:
+          ephemeral_session_closed: Misafir oturumunuz sona erdi
+          timed_out: Çok uzun süre hareketsiz kaldınız ve hizmetten otomatik olarak
+            çıkışınız yapıldı. Hizmeti kullanmaya devam etmek isterseniz lütfen tekrar
+            giriş yapın.
+      shared:
+        newsletter_modal:
+          buttons:
+            check: İşaretle ve devam et
+            uncheck: İşaretsiz bırak
+          notice: |-
+            <p>Bülten almak istemediğinizden emin misiniz?
+            Lütfen aşağıdaki bülten kutucuğunu tekrar işaretlemeyi düşünün.
+            Önemli duyurular yapabilmemiz için zaman zaman e-posta alabilmeniz bizim için çok önemli;
+            bunu her zaman bildirim ayarları sayfanızdan değiştirebilirsiniz.</p>
+            <p>Kutucuğu işaretlemezseniz, platformdaki yeni katılım fırsatları hakkında önemli bilgileri kaçırabilirsiniz.<br>
+            Yine de bülten almaktan kaçınmak istiyorsanız, kararınızı gayet iyi anlıyoruz.</p>
+            <p>Okuduğunuz için teşekkürler!</p>
+          title: Bülten bildirimleri
+        omniauth_buttons:
+          or: veya
+        password_fields:
+          hidden_password: Parolanız gizli
+          hide_password: Parolayı gizle
+          show_password: Parolayı göster
+          shown_password: Parolanız görünür
+        placeholder_email: merhaba@ornek.org
+    menu:
+      home: Ana sayfa
+    pages:
+      home:
+        extended:
+          debates: Tartışmalar
+          debates_explanation: Tartışın ve fikir alışverişinde bulunun, görüşlerinizi
+            paylaşın ve ilgili konuları zenginleştirin.
+          how_to_participate: Bir sürece nasıl katılırım?
+          meetings: Toplantılar
+          meetings_explanation: Kamuya açık toplantılara nerede ve ne zaman katılabileceğinizi
+            öğrenin.
+          more_info: "%{resource_name} hakkında daha fazla bilgi"
+          proposals: Öneriler
+          proposals_explanation: Öneriler sunun, mevcut olanları destekleyin ve görmek
+            istediğiniz değişiklikleri teşvik edin.
+        footer_sub_hero:
+          footer_sub_hero_body_html: Daha açık, şeffaf ve iş birliğine dayalı bir
+            toplum inşa edelim.<br /> Katılın, katkı verin ve karar alın.
+          footer_sub_hero_headline: "%{organization} katılım platformuna hoş geldiniz."
+          register: Hesap oluştur
+        hero:
+          participate: Katıl
+          participate_title: Platformun süreçlerine katılın
+          welcome: "%{organization} platformuna hoş geldiniz!"
+        statistics:
+          headline: İstatistikler
+        sub_hero:
+          register: Hesap oluştur
+          register_title: Hesap oluştur
+      index:
+        standalone_pages: Sayfalar
+        subheading: "%{name} yardım sayfalarında gezinin"
+        title: Yardım
+        topics: Konular
+      terms_of_service:
+        accept:
+          error: Hizmet şartları kabul edilirken bir sorun oluştu.
+          success: Harika! Hizmet şartlarını kabul ettiniz.
+        form:
+          agreement: Bu şartları kabul ediyorum
+          legend: Hizmet şartlarını kabul et
+        refuse:
+          modal_body: Reddederseniz platformu kullanamazsınız; <a href="%{download_your_data_path}">verilerinizi
+            indirebilir</a> ve/veya <a href="%{delete_path}">hesabınızı silebilirsiniz</a>.
+          modal_btn_continue: Şartları kabul et ve devam et
+          modal_btn_exit: Daha sonra gözden geçireceğim
+          modal_button: Şartları reddet
+          modal_title: Güncellenen hizmet şartlarını gerçekten reddediyor musunuz?
+        required_review:
+          alert: Hizmet Şartlarımızı güncelledik, lütfen gözden geçirin.
+          body: Lütfen Hizmet Şartlarımızdaki güncellemeleri gözden geçirmek için
+            bir dakikanızı ayırın. Aksi takdirde platformu kullanamazsınız.
+          title: 'Gerekli: Hizmet şartlarımızdaki güncellemeleri gözden geçirin'
+    search:
+      name: Ara
+      results: Arama sonuçları
+      results_found_for_term: '"%{term}" araması için %{count} sonuç'
+      term_input_placeholder: Ara
+    shared:
+      confirm_modal:
+        cancel: İptal
+        close_modal: Pencereyi kapat
+        ok: Tamam
+        title: Onayla
+      confirm_unload: Bu sayfada kaydedilmemiş değişiklikler var. Bu sayfadan ayrılmak
+        istediğinizden emin misiniz?
+      embed:
+        title: Gömülü video içeriği
+      filter_form_help:
+        help: Aşağıdaki form, arama koşulları değiştiğinde arama sonuçlarını dinamik
+          olarak filtreler.
+        skip: Sonuçlara geç
+      flag_modal:
+        already_reported: Bu içerik zaten bildirildi ve bir yönetici tarafından incelenecek.
+        close: Kapat
+        description: Bu içerik uygunsuz mu?
+        does_not_belong: Yasa dışı etkinlik, intihar tehdidi, kişisel bilgi veya %{organization_name}
+          üzerinde bulunmaması gerektiğini düşündüğünüz başka bir şey içeriyor.
+        hide: Gizle
+        hide_content: Bu içeriği gizle
+        offensive: Irkçılık, cinsiyetçilik, hakaret, kişisel saldırı, ölüm tehdidi,
+          intihara teşvik veya herhangi bir nefret söylemi içeriyor.
+        reason: Neden
+        report: Bildir
+        spam: Tıklama tuzağı, reklam, dolandırıcılık veya bot içeriyor.
+        title: Uygunsuz içeriği bildir
+      flag_user_modal:
+        already_reported: Bu içerik zaten bildirildi ve bir yönetici tarafından incelenecek.
+        block: Bu katılımcıyı engelle
+        description: Bu katılımcıyla ilgili uygunsuz olan nedir?
+        does_not_belong: Yasa dışı etkinlik, intihar tehdidi, kişisel bilgi veya %{organization_name}
+          üzerinde bulunmaması gerektiğini düşündüğünüz başka bir şey içeriyor.
+        hide: Tüm içeriklerini gizle
+        offensive: Irkçılık, cinsiyetçilik, hakaret, kişisel saldırı, ölüm tehdidi,
+          intihara teşvik veya herhangi bir nefret söylemi içeriyor.
+        report: Bildir
+        spam: Tıklama tuzağı, reklam, dolandırıcılık veya bot içeriyor.
+        title: Uygunsuz katılımcıyı bildir
+      floating_help:
+        help: Yardım
+      follow_button:
+        log_in_before_follow: Lütfen bu işlemi gerçekleştirmeden önce giriş yapın
+      login_modal:
+        please_log_in: Lütfen giriş yapın
+        sign_up: Hesap oluştur
+      mentions:
+        search_prompt: Katılımcı aramak için yazın
+      mentions_modal:
+        remove_recipient: "%{name} alıcısını kaldır"
+      progress: İlerleme
+      public_participation:
+        public_participation: Katılımımı herkese açık göster
+      reference:
+        reference: 'Referans: %{reference}'
+      results_per_page:
+        label: 'Sayfa başına sonuç:'
+        title: Sayfa başına sonuç sayısını seçin
+      share_modal:
+        copy_share_link: Kopyala
+        copy_share_link_clarification: Paylaşım bağlantısını panoya kopyala
+        copy_share_link_copied: Kopyalandı!
+        copy_share_link_cta: Veya bağlantıyı kopyala
+        copy_share_link_message: Bağlantı panoya başarıyla kopyalandı.
+        share: Paylaş
+        share_link: Bağlantıyı paylaş
+        share_to: "%{service} üzerinde paylaş"
+  devise:
+    confirmations:
+      confirmed: E-posta adresiniz başarıyla onaylandı.
+      new:
+        resend_confirmation_instructions: Onay talimatlarını yeniden gönder
+      send_instructions: Birkaç dakika içinde e-posta adresinizi nasıl onaylayacağınıza
+        dair talimatları içeren bir e-posta alacaksınız.
+      send_paranoid_instructions: E-posta adresiniz veritabanımızda varsa, birkaç
+        dakika içinde e-posta adresinizi nasıl onaylayacağınıza dair talimatları içeren
+        bir e-posta alacaksınız.
+    failure:
+      already_authenticated: Zaten giriş yaptınız.
+      csrf_token: İsteğiniz doğrulanamadı. Lütfen tekrar deneyin.
+      inactive: Hesabınız henüz etkinleştirilmemiş.
+      invalid: Geçersiz %{authentication_keys} veya parola.
+      invited: Bekleyen bir davetiniz var; hesabınızı oluşturmayı tamamlamak için
+        kabul edin.
+      last_attempt: Hesabınız kilitlenmeden önce bir denemeniz daha var.
+      locked: Hesabınız kilitli.
+      not_found_in_database: Geçersiz %{authentication_keys} veya parola.
+      timeout: Oturumunuzun süresi doldu. Devam etmek için lütfen tekrar giriş yapın.
+      unauthenticated: Devam etmeden önce giriş yapmanız veya bir hesap oluşturmanız
+        gerekir.
+    invitations:
+      edit:
+        header: Hesabınızı oluşturmayı bitirin
+        nickname_help: "%{organization} içindeki takma adınız. Yalnızca harf, rakam,
+          '-' ve '_' içerebilir."
+        submit_button: Kaydet
+        subtitle: Daveti kabul ederseniz lütfen takma adınızı ve parolanızı belirleyin.
+        subtitle_no_password: Daveti kabul ederseniz lütfen takma adınızı belirleyin.
+      invitation_removed: Davetiniz kaldırıldı.
+      invitation_token_invalid: Sağlanan davet anahtarı geçerli değil!
+      new:
+        header: Davet gönder
+        submit_button: Davet gönder
+      no_invitations_remaining: Kalan davet yok
+      send_instructions: "%{email} adresine bir davet e-postası gönderildi."
+      updated: Davet başarıyla kabul edildi. Şimdi giriş yaptınız.
+      updated_not_active: Davet başarıyla kabul edildi.
+    mailer:
+      confirmation_instructions:
+        action: Hesabımı onayla
+        greeting: Hoş geldiniz %{recipient}!
+        instruction: 'E-posta hesabınızı aşağıdaki bağlantı üzerinden onaylayabilirsiniz:'
+        subject: Onay talimatları
+      email_changed:
+        greeting: Merhaba %{recipient}!
+        message: E-postanızın %{email} olarak değiştirildiğini bildirmek için sizinle
+          iletişime geçiyoruz.
+        subject: E-posta Değiştirildi
+      invitation_instructions:
+        accept: Daveti kabul et
+        accept_until: Bu davetin süresi %{due_date} tarihinde dolacaktır.
+        decline: Daveti reddet
+        hello: Merhaba %{email},
+        ignore: |-
+          Daveti kabul etmek istemiyorsanız lütfen bu e-postayı yok sayın.<br />
+          Yukarıdaki bağlantıya erişip takma adınızı ve parolanızı belirleyene kadar hesabınız oluşturulmayacaktır.
+        invited_you_as_admin: "%{invited_by}, sizi %{application} yöneticisi olarak
+          davet etti. Aşağıdaki bağlantı üzerinden kabul edebilirsiniz."
+        invited_you_as_member: "%{invited_by}, sizi %{application} üyesi olarak davet
+          etti. Aşağıdaki bağlantı üzerinden kabul edebilirsiniz."
+        someone_invited_you: Biri sizi %{application} platformuna davet etti. Aşağıdaki
+          bağlantı üzerinden kabul edebilirsiniz.
+        someone_invited_you_as_admin: Biri sizi %{application} yöneticisi olarak davet
+          etti; aşağıdaki bağlantı üzerinden kabul edebilirsiniz.
+        someone_invited_you_as_member: Biri sizi %{application} üyesi olarak davet
+          etti; aşağıdaki bağlantı üzerinden kabul edebilirsiniz.
+        subject: Davet talimatları
+      invite_admin:
+        subject: "%{organization} platformunu yönetmek için davet edildiniz"
+      invite_collaborator:
+        subject: "%{organization} platformunda iş birliği yapmak için davet edildiniz"
+      invite_member:
+        subject: "%{organization} üzerinde özel bir katılım sürecine davet edildiniz"
+      organization_admin_invitation_instructions:
+        subject: "%{organization} platformunu yönetmek için davet edildiniz"
+      password_change:
+        greeting: Merhaba %{recipient}!
+        message: Parolanızın değiştirildiğini bildirmek için sizinle iletişime geçiyoruz.
+        subject: Parola değiştirildi
+      reset_password_instructions:
+        action: Parolamı değiştir
+        greeting: Merhaba %{recipient}!
+        instruction: Biri parolanızı değiştirmek için bir bağlantı istedi; bunu aşağıdaki
+          bağlantı üzerinden yapabilirsiniz.
+        instruction_2: Bunu siz istemediyseniz lütfen bu e-postayı yok sayın.
+        instruction_3: Yukarıdaki bağlantıya erişip yeni bir parola oluşturana kadar
+          parolanız değişmeyecektir.
+        subject: Parola sıfırlama talimatları
+      unlock_instructions:
+        action: Hesabımın kilidini aç
+        greeting: Merhaba %{recipient}!
+        instruction: 'Hesabınızın kilidini açmak için aşağıdaki bağlantıya tıklayın:'
+        message: Hesabınız çok sayıda başarısız giriş denemesi nedeniyle kilitlendi.
+        subject: Kilit açma talimatları
+    omniauth_callbacks:
+      add_tos_errors: Hesap oluşturmak için hizmet şartları kabul edilmelidir.
+      failure: '%{kind} hesabından kimliğiniz doğrulanamadı çünkü "%{reason}".'
+      success: "%{kind} hesabından başarıyla kimlik doğrulandı."
+    passwords:
+      edit:
+        change_my_password: Parolamı değiştir
+        confirm_new_password: Yeni parolayı onayla
+        new_password: Yeni parola
+        old_password_help: Hesabınızdaki değişiklikleri onaylamak için lütfen mevcut
+          parolanızı girin.
+        password_help: En az %{minimum_characters} karakter olmalı, en az 5 farklı
+          karakter içermeli, çok yaygın olmamalı (ör. 123456) ve adınızdan, takma
+          adınızdan, e-postanızdan ve kuruluşun ana bilgisayarından farklı olmalıdır.
+        password_help_admin: En az %{minimum_characters} karakter olmalı, en az 5
+          farklı karakter içermeli, çok yaygın olmamalı (ör. 123456), adınızdan, takma
+          adınızdan, e-postanızdan ve kuruluşun ana bilgisayarından farklı olmalı
+          ve eski parolalarınızdan farklı olmalıdır.
+        title: Parola değişikliği
+      new:
+        forgot_your_password: Parolanızı mı unuttunuz?
+        send_me_reset_password_instructions: Parola sıfırlama talimatlarını bana gönder
+      no_token: Bu sayfaya bir parola sıfırlama e-postasından gelmeden erişemezsiniz.
+        Bir parola sıfırlama e-postasından geliyorsanız, lütfen sağlanan tam URL'yi
+        kullandığınızdan emin olun.
+      send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlayacağınıza dair
+        talimatları içeren bir e-posta alacaksınız.
+      send_paranoid_instructions: E-posta adresiniz veritabanımızda varsa, birkaç
+        dakika içinde e-posta adresinize bir parola kurtarma bağlantısı alacaksınız.
+      updated: Parolanız başarıyla değiştirildi. Şimdi giriş yaptınız.
+      updated_not_active: Parolanız başarıyla değiştirildi.
+    registrations:
+      destroyed: Hesabınız başarıyla iptal edildi. Sizi yakında tekrar görmeyi umuyoruz.
+      new:
+        sign_up: Hesap oluştur
+      signed_up: Hoş geldiniz! Başarıyla kaydoldunuz.
+      signed_up_but_inactive: Başarıyla kaydoldunuz. Ancak hesabınız henüz etkinleştirilmediği
+        için giriş yaptıramadık.
+      signed_up_but_locked: Başarıyla kaydoldunuz. Ancak hesabınız kilitli olduğu
+        için giriş yaptıramadık.
+      signed_up_but_unconfirmed: E-posta adresinize bir onay bağlantısı içeren bir
+        mesaj gönderildi. Hesabınızı etkinleştirmek için lütfen bağlantıyı takip edin.
+      update_needs_confirmation: Hesabınızı başarıyla güncellediniz, ancak yeni e-posta
+        adresinizi doğrulamamız gerekiyor. Lütfen e-postanızı kontrol edin ve yeni
+        e-posta adresinizi onaylamak için onay bağlantısını takip edin.
+      updated: Hesabınız başarıyla güncellendi.
+    sessions:
+      already_signed_out: Başarıyla çıkış yapıldı.
+      new:
+        log_in: Giriş yap
+      signed_in: Başarıyla giriş yapıldı.
+      signed_out: Başarıyla çıkış yapıldı.
+    shared:
+      links:
+        back: Geri
+        didn_t_receive_confirmation_instructions: Onay talimatlarını almadınız mı?
+        didn_t_receive_unlock_instructions: Kilit açma talimatlarını almadınız mı?
+        forgot_your_password: Parolanızı mı unuttunuz?
+        log_in: Giriş yap
+        log_in_with_provider: "%{provider} ile giriş yap"
+        sign_up: Hesap oluştur
+      minimum_password_length:
+        one: "(en az %{count} karakter)"
+        other: "(en az %{count} karakter)"
+    unlocks:
+      new:
+        resend_unlock_instructions: Kilit açma talimatlarını yeniden gönder
+      send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınıza
+        dair talimatları içeren bir e-posta alacaksınız.
+      send_paranoid_instructions: Hesabınız varsa, birkaç dakika içinde kilidini nasıl
+        açacağınıza dair talimatları içeren bir e-posta alacaksınız.
+      unlocked: Hesabınızın kilidi başarıyla açıldı. Devam etmek için lütfen giriş
+        yapın.
+  layouts:
+    decidim:
+      announcements:
+        view_more: Daha fazla bilgi
+      data_consent:
+        details:
+          columns:
+            description: Açıklama
+            name: Ad
+            service: Hizmet
+            type: Tür
+          items:
+            _session_id:
+              description: Web sitelerinin, kullanıcı web sayfaları arasında geçiş
+                yaparken onu hatırlamasını sağlar.
+              service: Bu web sitesi
+            decidim-consent:
+              description: Kullanıcının bu web sitesinde izin verdiği çerezler hakkında
+                bilgi saklar.
+              service: Bu web sitesi
+            pwaInstallPromptSeen:
+              description: İlerici web uygulaması (PWA) yükleme bildiriminin kullanıcı
+                tarafından görülüp görülmediğini saklar.
+              service: Bu web sitesi
+          types:
+            cookie: Çerez
+            local_storage: Yerel depolama
+        dialog:
+          accept_all: Tümünü kabul et
+          accept_only_essential: Yalnızca gerekli olanları kabul et
+          description: Sitenin performansını ve içeriğini iyileştirmek için web sitemizde
+            çerezler kullanıyoruz. Çerezler, daha kişisel bir kullanıcı deneyimi ve
+            sosyal medya kanalları sunmamıza olanak tanır.
+          settings: Ayarlar
+          title: Web sitesinde kullanılan çerezler hakkında bilgi
+        modal:
+          accept_all: Tümünü kabul et
+          accept_only_essential: Yalnızca gerekli olanları kabul et
+          analytics:
+            description: Bu çerezler, web sitesini iyileştirmeye yardımcı olmak için
+              web sitesi kitlesini ölçmek ve analiz etmek amacıyla kullanılır.
+            title: Analitik ve istatistikler
+          description: Web sitesinin temel işlevlerini sağlamak ve çevrimiçi deneyiminizi
+            geliştirmek için çerezler kullanıyoruz. Çerez kullanımını istediğiniz
+            zaman yapılandırıp kabul edebilir ve onay seçeneklerinizi değiştirebilirsiniz.
+          essential:
+            description: Bu çerezler web sitesinin temel işlevlerini etkinleştirir
+              ve kullanıcılarının güvende kalmasına yardımcı olur. Tarayıcıya otomatik
+              olarak kaydedilirler ve devre dışı bırakılamazlar.
+            title: Gerekli
+          marketing:
+            description: Bu çerezler, web sitesini nasıl kullandığınıza dair bilgi
+              toplar ve kullandığınız farklı web sitelerinde size daha kişiselleştirilmiş
+              pazarlama sunmak için kullanılabilir.
+            title: Pazarlama
+          preferences:
+            description: Bu çerezler, web sitesi kullanıcılarına daha kişiselleştirilmiş
+              bir deneyim sunmak için bu web sitesinde geçmişte yaptığınız seçimleri
+              web sitesinin hatırlamasını sağlar.
+            title: Tercihler
+          save_settings: Ayarları kaydet
+          title: Çerez ayarları
+          toggle: "%{consent_category} aç/kapat"
+        warning:
+          all_categories: tüm çerezler
+          change_settings: Çerez ayarlarını değiştir
+          consent_required: Bu içeriği görmek için %{categories} etkinleştirmeniz
+            gerekir.
+      edit_link:
+        edit: Düzenle
+      footer:
+        cc_by_license: Creative Commons Lisansı
+        current_organization_img: "%{organization} (Ana sayfaya dön)"
+        data_consent_settings: Çerez ayarları
+        decidim_logo: Kurultay Logosu
+        decidim_title: Kurultay
+        help: Yardım
+        log_in: Giriş yap
+        made_with_open_source: <a target="_blank" href="https://github.com/decidim/decidim">Özgür
+          yazılımla</a> yapılmış web sitesi.
+        open_data: Açık Veri
+        resources: Kaynaklar
+        sign_up: Hesap oluştur
+        social_media: Sosyal medya
+        terms_of_service: Hizmet Şartları
+      header:
+        back: Geri
+        close: Kapat
+        confirm_close_ephemeral_session: Başka bir sayfaya giderseniz geçici oturumunuz
+          kapatılacaktır. Ancak tüm ilerlemeniz ve etkinliğiniz kaydedilecektir. Etkinliğinizi
+          tamamladıysanız Tamam'a tıklayın.
+        confirm_title_close_ephemeral_session: Bu sayfadan ayrılmadan önce…
+        log_in: Giriş yap
+        main_menu: Ana menü
+        mobile_account_greeting: Merhaba, %{user_name}
+        user_menu: Kullanıcı menüsü
+      impersonation_warning:
+        close_session: Oturumu kapat
+        description_html: "<b>%{user_name}</b> katılımcısını yönetiyorsunuz."
+        expire_time_html: Oturumunuz <b><span data-impersonation-warning-target="minutes">%{minutes}</span>
+          dakika</b> içinde sona erecek.
+      language_chooser:
+        choose_language: Dil seçin
+      navigation:
+        aria_label: 'Gezinme menüsü: %{title}'
+      notifications_dashboard:
+        mark_all_as_read: Tümünü okundu işaretle
+        mark_as_read: Okundu işaretle
+      offline_banner:
+        cache_version_page: Hoop! Ağınız çevrimdışı. Bu, ziyaret ettiğiniz sayfanın
+          daha önce önbelleğe alınmış bir sürümüdür; içerik güncel olmayabilir.
+      social_media_links:
+        facebook: Facebook'ta %{organization}
+        github: GitHub'da %{organization}
+        instagram: Instagram'da %{organization}
+        x: X'te %{organization}
+        youtube: YouTube'da %{organization}
+      timeout_modal:
+        body: "%{minutes} dakikadır hareketsizsiniz. Hareketsiz kalmaya devam ederseniz,
+          kendi güvenliğiniz için otomatik olarak çıkışınız yapılacaktır."
+        continue_session: Oturuma devam et
+        log_out: Çıkış yap
+        title: Oturumunuza devam etmek ister misiniz?
+      user_menu:
+        account: 'Kullanıcı hesabı: %{name}'
+        admin_dashboard: Yönetim paneli
+        configuration: Yapılandırma
+        conversations: Mesajlaşmalar
+        log_out: Çıkış yap
+        notifications: Bildirimler
+        profile: Hesabım
+        public_profile: Herkese açık profilim
+        title: Profil bağlantıları
+        unread_conversations: Okunmamış mesajlaşmalarınız var
+        unread_notifications: Okunmamış bildirimleriniz var
+      user_profile:
+        account: Hesap
+        authorizations: Yetkilendirmeler
+        delete_my_account: Hesabımı sil
+        my_data: Verilerim
+        notifications_settings: Bildirim ayarları
+        profile: Profil
+        title: Katılımcı ayarları
