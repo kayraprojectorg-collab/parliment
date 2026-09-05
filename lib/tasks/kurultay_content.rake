@@ -41,6 +41,18 @@ class KurultaySeed
 
   def t(en, tr) = { "en" => en, "tr" => tr }
   def para(en, tr) = t("<p>#{en}</p>", "<p>#{tr}</p>")
+  def para_multi(en_arr, tr_arr) = t(en_arr.map { |x| "<p>#{x}</p>" }.join, tr_arr.map { |x| "<p>#{x}</p>" }.join)
+
+  def rich_proposal_body(p_en, p_tr, title_en, title_tr)
+    para_multi(
+      ["<strong>Problem.</strong> #{p_en} requires coordinated action across the Turkic states, which today lack a shared framework.",
+       "<strong>Proposal.</strong> Establish a joint working group and a funded pilot under the #{title_en} process, with clear milestones and public reporting.",
+       "<strong>Expected outcome.</strong> A concrete, measurable result that member delegations can adopt and track together."],
+      ["<strong>Sorun.</strong> #{p_tr}, bugün ortak bir çerçeveden yoksun olan Türk devletleri arasında eşgüdümlü eylem gerektirir.",
+       "<strong>Öneri.</strong> #{title_tr} süreci kapsamında net kilometre taşları ve kamuya açık raporlama ile ortak bir çalışma grubu ve finanse edilen bir pilot kurmak.",
+       "<strong>Beklenen sonuç.</strong> Üye heyetlerin birlikte benimseyip izleyebileceği somut ve ölçülebilir bir sonuç."]
+    )
+  end
 
   def safely(label)
     yield
@@ -260,8 +272,9 @@ class KurultaySeed
   ].freeze
 
   def seed_processes!
+    group = safely("process group") { seed_process_group! }
     PROCESSES.each_with_index do |(slug, title_en, title_tr, term, proposal_titles), i|
-      process = upsert_process(slug, title_en, title_tr)
+      process = upsert_process(slug, title_en, title_tr, group)
       assign_taxonomy(process, term)
       safely("process homepage #{slug}") { seed_space_homepage!(process, "The #{title_en} process.", "#{title_tr} süreci.") }
 
@@ -271,7 +284,7 @@ class KurultaySeed
 
       proposal_titles.each_with_index do |(p_en, p_tr), j|
         proposal = upsert_proposal(proposals, t(p_en, p_tr),
-                                   para("A concrete proposal under the #{title_en} process.", "#{title_tr} süreci kapsamında somut bir öneri."),
+                                   rich_proposal_body(p_en, p_tr, title_en, title_tr),
                                    participant(i + j))
         assign_taxonomy(proposal, term)
         follow!(proposal, participant(i + j + 1))
@@ -327,18 +340,82 @@ class KurultaySeed
     end
   end
 
-  def upsert_process(slug, title_en, title_tr)
+  def upsert_process(slug, title_en, title_tr, group = nil)
     process = Decidim::ParticipatoryProcess.find_or_initialize_by(organization:, slug:)
     process.title = t(title_en, title_tr)
-    process.subtitle = t("A shared Kurultay process", "Ortak bir Kurultay süreci")
-    process.short_description = para("A cross-border thematic process of the Turkic world.", "Türk dünyasının sınır ötesi tematik süreci.")
-    process.description = para("Members from all delegations deliberate and decide together within the #{title_en} process.",
-                               "Tüm heyetlerden üyeler #{title_tr} süreci içinde birlikte müzakere eder ve karar alır.")
+    process.subtitle = t("A shared process of the Turkic world parliament", "Türk dünyası parlamentosunun ortak süreci")
+    process.short_description = para(
+      "An open, cross-border process where civil-society delegations from the Turkic states shape common policy on #{title_en.downcase}.",
+      "Türk devletlerinin sivil toplum heyetlerinin #{title_tr.downcase} konusunda ortak politika şekillendirdiği açık ve sınır ötesi bir süreç."
+    )
+    process.description = rich_process_description(title_en, title_tr)
+    process.participatory_process_group = group if group
+    process.promoted = true
     process.published_at ||= Time.current
     process.start_date ||= Date.current
-    process.end_date ||= 3.months.from_now.to_date
+    process.end_date ||= 6.months.from_now.to_date
     process.save!
+    safely("process steps #{slug}") { seed_process_steps!(process) }
     process
+  end
+
+  def rich_process_description(title_en, title_tr)
+    t(
+      "<h3>About this process</h3>" \
+      "<p>The #{title_en} process brings together civil-society organisations from Türkiye, Azerbaijan, Kazakhstan, " \
+      "Kyrgyzstan, Turkmenistan and Uzbekistan to deliberate and agree shared action on #{title_en.downcase}.</p>" \
+      "<h3>Objectives</h3><ul>" \
+      "<li>Build a common position across the Turkic world.</li>" \
+      "<li>Turn citizen and organisation proposals into concrete recommendations.</li>" \
+      "<li>Track delivery transparently through public meetings and published results.</li></ul>" \
+      "<h3>How to take part</h3>" \
+      "<p>Submit a proposal, join a meeting, comment on others' ideas, or endorse the proposals you support. " \
+      "Every phase of this process is public.</p>",
+      "<h3>Bu süreç hakkında</h3>" \
+      "<p>#{title_tr} süreci; Türkiye, Azerbaycan, Kazakistan, Kırgızistan, Türkmenistan ve Özbekistan sivil toplum " \
+      "kuruluşlarını #{title_tr.downcase} konusunda ortak eylemde bir araya getirir.</p>" \
+      "<h3>Amaçlar</h3><ul>" \
+      "<li>Türk dünyası genelinde ortak bir tutum oluşturmak.</li>" \
+      "<li>Yurttaş ve kuruluş önerilerini somut tavsiyelere dönüştürmek.</li>" \
+      "<li>Kamuya açık toplantılar ve yayımlanan sonuçlarla teslimatı şeffaf izlemek.</li></ul>" \
+      "<h3>Nasıl katılırsınız</h3>" \
+      "<p>Bir öneri sunun, toplantıya katılın, başkalarının fikirlerine yorum yapın veya desteklediğiniz önerileri " \
+      "onaylayın. Bu sürecin her aşaması kamuya açıktır.</p>"
+    )
+  end
+
+  PROCESS_STEPS = [
+    ["Diagnosis", "Teşhis", "Gathering issues and evidence from all delegations.", "Tüm heyetlerden konu ve kanıt toplama."],
+    ["Deliberation", "Müzakere", "Proposals, debates and public meetings.", "Öneriler, tartışmalar ve kamuya açık toplantılar."],
+    ["Decision", "Karar", "Voting and shared recommendations.", "Oylama ve ortak tavsiyeler."]
+  ].freeze
+
+  def seed_process_steps!(process)
+    PROCESS_STEPS.each_with_index do |(s_en, s_tr, d_en, d_tr), i|
+      step = process.steps.reload.detect { |s| s.title["en"] == s_en } ||
+             Decidim::ParticipatoryProcessStep.new(participatory_process: process)
+      step.title = t(s_en, s_tr)
+      step.description = para(d_en, d_tr)
+      step.position = i
+      step.active = i.zero?
+      step.start_date ||= (Date.current >> (i - 1))
+      step.end_date ||= (Date.current >> (i + 1))
+      step.save!
+    end
+  end
+
+  def seed_process_group!
+    group = Decidim::ParticipatoryProcessGroup.where(organization:).detect { |g| g.title["en"] == "Turkic World Processes" } ||
+            Decidim::ParticipatoryProcessGroup.new(organization:)
+    group.title = t("Turkic World Processes", "Türk Dünyası Süreçleri")
+    group.description = para(
+      "The thematic processes through which the Turkic world parliament builds shared policy across culture, " \
+      "environment and the economy.",
+      "Türk dünyası parlamentosunun kültür, çevre ve ekonomi alanlarında ortak politika ürettiği tematik süreçler."
+    )
+    group.save!
+    Decidim::ContentBlocksCreator.new(group).create_default!
+    group
   end
 
   # ---- Per-space homepage ----------------------------------------------
