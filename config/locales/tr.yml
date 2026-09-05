@@ -588,6 +588,95 @@ tr:
             comments_blocked: Yorumlar engellendi
             creation_enabled_for_participants: Katılımcılar tarafından toplantı oluşturma
               etkin
+      budgets:
+        actions:
+          comment: Yorum
+          vote: Oy ver
+          vote_comment: Yorumu oyla
+        name: Bütçeler
+        settings:
+          global:
+            announcement: Duyuru
+            clear_all: Tümünü temizle
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            form:
+              errors:
+                budget_voting_rule_only_one: Yalnızca bir oylama kuralı etkin olmalıdır.
+                budget_voting_rule_required: Bir oylama kuralı gereklidir.
+            geocoding_enabled: Haritalar etkin
+            landing_page_content: Bütçeler açılış sayfası
+            more_information_modal: Daha fazla bilgi penceresi
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            projects_per_page: Sayfa başına proje
+            resources_permissions_enabled: İşlem izinleri her proje için ayarlanabilir
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+            title: Başlık
+            total_budget: Toplam bütçe
+            vote_minimum_budget_projects_number: Oy verilecek minimum proje sayısı
+            vote_rule_minimum_budget_projects_enabled: 'Kuralı etkinleştir: Oylanacak
+              minimum proje sayısı'
+            vote_rule_selected_projects_enabled: 'Kuralı etkinleştir: Oylanacak minimum
+              ve maksimum proje sayısı'
+            vote_rule_threshold_percent_enabled: 'Kuralı etkinleştir: Minimum bütçe
+              yüzdesi'
+            vote_selected_projects_maximum: Seçilecek maksimum proje miktarı
+            vote_selected_projects_minimum: Seçilecek minimum proje miktarı
+            vote_threshold_percent: Oy eşiği yüzdesi
+            voting_rule: Oylama kuralı
+            voting_rule_choices:
+              minimum_projects: Oylanacak minimum proje sayısı
+              selected_projects: Oylanacak minimum ve maksimum proje sayısı
+              threshold_percent: Minimum bütçe yüzdesi
+            workflow: İş akışı
+            workflow_choices:
+              all: 'Tümünde oyla: katılımcıların tüm bütçelerde oy vermesine izin
+                verir.'
+              one: 'Birinde oyla: katılımcıların herhangi bir bütçede, ancak yalnızca
+                birinde oy vermesine izin verir.'
+          step:
+            announcement: Duyuru
+            comments_blocked: Yorumlar engellendi
+            highlighted_heading: Öne çıkan başlık
+            landing_page_content: Bütçeler açılış sayfası
+            list_heading: Liste başlığı
+            more_information_modal: Daha fazla bilgi penceresi
+            show_votes: Oyları göster
+            title: Başlık
+            votes: Oylama
+            votes_choices:
+              disabled: Oylama devre dışı
+              enabled: Oylama etkin
+              finished: Oylama bitti
+      accountability:
+        actions:
+          comment: Yorum
+          vote_comment: Yorumu oyla
+        name: Hesap verebilirlik
+        settings:
+          global:
+            clear_all: Tümünü temizle
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            default_taxonomy: Varsayılan taksonomi
+            default_taxonomy_help: Varsayılan olarak hangi taksonomiyi göstermek istediğinizi
+              seçin. Hiçbir taksonomi seçilmezse sonuçlar liste biçiminde gösterilir.
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            display_progress_enabled: İlerlemeyi göster
+            geocoding_enabled: Haritalar etkin
+            intro: Giriş
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+          step:
+            comments_blocked: Yorumlar engellendi
+          visualization: Görselleştirme
     download_your_data:
       help:
         comment_votes:
@@ -632,6 +721,14 @@ tr:
           updated_at: Bu kaydın son güncellendiği tarih ve saat
           user: Kaydı yapan kullanıcı
           validated_at: Bu kaydın doğrulandığı tarih ve saat
+        orders:
+          budget: Oyun ilişkili olduğu bütçe
+          checked_out_at: Oyun kesinleştirildiği tarih ve saat
+          component: Oyun ilişkili olduğu bileşen
+          created_at: Oyun oluşturulduğu tarih ve saat
+          id: Oyun benzersiz tanımlayıcısı
+          projects: Oyun oy verdiği projeler
+          updated_at: Oyun güncellendiği tarih ve saat
       show:
         debate_comments: Tartışma yorumları dışa aktarması
         debates: Tartışmalar dışa aktarması
@@ -643,6 +740,9 @@ tr:
         meetings: Toplantılar dışa aktarması
         participatory_processes: Katılım Süreçleri dışa aktarması
         assemblies: Meclisler dışa aktarması
+        projects: Projeler dışa aktarması
+        result_comments: Sonuç yorumları dışa aktarması
+        results: Sonuçlar dışa aktarması
     events:
       comments:
         comment_by_followed_user:
@@ -1071,6 +1171,25 @@ tr:
           email_subject: '"%{resource_title}" için %{role} olarak atandınız.'
           notification_title: <a href="%{resource_url}">%{resource_title}</a> meclisi
             için %{role} olarak atandınız.
+      accountability:
+        proposal_linked:
+          email_intro: '"%{proposal_title}" önerisi bir sonuca dâhil edildi. Şu sayfadan
+            görebilirsiniz:'
+          email_outro: Bu bildirimi "%{proposal_title}" takip ettiğiniz için aldınız.
+            Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{proposal_title} için bir güncelleme"
+          notification_title: <a href="%{proposal_path}">%{proposal_title}</a> önerisi
+            <a href="%{resource_path}">%{resource_title}</a> sonucuna dâhil edildi.
+        result_progress_updated:
+          email_intro: '"%{proposal_title}" önerisini içeren "%{resource_title}" sonucu
+            artık %{progress}% tamamlandı. Şu sayfadan görebilirsiniz:'
+          email_outro: Bu bildirimi "%{proposal_title}" takip ettiğiniz ve bu öneri
+            "%{resource_title}" sonucuna dâhil edildiği için aldınız. Önceki bağlantıyı
+            takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{resource_title} ilerlemesi için bir güncelleme"
+          notification_title: <a href="%{proposal_path}">%{proposal_title}</a> önerisini
+            içeren <a href="%{resource_path}">%{resource_title}</a> sonucu artık %{progress}%
+            tamamlandı.
     debates:
       actions:
         close: Kapat
@@ -1485,6 +1604,64 @@ tr:
           url: Alanın URL'si
           youtube_handler: YouTube için sosyal medya kullanıcı adı
           slug: Meclis kısaltması (tanımlama amacıyla, URL için kullanılır)
+        projects:
+          address: Projenin adresi (varsa)
+          budget: Projenin bütçesine ilişkin veriler (ör. "2021 Bütçesi")
+          budget_amount: Bu proje için bütçenin toplam tutarı
+          comments: Bu projenin aldığı yorum sayısı
+          component: Projenin ait olduğu bileşen
+          confirmed_votes: Bu projenin aldığı onaylanmış oy sayısı
+          created_at: Projenin oluşturulduğu tarih ve saat
+          description: Projenin açıklaması
+          follows_count: Projenin sahip olduğu takip sayısı
+          id: Projenin benzersiz tanımlayıcısı
+          latitude: Projenin fiziksel bir konumu varsa enlemi
+          longitude: Projenin fiziksel bir konumu varsa boylamı
+          participatory_space: Bu projenin hangi alana (ör. Katılım Süreci veya Meclis)
+            ait olduğu
+          reference: Projenin benzersiz referansı
+          related_proposal_titles: İlişkili önerilerin başlıkları
+          related_proposal_urls: İlişkili önerilerin URL'leri
+          related_proposals: Bu projeyle ilişkili öneriler
+          selected_at: Projenin seçildiği zaman
+          taxonomies: Projenin taksonomileri
+          title: Projenin başlığı
+          updated_at: Projenin son güncellendiği tarih
+          url: Projenin URL'si
+        result_comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        results:
+          address: Sonucun adresi (varsa)
+          children_count: Alt sonuçların sayısı
+          comments_count: Bu sonucun sahip olduğu yorum sayısı
+          component: Sonucun ait olduğu bileşen
+          created_at: Sonucun oluşturulduğu tarih
+          description: Sonucun açıklaması
+          end_date: Sonucun yürütmesinin bittiği ve tamamlandığı tarih
+          id: Sonucun benzersiz tanımlayıcısı
+          latitude: Sonucun fiziksel bir konumu varsa enlemi
+          longitude: Sonucun fiziksel bir konumu varsa boylamı
+          parent: Sonucun üst sonucu (varsa)
+          progress: Sonucun yürütme yüzdesi
+          proposal_urls: Bu sonuca dâhil edilen önerilerin URL'leri
+          reference: Sonucun benzersiz referansı
+          start_date: Sonucun yürütmeye başladığı tarih
+          status: Bu sonucun mevcut durumu
+          taxonomies: Sonucun taksonomileri
+          title: Sonucun başlığı
+          updated_at: Bu sonucun son güncellendiği tarih
+          url: Bu sonucun bulunabileceği URL
     statistics:
       debates_count: Tartışmalar
       debates_count_tooltip: Yapılan tartışmaların sayısı.
@@ -1507,6 +1684,12 @@ tr:
       assemblies_count: Meclisler
       assemblies_count_tooltip: Ortak kararların alındığı herkese açık meclislerin
         sayısı.
+      orders_count: Destekler
+      projects_count: Bütçeler
+      projects_count_tooltip: Katılımcı bütçeleme projelerinin sayısı ve bunlara verilen
+        toplam oylar.
+      results_count: Sonuçlar
+      results_count_tooltip: Bu alandan üretilen karar veya çıktıların sayısı.
     blogs:
       actions:
         author_id: Gönderiyi şu adla oluştur
@@ -1677,6 +1860,8 @@ tr:
         past_meetings: Geçmiş toplantılar
         see_all: Tüm toplantıları gör
         upcoming_meetings: Yaklaşan toplantılar
+      highlighted_results:
+        see_all: Tüm sonuçları gör
     proposals:
       actions:
         answer_proposal: Öneriyi yanıtla
@@ -1974,9 +2159,12 @@ tr:
         proposal_proposal: İlişkili öneriler
       included_projects:
         project_result: 'Bu projede görünen sonuçlar:'
+        result_project: Bu sonuca dâhil edilen projeler
       included_proposals:
         proposal_project: 'Bu projelerde görünen öneri:'
         proposal_result: 'Bu sonuçlarda görünen öneri:'
+        project_proposal: Bu projeye dâhil edilen öneriler
+        result_proposal: Bu sonuca dâhil edilen öneriler
       meetings_through_proposals:
         meeting_result: 'İlişkili sonuçlar:'
         result_meeting: 'İlişkili toplantılar:'
@@ -2850,6 +3038,340 @@ tr:
       value_types:
         assembly_presenter:
           not_found: 'Meclis veritabanında bulunamadı (Kimlik: %{id})'
+    budgets:
+      actions:
+        confirm_delete_budget: Bu bütçeyi silmek istediğinizden emin misiniz?
+        confirm_delete_project: Bu projeyi silmek istediğinizden emin misiniz?
+        deleted_budgets_info: Silinen bütçeler çöp kutusundan geri getirilebilir.
+        edit: Düzenle
+        edit_projects: Proje ekle
+        import: Önerileri projelere içe aktar
+        new_budget: Yeni bütçe
+        new_project: Yeni proje
+        preview: Önizleme
+        send_voting_reminders: Oylama hatırlatmaları gönder
+        title: İşlemler
+        view_deleted_budgets: Silinen bütçeleri görüntüle
+        view_deleted_projects: Silinen projeleri görüntüle
+      admin_log:
+        budget:
+          create: "%{user_name}, %{space_name} alanında %{resource_name} bütçesini
+            oluşturdu"
+          delete: "%{user_name}, %{space_name} alanında %{resource_name} bütçesini
+            sildi"
+          restore: "%{user_name}, %{space_name} içinde %{resource_name} bütçesini
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} içindeki %{resource_name} bütçesini
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} alanında %{resource_name} bütçesini
+            güncelledi"
+        project:
+          create: "%{user_name}, %{space_name} alanında %{resource_name} projesini
+            oluşturdu"
+          delete: "%{user_name}, %{space_name} alanında %{resource_name} projesini
+            sildi"
+          restore: "%{user_name}, %{space_name} içinde %{resource_name} projesini
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} içindeki %{resource_name} projesini
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} alanında %{resource_name} projesini
+            güncelledi"
+      budget_information_modal:
+        back_to: "%{component_name} bileşenine dön"
+        close_modal: Pencereyi kapat
+        continue: Devam et
+        more_information: Bütçe hakkında daha fazla bilgi
+      budgets_list:
+        budgets: Bütçeler
+        cancel_order:
+          more_than_one: "%{name} için oyunuzu silin ve yeniden başlayın"
+          only_one: oyunuzu silin ve yeniden başlayın.
+        completed: Tamamlandı
+        count:
+          one: "%{count} bütçe"
+          other: "%{count} bütçe"
+        empty: Henüz bütçe yok
+        finished_message: Oylama sürecini tamamladınız. Katıldığınız için teşekkürler!
+        highlighted_cta: "%{name} için oy verin"
+        if_change_opinion: 'Fikrinizi değiştirdiyseniz şunu yapabilirsiniz:'
+        incomplete: Tamamlanmadı
+        orders:
+          highest_cost: En yüksek maliyet
+          label: Bütçeleri sırala
+          lowest_cost: En düşük maliyet
+          random: Rastgele sıralama
+        progress: Oylamayı bitir
+        remove_vote: Oyu kaldır
+        see_projects: Projeleri gör
+        see_results: Sonuçları gör
+        show: Projeleri gör
+        vote: Oy ver
+        voted_budgets: Oylanan bütçeler
+        voted_on: "%{links} için oy verdiniz."
+      creation:
+        text: Bu bütçeye eklendiler
+      last_activity:
+        new_vote_at: 'Yeni bütçe oyu şurada:'
+      limit_announcement:
+        cant_vote: Bu bütçede oy veremezsiniz. <a href="%{landing_path}">Başka bir
+          bütçede deneyin</a>.
+        limit_reached: '%{links} içinde etkin oylarınız var. Bu bütçede oy vermek
+          için <a href="%{landing_path}">oyunuzu silip yeniden başlamalısınız</a>.'
+      models:
+        budget:
+          fields:
+            name: Ad
+            projects_count: Proje sayısı
+            total_budget: Toplam bütçe
+        project:
+          fields:
+            map: Harita
+            taxonomies: Taksonomiler
+            title: Başlık
+      order:
+        status:
+          continue_voting: Oylamaya devam et
+          download_vote: Oyunuzu indirin
+          pending_to_vote_budgets:
+            one: Başka bir bütçede oy verebilirsiniz
+            other: Başka bütçelerde oy verebilirsiniz
+          share_text: "%{space_name} içinde en sevdiğim projelere oy verdim! \U0001F389
+            Şimdi oy verin: %{component_url}"
+          share_vote: Oyunuzu paylaşın
+          title: Oyunuz başarıyla kabul edildi
+          view_votes:
+            one: Oyu görüntüle
+            other: Oyları görüntüle
+          votes_count:
+            one: "%{budget_name} için oyunuz zaten kaydedildi."
+            other: "%{budget_name} için %{count} oyunuz zaten kaydedildi."
+      order_pdf:
+        text: "%{space_name} içinde şu projeler için oy verdiniz"
+        title: Oyunuz başarıyla kabul edildi.
+      order_summary_mailer:
+        order_summary:
+          selected_projects: 'Seçtiğiniz projeler:'
+          subject: "%{space_name} katılım alanında oy verdiniz"
+          voted_on_space: "%{space_name} katılım alanı için %{budget_name} bütçesinde
+            oy verdiniz."
+      projects:
+        back_to_budgets: Bütçelere dön
+        budget_confirm:
+          are_you_sure: Fikrinizi değiştirirseniz oyunuzu daha sonra değiştirebilirsiniz.
+          cancel: İptal
+          confirm: Onayla
+          description: Bunlar, bütçenin parçası olması için seçtiğiniz projeler.
+          title: Oyu onayla
+        budget_excess:
+          budget_excess:
+            description: Bu proje maksimum bütçeyi aşıyor ve eklenemez. İsterseniz,
+              tercihlerinize göre yeniden oy verebilmek için zaten seçtiğiniz bir
+              projeyi silebilirsiniz.
+            title: Maksimum bütçe aşıldı
+          description: Bu proje maksimum bütçeyi aşıyor ve eklenemez. İsterseniz,
+            tercihlerinize göre yeniden oy verebilmek için zaten seçtiğiniz bir projeyi
+            silebilirsiniz.
+          ok: Tamam
+          projects_excess:
+            description: Bu proje maksimum proje sayısını aşıyor ve eklenemez. İsterseniz,
+              tercihlerinize göre yeniden oy verebilmek için zaten seçtiğiniz bir
+              projeyi silebilirsiniz.
+            title: Maksimum proje sayısı aşıldı
+        budget_summary:
+          are_you_sure: Oyunuzu iptal etmek istediğinizden emin misiniz?
+          cancel_order: Oyunuzu silin
+          checked_out:
+            description: Bütçe için zaten oy verdiniz. Fikrinizi değiştirdiyseniz
+              oyunuzu silebilirsiniz.
+            title: Bütçe oylaması tamamlandı
+          vote: Bütçeyi oyla
+        count:
+          projects_count:
+            one: 1 proje
+            other: "%{count} proje"
+        empty: Henüz proje yok
+        exit_modal:
+          cancel: Oylamaya dön
+          exit: Oylamadan çık
+          message: Oylama sürecini henüz tamamlamadığınız için oyunuz kaydedilmedi.
+            Oylamadan çıkmak istediğinizden emin misiniz?
+          title: Henüz oy vermediniz
+        filters:
+          search: Ara
+          status: Durum
+          status_values:
+            all: Tümü
+            not_selected: Seçilmedi
+            selected: Seçildi
+        order_progress:
+          assigned: Atanan
+          budget: Bütçe
+          dynamic_help:
+            minimum_reached: Oy verebilmek için minimuma ulaştınız
+          minimum: Minimum
+          minimum_projects_rule:
+            description: İstediğiniz <b>en az %{minimum_number} projeyi seçin</b>
+              ve tercihlerinize göre oy verin.
+          projects_rule:
+            description: İstediğiniz <b>en az %{minimum_number} ve en fazla %{maximum_number}
+              projeyi seçin</b> ve tercihlerinize göre oy verin.
+          projects_rule_maximum_only:
+            description: İstediğiniz <b>en fazla %{maximum_number} projeyi seçin</b>
+              ve tercihlerinize göre oy verin.
+          vote_threshold_percent_rule:
+            description: İstediğiniz projelere <b>en az %{minimum_budget} atayın</b>
+              ve tercihlerinize göre oy verin.
+        orders:
+          highest_cost: En yüksek maliyet
+          label: Projeleri sırala
+          lowest_cost: En düşük maliyet
+          most_voted: En çok oylanan
+          random: Rastgele sıralama
+          selected: Seçildi
+        project:
+          add: "%{resource_name} projesini oyunuza ekleyin."
+          remove: "%{resource_name} projesini oyunuzdan kaldırın."
+          selected: Seçildi
+          votes:
+            one: oy
+            other: oy
+          you_voted: Buna oy verdiniz
+        project_budget_button:
+          add: Ekle
+          add_descriptive: "%{resource_name} projesini oyunuza ekleyin."
+          added: Eklendi
+          added_descriptive: "%{resource_name} projesi oyunuza eklendi."
+        project_filter:
+          added: Eklendi
+          all: Tümü
+        projects_for: "%{name} için projeler"
+        select_projects: Proje ekle
+        show:
+          budget: Bütçe
+          votes: Oylar
+      prompt: Bütçe seçin
+      vote_reminder_mailer:
+        vote_reminder:
+          email_budgets: 'Bitmemiş oyunuzun olduğu alanlar:'
+          email_intro: Katılımcı bütçeleme oyuna başladınız ama tamamlamadınız.
+          email_link: Oylamaya devam etmek için git
+          email_outro: Lütfen oyu tamamlamayı unutmayın. Oy vermek için önce oy vermek
+            istediğiniz öneri veya önerileri seçmeli, ardından "Oy ver" düğmesiyle
+            oyunuzu onaylamalısınız.
+          email_subject:
+            one: Katılımcı bütçeleme oyunda bitmemiş bir oyunuz var
+            other: Katılımcı bütçeleme oyunda bitmemiş oylarınız var
+    orders:
+      checkout:
+        error: Oyunuz işlenirken bir sorun oluştu.
+      destroy:
+        error: Oyunuz iptal edilirken bir sorun oluştu.
+        success: Oyunuz başarıyla iptal edildi.
+    accountability:
+      actions:
+        add_milestone: Kilometre taşı ekle
+        add_result: Sonuç ekle
+        confirm_delete_result: Bu sonucu silmek istediğinizden emin misiniz?
+        confirm_destroy: Bu %{name} öğesini silmek istediğinizden emin misiniz?
+        deleted_results_info: Silinen sonuçlar çöp kutusundan geri getirilebilir.
+        destroy: Sil
+        edit: Düzenle
+        import: Başka bir bileşenden sonuçları içe aktar
+        import_csv: CSV dosyasından sonuçları içe aktar
+        new_milestone: Yeni kilometre taşı
+        new_result: Yeni sonuç
+        new_status: Yeni durum
+        preview: Önizleme
+        title: İşlemler
+        view_deleted_results: Silinen sonuçları görüntüle
+      admin_log:
+        milestones:
+          create: "%{user_name}, %{resource_name} kilometre taşını oluşturdu"
+          delete: "%{user_name}, %{resource_name} kilometre taşını sildi"
+          update: "%{user_name}, %{resource_name} kilometre taşını güncelledi"
+        result:
+          create: "%{user_name}, %{space_name} içinde %{resource_name} sonucunu oluşturdu"
+          delete: "%{user_name}, %{space_name} içinde %{resource_name} sonucunu sildi"
+          restore: "%{user_name}, %{space_name} içinde %{resource_name} sonucunu geri
+            getirdi"
+          soft_delete: "%{user_name}, %{space_name} içindeki %{resource_name} sonucunu
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} içinde %{resource_name} sonucunu güncelledi"
+        status:
+          create: "%{user_name}, %{resource_name} durumunu oluşturdu"
+          delete: "%{user_name}, %{resource_name} durumunu sildi"
+          update: "%{user_name}, %{resource_name} durumunu güncelledi"
+        value_types:
+          parent_presenter:
+            not_found: 'Üst öğe veritabanında bulunamadı (Kimlik: %{id})'
+      content_blocks:
+        highlighted_results:
+          results: Sonuçlar
+      creation:
+        text: Bu sonuç oluşturuldu
+      import_mailer:
+        import:
+          errors: Hatalar
+          errors_present: Sonuçlar içe aktarılırken bir sorun oluştu.
+          row_number: Satır
+          subject: Sonuçların başarılı içe aktarımı
+          success: Sonuçların başarılı içe aktarımı. Sonuçları yönetim arayüzünde
+            inceleyebilirsiniz.
+      import_projects_mailer:
+        import:
+          added_projects:
+            one: Projelerden bir sonuç içe aktarıldı.
+            other: Projelerden %{count} sonuç içe aktarıldı.
+          subject: Projelerin başarılı içe aktarımı
+          success: "%{component_name} bileşeninde projeler sonuçlara başarıyla içe
+            aktarıldı. Sonuçları yönetim arayüzünde inceleyebilirsiniz."
+      import_proposals_mailer:
+        import:
+          added_proposals:
+            one: Önerilerden bir sonuç içe aktarıldı
+            other: Önerilerden %{count} sonuç içe aktarıldı.
+          subject: Önerilerin başarılı içe aktarımı
+          success: "%{component_name} bileşeninde öneriler sonuçlara başarıyla içe
+            aktarıldı. Sonuçları yönetim arayüzünde inceleyebilirsiniz."
+      last_activity:
+        new_result: 'Yeni sonuç:'
+      models:
+        milestone:
+          fields:
+            entry_date: Tarih
+            title: Başlık
+        result:
+          fields:
+            created_at: Oluşturuldu
+            end_date: Bitiş tarihi
+            progress: İlerleme
+            start_date: Başlangıç tarihi
+            status: Durum
+            taxonomies: Taksonomiler
+            title: Başlık
+        status:
+          fields:
+            description: Açıklama
+            key: Anahtar
+            name: Ad
+            progress: İlerleme
+      results:
+        count:
+          results_count:
+            one: 1 sonuç
+            other: "%{count} sonuç"
+        home_header:
+          global_status: Genel yürütme durumu
+        milestones:
+          title: Kilometre taşları
+        no_results: Proje yok
+        root_taxonomies:
+          title: 'Şuna göre görüntüle:'
+        search:
+          search: Eylemleri ara
+        show:
+          stats:
+            back_to_resource: Sonuca geri dön
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -3225,6 +3747,8 @@ tr:
       decidim/meetings/update_meeting_event: Toplantı güncellendi
       decidim/participatory_process_step_activated_event: Aşama etkinleştirildi
       decidim/participatory_process_step_changed_event: Aşama değiştirildi
+      decidim/accountability/proposal_linked_event: Öneri bir sonuca dâhil edildi
+      decidim/accountability/result_progress_updated_event: Sonuç ilerlemesi güncellendi
     attributes:
       debate:
         closed_at: Kapatılma zamanı
@@ -3304,6 +3828,7 @@ tr:
         import_proposals: Önerileri içe aktar
         keep_answers: Durumları ve yanıtları koru
         keep_authors: Özgün yazarları koru
+        scope_id: Kapsam
       close_meeting:
         attendees_count: Katılan sayısı
         attending_organizations: Katılan kuruluşların listesi
@@ -3481,6 +4006,94 @@ tr:
         email: E-posta
         name: Ad
         role: Rol
+      budget:
+        description: Açıklama
+        title: Başlık
+        total_budget: Toplam bütçe
+        weight: Sıra konumu
+      pabulib_rules:
+        equalshares:
+          help: Tamamlama olmadan Eşit Paylar Yöntemi (MES). MES'te her seçmen bütçenin
+            eşit sanal payıyla başlar ve destekçileri birlikte karşılayabildiğinde
+            bir proje seçilir.
+          label: Eşit Paylar Yöntemi (%{rule})
+        equalshares/add1:
+          help: Temel eşit payları kullanın, ancak çok erken durursa, seçilen nihai
+            projeler gerçek bütçeye sığdığı sürece her seçmenin sanal bütçesini her
+            seferinde 1 birim artırmaya (Add1) ve yeniden hesaplamaya devam edin.
+          label: Eşit Paylar Yöntemi, add1 (%{rule})
+        equalshares/add1_comparison:
+          help: equalshares/add1 kullanın ve ardından yukarıdaki karşılaştırma adımının
+            aynısını uygulayın.
+          label: Eşit Paylar Yöntemi, add1 karşılaştırma (%{rule})
+        equalshares_comparison:
+          help: 'Temel eşit payları kullanın ve ardından bir ek adım ekleyin: sonucunu
+            açgözlü bir kıyaslamayla karşılaştırın ve yalnızca daha fazla seçmen açgözlü
+            sonucu tercih ederse geçiş yapın.'
+          label: Eşit Paylar Yöntemi, karşılaştırma (%{rule})
+        greedy:
+          help: Standart Sırt Çantası (Knapsack) tarzı yaklaşım. Projeler oy sayısına
+            göre (azalan) sıralanır. Algoritma listede ilerler ve kalan bütçeye sığan
+            projeleri seçer. Bir proje mevcut kalan fon için çok pahalıysa atlanır
+            ve algoritma sığıp sığmadığını görmek için bir sonraki projeyle devam
+            eder.
+          label: Açgözlü (%{rule})
+        greedy_custom:
+          help: Elle bütçe yeniden dağıtımları veya karmaşık hibrit kurallar gibi
+            standart algoritmalara uymayan özel durumlar için kullanılır.
+          label: Açgözlü, özel (%{rule})
+        greedy_exclusive:
+          help: Çakışan proje gruplarını ele alır. Standart açgözlü gibi çalışır,
+            ancak birden fazla 'kazanan' proje çakışırsa (ör. aynı özel bölgede veya
+            kategoride), yalnızca oy sayısına dayanmak yerine bir hiyerarşi kuralı
+            uygulanır (ör. ilçe düzeyindeki projeler kent genelindekilere göre önceliğe
+            sahip olabilir veya tersi).
+          label: Açgözlü, özel bölgeli (%{rule})
+        greedy_no_skip:
+          help: Projeler oy sayısına göre (azalan) sıralanır. Algoritma kalan bütçeye
+            sığan projeleri seçer ancak sığmayan ilk projede hemen durur. Sığacak
+            olsalar bile sonraki projeler değerlendirilmez.
+          label: Açgözlü, atlamasız (%{rule})
+        greedy_threshold:
+          help: Standart açgözlü gibi davranır, ancak projeler yalnızca tanımlı bir
+            min_project_score_threshold değerini karşılıyorsa değerlendirilir.
+          label: Açgözlü, eşikli (%{rule})
+        unknown:
+          help: Ya bilgi mevcut değil ya da birden fazla olasılık vardı ve hangisinin
+            geçerli olduğu belirsiz.
+          label: Bilinmiyor (%{rule})
+      pabulib_vote_types:
+        approval: Onay (%{type})
+        cumulative: Kümülatif (%{type})
+        ordinal: Sıralı (%{type})
+        scoring: Puanlama (%{type})
+      project:
+        budget_amount: Bütçe tutarı
+        description: Açıklama
+        proposal_ids: İlişkili öneriler
+        proposals: Öneriler
+        selected: Uygulama için seçildi
+        title: Başlık
+      milestone:
+        description: Açıklama
+        entry_date: Tarih
+        title: Başlık
+      result:
+        decidim_accountability_status_id: Durum
+        decidim_category_id: Kategori
+        decidim_scope_id: Kapsam
+        description: Açıklama
+        end_date: Bitiş tarihi
+        progress: İlerleme
+        start_date: Başlangıç tarihi
+        subresults: Alt sonuçlar
+        title: Başlık
+        updated_at: Güncellenme tarihi
+      status:
+        description: Açıklama
+        key: Anahtar
+        name: Ad
+        progress: İlerleme
     errors:
       models:
         questionnaire:
@@ -3576,6 +4189,16 @@ tr:
         meetings:
           meeting:
             text: 'Bu toplantıda tartışıldı: %{link}'
+        budgets:
+          project:
+            text: 'Bu bütçeye eklendi: %{link}'
+        accountability:
+          result:
+            budget_text: Bu sonuç %{link} dâhil edildi
+            meetings_ids: 'Bu toplantıda tartışıldı: %{link}'
+            project_ids: 'Bu projeye dâhil edildi: %{link}'
+            proposal_ids: 'Bu öneriye dâhil edildi: %{link}'
+            text: 'Bu sonuca eklendi: %{link}'
       decidim/proposals/collaborative_draft:
         one: İş birlikçi taslak
         other: İş birlikçi taslaklar
@@ -3615,6 +4238,17 @@ tr:
       decidim/assembly_user_role:
         one: Meclis kullanıcı rolü
         other: Meclis kullanıcı rolleri
+      decidim/budgets/budget:
+        one: Bütçe
+        other: Bütçeler
+      decidim/budgets/project:
+        one: Proje
+        other: Projeler
+      decidim/accountability/result:
+        one: Sonuç
+        other: Sonuçlar
   errors:
     messages:
       cannot_have_comments: yorum içeremez
+  index:
+    confirmed_orders_count: Oy sayısı
