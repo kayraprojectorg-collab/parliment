@@ -57,6 +57,14 @@ module Decidim
       engine_name "decidim"
 
       initializer "decidim_core.register_icons", after: "decidim_core.add_social_share_services" do
+        # Kurultay side-menu icons
+        Decidim.icons.register(name: "home-4-line", icon: "home-4-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "user-line", icon: "user-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "notification-3-line", icon: "notification-3-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "mail-line", icon: "mail-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "settings-3-line", icon: "settings-3-line", category: "system", description: "", engine: :core)
+        Decidim.icons.register(name: "login-box-line", icon: "login-box-line", category: "system", description: "", engine: :core)
+
         Decidim.icons.register(name: "qr-code-line", icon: "qr-code-line", category: "system", description: "", engine: :core)
         Decidim.icons.register(name: "phone-line", icon: "phone-line", category: "system", description: "", engine: :core)
         Decidim.icons.register(name: "more-2-fill", icon: "more-2-fill", category: "system", description: "Resource Action button", engine: :core)
