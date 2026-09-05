@@ -25,4 +25,14 @@ Rails.application.config.to_prepare do
   Decidim::System::ApplicationHelper.prepend(Module.new do
     def title = "Kurultay"
   end)
+
+  # Default colors applied to organizations created from the system panel, so a
+  # newly created tenant starts on the Kurultay palette instead of Decidim's.
+  Decidim::System::CreateOrganization.prepend(Module.new do
+    private
+
+    def default_colors
+      { primary: "#127C82", secondary: "#0A4A4E", tertiary: "#F2C14E" }
+    end
+  end)
 end
