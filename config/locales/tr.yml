@@ -677,6 +677,50 @@ tr:
           step:
             comments_blocked: Yorumlar engellendi
           visualization: Görselleştirme
+      component_order_selector:
+        no_content: Bu ölçütlere uyan içerik bulamadık.
+        order:
+          all_types: Tüm türler
+          collaborative_draft: İş birlikçi Taslak
+          comment: Yorum
+          debate: Tartışma
+          initiative: Girişim
+          meeting: Toplantı
+          order: Bütçe oyu
+          post: Gönderi
+          proposal: Öneri
+          question: Soru
+        title: 'Göster:'
+      dummy:
+        actions:
+          bar: Bar
+          foo: Foo
+        name: Örnek Bileşen
+        settings:
+          global:
+            amendments_enabled: Değişiklik önerileri etkin
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            dummy_global_attribute1: Örnek Öznitelik 1
+            dummy_global_attribute2: Örnek Öznitelik 2
+            dummy_global_translatable_text: Örnek Çevrilebilir Metin
+            enable_pads_creation: Pad oluşturmayı etkinleştir
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            resources_permissions_enabled: Kaynak izinleri etkin
+            taxonomy_filters: Bileşen için filtreleri seçin
+          step:
+            amendment_creation_enabled: Değişiklik önerisi oluşturma etkin
+            amendment_promotion_enabled: Değişiklik önerisi yükseltme etkin
+            amendment_reaction_enabled: Değişiklik önerisi tepkisi etkin
+            amendments_visibility: Değişiklik önerisi görünürlüğü
+            comments_blocked: Yorumlar engellendi
+            dummy_step_attribute1: Örnek Adım Özniteliği 1
+            dummy_step_attribute2: Örnek Adım Özniteliği 2
+            dummy_step_translatable_text: Örnek Adım Çevrilebilir Metni
+      pagination:
+        page_title: "%{component_name} - Sayfa %{current_page} / %{total_pages}"
     download_your_data:
       help:
         comment_votes:
@@ -1339,6 +1383,32 @@ tr:
             katılın!
           unearned_another: Bu katılımcı henüz hiçbir toplantıya katılmadı.
           unearned_own: Henüz hiçbir toplantıya katılmadınız.
+        followers:
+          description: Bu rozet, belirli bir takipçi sayısına ulaştığınızda verilir.
+            %{organization_name} bir sosyal ve politik ağdır; platformdaki diğer kişilerle
+            iletişim kurmak için ağınızı örün.
+          description_another: Bu katılımcının %{score} takipçisi var.
+          description_own: "%{score} kişi sizi takip ediyor."
+          name: Takipçiler
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} kişinin daha sizi
+            takip etmesini sağlayın!
+          unearned_another: Bu katılımcının henüz hiç takipçisi yok.
+          unearned_own: Henüz hiç takipçiniz yok.
+        index:
+          badge_title: "%{name} rozeti"
+          how: Nasıl kazanabilirsiniz
+          page_description: Rozetler, platformdaki katılımcı eylemlerinin ve ilerlemenin
+            takdirleridir. Platformda keşfetmeye, katılmaya ve etkileşime girmeye
+            başladıkça farklı rozetler kazanacaksınız. İşte rozetlerin listesi ve
+            bunları kazanmanın bazı yolları.
+          title: Rozetler
+      all_badges_link: Mevcut tüm rozetleri gör.
+      description: Rozetler, platformdaki katılımcı eylemlerinin ve ilerlemenin takdirleridir.
+        Platformda keşfetmeye, katılmaya ve etkileşime girmeye başladıkça farklı rozetler
+        kazanacaksınız.
+      level: Seviye %{level}
+      reached_top: Bu rozet için en üst seviyeye ulaştınız.
+      title: Rozetler nedir?
     open_data:
       help:
         debate_comments:
@@ -1769,6 +1839,10 @@ tr:
       errors:
         response:
           body: İçerik boş olamaz
+        decidim/user:
+          password: Parola çok kısa.
+          password_confirmation: Parola onayı, parolayla eşleşmelidir.
+        error: Bu alanda bir hata var.
       images:
         dimensions: "%{width} x %{height} px"
         processors:
@@ -1850,9 +1924,71 @@ tr:
       meetings:
         attendees_count_help_text: Yüz yüze, çevrimiçi veya hibrit olsun, toplantınızdaki
           toplam katılan sayısını eklemeyi unutmayın.
+      attachment_link:
+        explanation: Ek bağlantıları için rehber
+      file_help:
+        file:
+          explanation: 'Dosya için rehber:'
+          message_1: Bir görsel veya belge olmalıdır.
+          message_2: Görselse, tercihen metin içermeyen yatay bir görsel olmalıdır.
+            Platform görseli kırpar.
+        icon:
+          explanation: 'Simge için rehber:'
+          message_1: Kare bir görsel olmalıdır.
+          message_2: Bu görsel için önerilen boyut 512x512'dir.
+        image:
+          explanation: 'Görsel için rehber:'
+          message_1: Tercihen metin içermeyen yatay bir görsel.
+          message_2: Hizmet görseli kırpar.
+        import_file:
+          explanation: 'İçe aktarma dosyası için rehber:'
+          message_1: Dışa aktarma özelliğiyle indirilmiş bir JSON belgesi olmalıdır.
+      file_validation:
+        allowed_file_extensions: 'İzin verilen dosya uzantıları: %{extensions}'
+        max_file_dimension: 'Maksimum dosya boyutları: %{resolution} piksel'
+        max_file_size: 'Maksimum dosya boyutu: %{megabytes}MB'
+      files:
+        extension_allowlist: 'Kabul edilen biçimler: %{extensions}'
+      upload:
+        labels:
+          add_attachment: Ek ekle
+          add_file: Dosya ekle
+          add_image: Görsel ekle
+          edit_image: Görseli düzenle
+          error: Hata!
+          file_size_too_large: 'Dosya boyutu çok büyük! Maksimum dosya boyutu: %{megabytes}MB'
+          filename: Dosya adı
+          remove: Kaldır
+          replace: Değiştir
+          save: Kaydet
+          title: Başlık
+          title_required: Başlık zorunludur!
+          uploaded: Yüklendi
+          validating: Doğrulanıyor...
+          validation_error: Doğrulama hatası! Dosyanın izin verilen bir uzantıya veya
+            boyuta sahip olduğunu kontrol edin.
+        select_file: Dosya seç
+      upload_help:
+        dropzone: Dosyaları buraya bırakın veya yüklemek için düğmeye tıklayın
+        explanation: "%{attribute} için rehber"
     application:
       geocoding:
         not_configured: Coğrafi kodlama yapılandırılmamış!
+      document:
+        download: Dosyayı indir
+        visit_link: Bağlantıyı ziyaret et
+      documents:
+        component_documents:
+          dummy: Örnek bileşen belgeleri
+          meetings: Toplantı belgeleri
+        documents: Belgeler
+        related_documents: İlişkili belgeler
+      photo:
+        alt: Medya resmi
+        title: Görsel
+      photos:
+        photos: Görseller
+        related_photos: İlişkili görseller
     participatory_spaces:
       highlighted_proposals:
         see_all: Tüm önerileri gör
@@ -2643,6 +2779,17 @@ tr:
             veya bir güvence organı (karar alma prosedürlerini iyileştirmek için olayları,
             suistimalleri veya önerileri toplayan) meclis örnekleridir.</p>\n"
           title: Meclis nedir?
+      main_topic:
+        default_page:
+          content: "<p>%{organization} içinde, üst menüde gördüğünüz alanlar aracılığıyla
+            farklı konularda katılabilir ve karar verebilirsiniz: Süreçler, Meclisler,
+            Girişimler, Danışmalar.</p> <p>Her birinde katılmak için farklı seçenekler
+            bulacaksınız: tek başınıza veya başkalarıyla öneriler yapmak, tartışmalara
+            katılmak, uygulanacak projeleri önceliklendirmek, yüz yüze toplantılara
+            katılmak ve diğer eylemler.</p>\n"
+          title: "%{organization} içinde neler yapabilirim?"
+        description: "%{organization} hakkında daha fazla bilgi edinin."
+        title: Genel
     participatory_process_groups:
       content_blocks:
         extra_data:
@@ -3038,6 +3185,10 @@ tr:
       value_types:
         assembly_presenter:
           not_found: 'Meclis veritabanında bulunamadı (Kimlik: %{id})'
+      base_presenter:
+        create: "%{user_name}, %{resource_name} öğesini oluşturdu"
+        create_with_space: "%{user_name}, %{space_name} içinde %{resource_name} öğesini
+          oluşturdu"
     budgets:
       actions:
         confirm_delete_budget: Bu bütçeyi silmek istediğinizden emin misiniz?
@@ -3372,6 +3523,436 @@ tr:
         show:
           stats:
             back_to_resource: Sonuca geri dön
+    accessibility:
+      external_link: Harici bağlantı
+      front_page_link: Ana sayfaya git
+      logo: "%{organization} resmi logosu"
+      opens_in_new_tab: Yeni sekmede açılır
+      skip_button: Ana içeriğe geç
+    activity:
+      time_ago: "%{time} önce"
+    admin_terms_of_service:
+      default_body: "<h2>YÖNETİCİ HİZMET ŞARTLARI</h2><p>Yerel Sistem Yöneticisinden
+        her zamanki bilgilendirmeyi aldığınıza güveniyoruz. Genellikle şu üç şeye
+        iner:</p><ol><li>Başkalarının mahremiyetine saygı gösterin.</li><li>Tıklamadan
+        önce düşünün.</li><li>Büyük güç, büyük sorumluluk getirir.</li></ol>"
+    alert:
+      dismiss: Bildirimi kapat
+    amendments:
+      accepted:
+        error: Değişiklik önerisi kabul edilirken bir sorun oluştu.
+        success: Değişiklik önerisi başarıyla kabul edildi.
+      amendable:
+        button: "%{model_name} için değişiklik öner"
+        error: Bu kaynakta değişiklik önerilirken bir sorun oluştu.
+        promote_button: "%{model_name} seviyesine yükselt"
+        promote_confirm_text: Bu değişiklik önerisini yükseltmek istediğinizden emin
+          misiniz?
+        promote_help_text: Bu değişiklik önerisini yükseltip bağımsız bir %{model_name}
+          olarak yayınlayabilirsiniz.
+      amendments:
+        title:
+          one: "%{count} değişiklik önerisi"
+          other: "%{count} değişiklik önerisi"
+      created:
+        error: Değişiklik önerisi taslağı oluşturulurken bir sorun oluştu.
+        success: Değişiklik önerisi taslağı başarıyla oluşturuldu.
+      destroy_draft:
+        error: Değişiklik önerisi taslağı silinirken bir sorun oluştu.
+        success: Değişiklik önerisi taslağı başarıyla silindi.
+      edit_draft:
+        discard: Bu taslağı at
+        send: Önizleme
+        title: Değişiklik Önerisi Taslağını Düzenle
+      emendation:
+        actions:
+          button_accept: Kabul et
+          button_reject: Reddet
+          help_text: Değişiklikleri gözden geçirin ve bu değişiklik önerisini kabul
+            edin veya reddedin. Yazarlarına bir bildirim gönderilecektir.
+        announcement:
+          accepted: |-
+            %{amendable_type} %{proposal_link} için bu değişiklik önerisi
+            <strong>%{date}</strong> tarihinde kabul edildi.
+          evaluating: |-
+            %{amendable_type} %{proposal_link} için bu değişiklik önerisi
+            değerlendiriliyor.
+          promoted: Bir %{amendable_type} seviyesine yükseltildi.
+          rejected: "%{amendable_type} %{proposal_link} için bu değişiklik önerisi
+            <strong>%{date}</strong> tarihinde reddedildi."
+          withdrawn: |-
+            %{amendable_type} %{proposal_link} için bu değişiklik önerisi
+            yazarı tarafından geri çekildi.
+      name: Değişiklik önerisi
+      new:
+        send: Oluştur
+        title: Değişiklik Önerisi Taslağı Oluştur
+      preview_draft:
+        modify: Değiştir
+        publish: Yayınla
+        title: Değişiklik Önerisi Taslağını Yayınla
+      promoted:
+        error: Değişiklik önerisi yeni bir öneri olarak yayınlanırken bir sorun oluştu.
+        success: Değişiklik önerisi yeni bir öneri olarak başarıyla yayınlandı.
+      publish_draft:
+        error: Değişiklik önerisi yayınlanırken bir sorun oluştu.
+        success: Değişiklik önerisi başarıyla yayınlandı.
+      rejected:
+        error: Bu değişiklik önerisi reddedilirken bir sorun oluştu, lütfen daha sonra
+          tekrar deneyin.
+        success: Değişiklik önerisi başarıyla reddedildi.
+      review:
+        back: Geri
+        heading: Değişiklik önerisini gözden geçir
+        send: Değişiklik önerisini kabul et
+      update_draft:
+        error: Değişiklik önerisi taslağı güncellenirken bir sorun oluştu.
+        success: Değişiklik önerisi taslağı başarıyla güncellendi.
+      withdraw:
+        error: Değişiklik önerisi geri çekilirken bir sorun oluştu.
+        success: Değişiklik önerisi başarıyla geri çekildi.
+      wizard:
+        steps:
+          '1': Değişiklik önerinizi oluşturun
+          '2': Değişiklik önerinizi yayınlayın
+    anonymous_user: Anonim
+    author:
+      avatar: 'Avatar: %{name}'
+      comments:
+        one: yorum
+        other: yorum
+      likes:
+        one: beğeni
+        other: beğeni
+      official_author: Resmi
+    authorization_handlers:
+      another_dummy_authorization_handler:
+        explanation: '"A" ile başlayan bir pasaport numarası girerek doğrulanın.'
+        fields:
+          passport_number: Pasaport numarası
+          postal_code: Posta kodu
+        name: Başka bir örnek yetkilendirme
+      dummy_authorization_handler:
+        explanation: '"X" ile biten bir belge numarası girerek doğrulanın.'
+        fields:
+          allowed_postal_codes: İzin verilen posta kodları (virgülle ayrılmış)
+          document_number: Belge numarası
+          postal_code: Posta kodu
+        name: Örnek yetkilendirme
+      dummy_authorization_workflow:
+        explanation: Örnek yetkilendirme iş akışı
+        name: Örnek yetkilendirme iş akışı
+      ephemeral_dummy_authorization_handler:
+        explanation: '"X" ile biten bir belge numarası girerek doğrulanın.'
+        fields:
+          allowed_postal_codes: İzin verilen posta kodları (virgülle ayrılmış)
+          document_number: Belge numarası
+          postal_code: Posta kodu
+        name: Geçici örnek yetkilendirme
+      errors:
+        duplicate_authorization: Bir katılımcı aynı verilerle zaten yetkilendirilmiş.
+          Ayrıntılarınızı doğrulamak için bir yönetici sizinle iletişime geçecektir.
+      expired_at: "%{timestamp} tarihinde süresi doldu"
+      expires_at: "%{timestamp} tarihinde süresi dolacak"
+      foo_authorization:
+        fields:
+          bar: Bar
+          foo: Foo
+        name: Foo yetkilendirmesi
+      granted_at: "%{timestamp} tarihinde verildi"
+      sms:
+        explanation: Kimliğinizi doğrulayabilmemiz için cep telefonu numaranızı gönderin.
+        name: SMS ile kod
+      started_at: "%{timestamp} tarihinde başladı"
+    authorization_modals:
+      content:
+        expired:
+          authorize: '"%{authorization}" ile yeniden yetkilendir'
+          explanation: Yetkilendirmenizin süresi doldu. Bu işlemi gerçekleştirmek
+            için "%{authorization}" ile yeniden yetkilendirilmeniz gerekir.
+          title: Yetkilendirmenin süresi doldu
+        incomplete:
+          cancel: İptal
+          explanation: 'Şu anda "%{authorization}" ile yetkilendirilmiş olsanız da,
+            şu veriler eksik olduğu için yeniden yetkilendirmenize ihtiyacımız var:'
+          invalid_field: "%{field}"
+          reauthorize: Yeniden yetkilendir
+          title: Lütfen yeniden yetkilendirin
+        missing:
+          authorize: '"%{authorization}" ile yetkilendir'
+          explanation: Bu işlemi gerçekleştirmek için "%{authorization}" ile yetkilendirilmeniz
+            gerekir.
+          title: Yetkilendirme gerekli
+        ok:
+          title: Bu sayfadayken yetkilendirildiniz. İşleminizi gerçekleştirmek için
+            lütfen sayfayı yeniden yükleyin.
+        pending:
+          explanation: Bu işlemi gerçekleştirmek için "%{authorization}" ile yetkilendirilmeniz
+            gerekir, ancak yetkilendirmeniz hâlâ sürüyor.
+          resume: '"%{authorization}" yetkilendirme ilerlemenizi kontrol edin.'
+          title: Yetkilendirme hâlâ sürüyor
+        unauthorized:
+          explanation: Üzgünüz, yetkilendirme verilerinizin bir kısmı eşleşmediği
+            için bu işlemi gerçekleştiremezsiniz.
+          invalid_field: "%{field} değeri %{value} geçerli değil."
+          ok: Tamam
+          title: Yetkilendirilmedi
+        unconfirmed:
+          confirmation_instructions: 'Onay talimatlarını almadıysanız yeniden isteyebilirsiniz:'
+          explanation_html: Bu işlemi gerçekleştirmek için yetkilendirilmeniz gerekir;
+            bunu yapmadan önce <strong>%{email}</strong> e-postanızı onaylamanız gerekir.
+          request_confirmation_instructions: Onay talimatlarını iste
+          title: E-postanızı onaylayın
+    block_user_mailer:
+      notify:
+        body_1: Hesabınız engellendi.
+        body_2: 'Neden: %{justification}'
+        greetings: Saygılarımızla,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        hello: Merhaba,
+        subject: Hesabınız %{organization_name} tarafından engellendi
+    collapsible_list:
+      hidden_elements_count:
+        one: ve %{count} tane daha
+        other: ve %{count} tane daha
+      see_less: "(daha az göster)"
+    contact: İletişim
+    content_blocks:
+      announcement:
+        body: Duyuru metni
+        name: Duyuru
+      cta:
+        name: Görsel, metin ve Eylem Çağrısı düğmesi
+      cta_settings_form:
+        background_image: Arka plan görseli
+        button_text: Eylem Çağrısı metni
+        button_url: Eylem Çağrısı URL'si
+        description: Açıklama
+      footer_sub_hero:
+        name: Alt bilgi alt kahraman afişi
+      hero:
+        name: Ana görsel ve eylem çağrısı
+      hero_settings_form:
+        background_image: Arka plan görseli
+        cta_button_path: Eylem Çağrısı düğmesi URL'si
+        cta_button_path_help: 'Ana sayfadaki Eylem Çağrısı düğmesinin bağlandığı yeri
+          değiştirebilirsiniz. Burada tam URL değil, kısmi yollar kullanın. Harf,
+          rakam, tire ve eğik çizgi kabul eder ve bir harfle başlamalıdır. Eylem Çağrısı
+          düğmesi, ana sayfada karşılama metni ile açıklama arasında gösterilir. Örnek:
+          %{url}'
+        cta_button_text: Eylem Çağrısı düğmesi metni
+        cta_button_text_help: Ana sayfadaki Eylem Çağrısı düğmesi metnini, kuruluşunuzda
+          mevcut her dil için değiştirebilirsiniz. Ayarlanmazsa varsayılan değer kullanılır.
+          Eylem Çağrısı düğmesi, ana sayfada karşılama metni ile açıklama arasında
+          gösterilir.
+        welcome_text: Karşılama metni
+      highlighted_content_banner:
+        name: Öne çıkan içerik afişi
+      highlighted_content_banner_settings_form:
+        action_button_subtitle: Eylem düğmesi alt başlığı
+        action_button_title: Eylem düğmesi başlığı
+        action_button_url: Eylem düğmesi URL'si
+        background_image: Arka plan görseli
+        short_description: Kısa açıklama
+        subtitle: Alt başlık
+        title: Başlık
+      highlighted_elements_settings_form:
+        components:
+          all: Tümü
+          label: 'Bileşen seçin:'
+        orders:
+          label: 'Öğeleri şuna göre sırala:'
+          random: Rastgele
+          recent: En yeni
+      how_to_participate:
+        name: Nasıl katılınır
+      html:
+        html_content: HTML içeriği
+        name: HTML bloğu
+      last_activity:
+        name: Son etkinlik
+        title: Son etkinlik
+        view_all: Tümünü görüntüle
+      last_activity_settings_form:
+        max_last_activity_users: Gösterilecek, son etkinliğe sahip maksimum kullanıcı
+          avatarı sayısı
+      main_data:
+        name: Ana veriler
+      metadata:
+        name: Meta veri
+      participatory_space_stats:
+        name: İstatistikler
+      social_networks_metadata:
+        name: Sosyal ağlar
+      static_page:
+        section:
+          name: Bölüm
+          section_content: İçerik
+        summary:
+          name: Özet
+          summary_content: İçerik
+        two_pane_section:
+          left_column: Sol sütun
+          name: İki sütunlu bölüm
+          right_column: Sağ sütun
+      stats:
+        name: Kuruluş istatistikleri
+      sub_hero:
+        name: Alt kahraman afişi
+    core:
+      actions:
+        login_before_access: Lütfen erişmeden önce hesabınızla giriş yapın.
+        unauthorized: Bu işlemi gerçekleştirme yetkiniz yok.
+      application_helper:
+        filter_area_values:
+          all: Tümü
+        filter_scope_values:
+          all: Tümü
+        filter_taxonomy_values:
+          all: Tümü
+    delete_user_mailer:
+      delete:
+        body_1: Hesabınız devre dışı bırakıldı ve artık erişilebilir değil. Kişisel
+          verileriniz, veri saklama politikalarımız uyarınca kalıcı olarak silinmek
+          üzere zamanlandı.
+        body_2: Güvenlik nedeniyle bazı yetkilendirmeyle ilgili veriler saklanacaktır;
+          yeni bir hesap oluşturup yeniden yetkilendirirseniz, bunlar yeni hesabınıza
+          bağlanabilir.
+        greetings_html: Saygılarımızla,<br/><a href="%{organization_url}">%{organization_name}</a>
+        hello: Sayın %{username},
+      subject: Hesabınız silindi
+    documents:
+      one: "%{count} belge"
+      other: "%{count} belge"
+    doorkeeper:
+      authorizations:
+        new:
+          api_read: API aracılığıyla içerik okuma
+          authorize: Uygulamayı yetkilendir
+          by_organization_link_html: "%{link} tarafından"
+          cancel: İptal
+          connect_your_account_html: "%{organization} platformuna giriş yaparak hesabınızı
+            bağlayın."
+          publish_content: Sizin için içerik yayınlama
+          see_email: E-postanızı görme
+          see_name: Adınızı görme
+          see_username: Takma adınızı görme
+          this_application_will_be_able_to: 'Bu uygulama şunları yapabilecek:'
+          this_application_will_not_be_able_to: 'Bu uygulama şunları yapamayacak:'
+          update_profile: Profilinizi güncelleme
+          wants_to_use_your_account_html: "%{application_name} hesabınızı kullanmak
+            istiyor"
+    editor_images:
+      create:
+        error: Görsel yüklenirken hata oluştu.
+        success: Görsel başarıyla yüklendi.
+      drag_and_drop_help: Görselleri sürükleyip bırakarak veya yapıştırarak ekleyin.
+    ephemeral_user: Ziyaretçi
+    errors:
+      files:
+        file_cannot_be_processed: Dosya işlenemiyor
+        file_resolution_too_large: Dosya çözünürlüğü çok yüksek
+        not_inside_organization: Dosya herhangi bir kuruluşa eklenmemiş.
+      internal_server_error:
+        copied: Metin kopyalandı!
+        copy_error_message_clarification: Hata mesajını panoya kopyala
+        copy_to_clipboard: Panoya kopyala
+        date_and_time: Tarih ve saat
+        reference: Referans
+        request_method: İstek yöntemi
+        title: Sunucumuzda bir sorun oluştu
+        try_later: Lütfen daha sonra tekrar deneyin. Hata devam ederse, lütfen aşağıdaki
+          bilgileri kopyalayıp paylaşmak isteyebileceğiniz diğer bilgilerle birlikte
+          platform yöneticilerine gönderin.
+        unknown: Bilinmiyor
+        url: URL
+        user: Kullanıcı Kimliği
+      not_found:
+        back_home: Ana sayfaya dön
+        content_doesnt_exist: Bu adres yanlış veya kaldırılmış.
+        title: Aradığınız sayfa bulunamıyor
+    export_mailer:
+      download_your_data_export:
+        click_button_html: Verilerinizi indirmek için bir sonraki bağlantıya tıklayın.<br/>Dosya
+          %{date} tarihine kadar indirilebilir olacaktır.
+        download: İndir
+      export:
+        click_button_html: İndirmeniz hazır. <br/>Dosya %{date} tarihine kadar indirilebilir
+          olacaktır.
+        download: İndir
+      subject: '"%{name}" dışa aktarmanız hazır'
+    filters:
+      linked_classes:
+        all: Tümü
+        answer: Yanıt
+        collaborative_draft: İş birlikçi taslak
+        dummy_resource: Örnek kaynaklar
+        meeting: Toplantılar
+        project: Projeler
+        proposal: Öneriler
+        result: Sonuçlar
+    fingerprint:
+      check: Parmak izini kontrol et
+      explanation: Aşağıdaki metin parçası, bu içeriğin kısaltılmış, karma bir gösterimidir.
+        Tek bir değişiklik tamamen farklı bir değere yol açacağından, içeriğin değiştirilmediğinden
+        emin olmak için kullanışlıdır.
+      online_calculator_name: Çevrimiçi MD5 hesaplayıcı
+      replicate_help: Bu parmak izi bir SHA256 karma algoritması kullanılarak hesaplanır.
+        Kendiniz yeniden oluşturmak için bir %{online_calculator_link} kullanabilir
+        ve kaynak verileri kopyalayıp yapıştırabilirsiniz.
+      source: Kaynak
+      title: Parmak izi
+      value: Değer
+    followers:
+      followers_count:
+        one: "%{count} takipçi"
+        other: "%{count} takipçi"
+      no_followers: Henüz takipçi yok.
+    following:
+      following_count:
+        one: "%{count} takip"
+        other: "%{count} takip"
+      no_followings: Henüz kimseyi veya hiçbir şeyi takip etmiyor.
+      non_public_followings: Takip edilen kaynakların bir kısmı herkese açık değil.
+    follows:
+      create:
+        button: Takip et
+        error: Bu kaynak takip edilirken bir sorun oluştu.
+        participatory_space: "<span>%{resource_name}</span> takip ediliyor"
+      destroy:
+        button: Takibi bırak
+        error: Bu kaynağın takibi bırakılırken bir sorun oluştu.
+    groups:
+      roles:
+        creator: Yönetici
+        member: Üye
+    last_activities:
+      all: Tüm etkinlik türleri
+      index:
+        last_activity: Son etkinlik
+      name: Son etkinlikler
+      no_activities_warning: Bu etkinlik türü için gösterilecek giriş yok.
+    like_buttons_cell:
+      already_liked: Beğeniyi geri al
+      like: Beğen
+    likes_list:
+      liked_by:
+        one: "%{visible} tarafından beğenildi"
+        other: "%{visible} ve %{others} tarafından beğenildi"
+      others: "%{count} kişi daha"
+      title: Beğenenler
+      you: siz
+    linked_resource_from:
+      included_in: 'Şuna dâhil:'
+    links:
+      invalid_url: Geçersiz URL
+      warning:
+        body_1: Harici bir bağlantıyı ziyaret etmek üzeresiniz ve harici sitedeki
+          içerik konusunda dikkatli olmanızı rica ederiz.
+        body_2: Lütfen ziyaret etmek üzere olduğunuz bağlantıyı kontrol edin ve devam
+          etmeden önce onu güvenli bir site olarak tanıdığınızdan emin olun.
+        cancel: İptal
+        proceed: Devam et
+        title: Harici bağlantıyı aç
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -3749,6 +4330,21 @@ tr:
       decidim/participatory_process_step_changed_event: Aşama değiştirildi
       decidim/accountability/proposal_linked_event: Öneri bir sonuca dâhil edildi
       decidim/accountability/result_progress_updated_event: Sonuç ilerlemesi güncellendi
+      decidim/attachment_created_event: Ek
+      decidim/component_published_event: Etkin bileşen
+      decidim/demoted_membership: Artık grup yöneticisi değil
+      decidim/gamification/badge_earned_event: Rozet kazanıldı
+      decidim/gamification/level_up_event: Seviye atladınız
+      decidim/invited_to_group_event: Gruba davet edildi
+      decidim/join_request_accepted_event: Katılma isteği kabul edildi
+      decidim/join_request_rejected_event: Katılma isteği reddedildi
+      decidim/profile_updated_event: Profil güncellendi
+      decidim/promote_to_admin: Grup yöneticiliğine yükseltildi
+      decidim/promoted_to_admin_event: Grup yöneticiliğine yükseltildi
+      decidim/removed_from_group: Gruptan çıkarıldı
+      decidim/resource_hidden_event: Kaynak gizlendi
+      decidim/resource_liked_event: Kaynak beğenildi
+      decidim/welcome_notification_event: Karşılama mesajı
     attributes:
       debate:
         closed_at: Kapatılma zamanı
@@ -4094,6 +4690,58 @@ tr:
         key: Anahtar
         name: Ad
         progress: İlerleme
+      account:
+        delete_reason: Hesabınızı silme nedeni
+      attachment:
+        documents: Belgeler
+        image: Görsel
+        photos: Fotoğraflar
+      common:
+        created_at: Oluşturulma tarihi
+      component:
+        taxonomy_filters: Taksonomi filtreleri
+      content_block_attachment:
+        background_image: Arka plan görseli
+        main_image: Ana görsel
+      conversation:
+        body: İçerik
+      editor_image:
+        file: Dosya
+      group:
+        about: Hakkında
+        avatar: Avatar
+        document_number: Belge numarası
+        email: E-posta
+        name: Ad
+        nickname: Takma ad
+        phone: Telefon
+      import:
+        file: Dosya
+      message:
+        body: İçerik
+      report:
+        details: Ek yorumlar
+      taxonomy:
+        name: Taksonomi adı
+      taxonomy_filter:
+        internal_name: İç etiket
+        name: Etiket
+        root_taxonomy_id: Taksonomiden
+        space_filter: Şunun için filtre olarak kullanılabilir
+      user:
+        about: Hakkında
+        avatar: Avatar
+        email: E-postanız
+        encrypted_password: Parola
+        locale: Yerel ayar
+        name: Adınız
+        nickname: Takma ad
+        old_password: Mevcut parola
+        password: Parola
+        password_confirmation: Parolanızı onaylayın
+        personal_url: Kişisel URL
+        remove_avatar: Avatarı kaldır
+        tos_agreement: Hizmet şartları sözleşmesi
     errors:
       models:
         questionnaire:
@@ -4162,6 +4810,10 @@ tr:
                 sahip dosyalara izin verilir: %{types}.'
               empty: Belge boş
               invalid_json: Belge geçerli bir JSON değil
+        user:
+          attributes:
+            nickname:
+              format: Takma ad küçük harflerden oluşmalı ve boşluk içermemelidir
   activerecord:
     models:
       decidim/comments/comment:
@@ -4199,6 +4851,9 @@ tr:
             project_ids: 'Bu projeye dâhil edildi: %{link}'
             proposal_ids: 'Bu öneriye dâhil edildi: %{link}'
             text: 'Bu sonuca eklendi: %{link}'
+        history:
+          one: Geçmiş
+          other: Geçmiş
       decidim/proposals/collaborative_draft:
         one: İş birlikçi taslak
         other: İş birlikçi taslaklar
@@ -4247,8 +4902,100 @@ tr:
       decidim/accountability/result:
         one: Sonuç
         other: Sonuçlar
+      decidim/amendment:
+        one: Değişiklik önerisi
+        other: Değişiklik önerileri
+      decidim/like:
+        one: Beğeni
+        other: Beğeniler
+      decidim/user:
+        one: Katılımcı
+        other: Katılımcılar
+    attributes:
+      decidim/action_log:
+        created_at: Zaman
+        with_participatory_space: Katılım alanı
+      decidim/user:
+        current_password: Mevcut parola
+        email: E-posta adresi
+        name: Takma ad
+        password: Parola
+        password_confirmation: Parola onayı
+        remember_me: Beni hatırla
   errors:
     messages:
       cannot_have_comments: yorum içeremez
   index:
     confirmed_orders_count: Oy sayısı
+  booleans:
+    'false': Hayır
+    'true': Evet
+  date:
+    buttons:
+      close: Kapat
+      select: Seç
+    formats:
+      decidim_short: "%d/%m/%Y"
+      decidim_short_dashed: "%d-%m-%Y"
+      decidim_short_with_month_name_short: "%d %b %Y"
+      decidim_with_day_and_month_name: "%A %d %b %Y"
+      decidim_with_month_name: "%d %B %Y"
+      decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Biçim: gg/aa/yyyy'
+      order: d-m-y
+      separator: "/"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: yaklaşık 1 saat
+        other: yaklaşık %{count} saat
+      about_x_months:
+        one: yaklaşık 1 ay
+        other: yaklaşık %{count} ay
+      half_a_minute: yarım dakika
+      less_than_x_minutes:
+        one: bir dakikadan az
+        other: "%{count} dakikadan az"
+      less_than_x_seconds:
+        one: 1 saniyeden az
+        other: "%{count} saniyeden az"
+      short:
+        about_x_days: "%{count}g"
+        about_x_hours: "%{count}sa"
+        about_x_minutes: "%{count}dk"
+        about_x_months: "%{count} ay"
+        about_x_years: "%{count}y"
+        almost_x_years: "%{count}y"
+        half_a_minute: 1dk
+        less_than_x_minutes: "%{count}dk"
+        less_than_x_seconds: "%{count}sn"
+        over_x_years: "%{count}y"
+        x_days: "%{count}g"
+        x_hours: "%{count}sa"
+        x_minutes: "%{count}dk"
+        x_months: "%{count} ay"
+        x_seconds: "%{count}sn"
+        x_years: "%{count}y"
+      x_days:
+        one: 1 gün
+        other: "%{count} gün"
+      x_hours:
+        one: 1 saat
+        other: "%{count} saat"
+      x_minutes:
+        one: 1 dakika
+        other: "%{count} dakika"
+      x_months:
+        one: 1 ay
+        other: "%{count} ay"
+      x_seconds:
+        one: 1 saniye
+        other: "%{count} saniye"
+    widget:
+      label:
+        date: "%{label} için tarih seçin"
+        time: "%{label} için saat seçin"
+      picker:
+        date_button: "%{label} için takvim seçiciyi aç"
+        time_button: "%{label} için saat seçiciyi aç"
