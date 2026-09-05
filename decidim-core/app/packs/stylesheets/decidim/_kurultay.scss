@@ -397,6 +397,18 @@ header .main-bar__language-chooser-desktop .main-bar__language-chooser-trigger s
 
 /* ---------- Statistics band (dark, gold figures) ---------------------- */
 
+// Balance the home statistics grid so a partial last row stays centred and
+// never reads as an unfinished 4-column row.
+#statistics .statistic__container {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #statistics .statistic__container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .statistic {
   background-color: var(--kur-deep);
   background-image: var(--kur-star-texture);
