@@ -49,4 +49,5 @@
 
 
 # Ignore Tailwind configuration
-tailwind.config.js
+tailwind.config.jsdb/schema.rb
+db/data_schema.rb
