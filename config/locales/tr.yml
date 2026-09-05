@@ -773,6 +773,92 @@ tr:
           id: Oyun benzersiz tanımlayıcısı
           projects: Oyun oy verdiği projeler
           updated_at: Oyun güncellendiği tarih ve saat
+        core:
+          description: Bunlar, %{user_name} kullanıcısının kişisel verilerini, katkılarını
+            ve etkinliğini içeren dosyalardır
+          title: Veri dosyalarınızı %{organization} platformundan indirin
+        follows:
+          created_at: Takibin oluşturulduğu tarih ve saat
+          followable: Takip edilen kaynak veya alan
+          id: Bu takibin benzersiz tanımlayıcısı
+          updated_at: Takibin son güncellendiği tarih ve saat
+        identities:
+          created_at: Kimliğin oluşturulduğu tarih ve saat
+          id: Bu kimliğin benzersiz tanımlayıcısı
+          provider: Bu kimliğin sağlayıcısı
+          uid: Bu kimliğin benzersiz tanımlayıcısı
+          updated_at: Kimliğin son güncellendiği tarih ve saat
+          user: Bu kimliğin ait olduğu kullanıcı
+        messaging_conversations:
+          created_at: Bu mesajlaşmanın oluşturulduğu tarih
+          id: Bu mesajlaşmanın benzersiz tanımlayıcısı
+          messages: Bu mesajlaşmanın mesajları
+          updated_at: Bu mesajlaşmanın son güncellendiği tarih
+        notifications:
+          created_at: Bildirimin oluşturulduğu tarih ve saat
+          event_class: Bildirimi tetikleyen olayın sınıfı
+          event_name: Bildirimi tetikleyen olayın adı
+          extra: Bu bildirimin ek bilgileri
+          id: Bu bildirimin benzersiz tanımlayıcısı
+          resource_type: Bildirimin ilişkili olduğu kaynağın türü
+          updated_at: Bildirimin son güncellendiği tarih ve saat
+        participatory_space_members:
+          created_at: Bu üyenin oluşturulduğu tarih ve saat
+          id: Bu üyenin benzersiz tanımlayıcısı
+          participatory_space: Bu üyenin hangi alana ait olduğu
+          published: Bu üyenin yayınlanıp yayınlanmadığı
+          role: Bu üyenin sahip olduğu rol
+          updated_at: Bu üyenin son güncellendiği tarih ve saat
+        reports:
+          created_at: Bu raporun oluşturulduğu tarih ve saat
+          details: Bu raporun ayrıntıları
+          id: Bu raporun benzersiz tanımlayıcısı
+          locale: Bu raporun dili
+          moderation: Bu raporun sahip olduğu denetim
+          reason: Bu raporun nedeni
+          updated_at: Bu raporun son güncellendiği tarih ve saat
+        users:
+          about: Bu katılımcının profil açıklaması
+          accepted_tos_version: Bu platformun Hizmet Şartlarının kullanıcı tarafından
+            kabul edildiği tarih
+          confirmation_sent_at: Onayın gönderildiği tarih ve saat
+          confirmed_at: Bu kullanıcının onaylandığı tarih ve saat
+          created_at: Bu kullanıcının oluşturulduğu tarih ve saat
+          current_sign_in_at: Mevcut girişin tarih ve saati
+          current_sign_in_ip: Mevcut girişin IP adresi
+          delete_reason: Bu kullanıcıyı silme nedeni
+          deleted_at: Bu kullanıcının silindiği tarih ve saat
+          email: Bu kullanıcının e-posta adresi
+          followers_count: Bu kullanıcıyı takip eden katılımcı sayısı
+          following_count: Bu kullanıcının takip ettiği katılımcı sayısı
+          id: Bu kullanıcının benzersiz tanımlayıcısı
+          invitation_accepted_at: Davetin kabul edildiği tarih ve saat
+          invitation_created_at: Bu kullanıcının davet edildiği tarih ve saat
+          invitation_sent_at: Davetin gönderildiği tarih ve saat
+          invitations_count: Bu kullanıcıya gönderilen davet sayısı
+          invited_by: Bu kullanıcıyı davet eden kullanıcı
+          last_sign_in_at: Önceki girişin tarih ve saati
+          last_sign_in_ip: Önceki girişin IP adresi
+          locale: Bu kullanıcının seçtiği dil (yerel ayar)
+          managed: Bu kullanıcının başka bir kullanıcı tarafından yönetilip yönetilmediği
+          name: Bu kullanıcının adı
+          newsletter_notifications_at: Bu katılımcının bülten almak için abone olduğu
+            tarih ve saat
+          nickname: Bu kullanıcının takma adı
+          notification_settings: Bu kullanıcının seçtiği bildirim ayarları
+          notifications_sending_frequency: Bu kullanıcının aldığı bildirimlerin sıklığı
+          officialized_as: Resmileştirmenin adı (Meclis üyesi, Başkan vb.)
+          officialized_at: Bu kullanıcının resmileştirildiği tarih ve saat
+          organization: Bu kullanıcının ait olduğu kuruluş
+          password_updated_at: Parolalarının en son değiştirildiği tarih
+          personal_url: Bu kullanıcının kişisel URL'si
+          remember_created_at: Kullanıcının hatırlanmak üzere seçildiği tarih ve saat
+          reset_password_sent_at: Parola sıfırlamanın gönderildiği tarih ve saat
+          roles: Varsa bu kullanıcının sahip olduğu rol
+          sign_in_count: Bu kullanıcının giriş yapma sayısı
+          type: Bu kullanıcının türü
+          unconfirmed_email: Bu kullanıcının henüz onaylamadığı e-posta adresi
+          updated_at: Bu kullanıcının son güncellendiği tarih ve saat
       show:
         debate_comments: Tartışma yorumları dışa aktarması
         debates: Tartışmalar dışa aktarması
@@ -787,6 +873,31 @@ tr:
         projects: Projeler dışa aktarması
         result_comments: Sonuç yorumları dışa aktarması
         results: Sonuçlar dışa aktarması
+        action: İşlem
+        download: Dosyayı indir
+        download_data: Veri indirme
+        download_data_description_1: Burada hesabınız için mevcut tüm indirmeleri
+          bulabilirsiniz. Bu .zip dosyaları silinmeden önce iki hafta boyunca kullanılabilir
+          olacaktır.
+        download_data_description_2: Gönderilerinizi ve kişisel verilerinizi içeren
+          bir .zip dosyası isteyebilirsiniz.
+        download_your_data: Kişisel veriler
+        expiration: Son kullanma
+        expired: Süresi doldu
+        explanation:
+          body_1: Bu dosyalar, öneriler veya yorumlar gibi bu platformdaki etkinliğinizden
+            dışa aktarılan veri kümeleridir. Analiz, araştırma veya diğer araçlarla
+            entegrasyon için kullanılabilecek ham, yapılandırılmış veriler sağlarlar
+          body_2: Bu dosyalar CSV (Virgülle Ayrılmış Değerler) biçimindedir; bu, elektronik
+            tablo programları, metin düzenleyiciler ve veri analiz araçları dâhil
+            olmak üzere çeşitli yazılım uygulamalarıyla açılıp işlenebilen yaygın
+            kullanılan bir dosya biçimidir.
+          title: Bu dosyalar nedir?
+        files_to_download: İndirilecek dosyalar
+        request_data: İste
+        type: İndirme türü
+      export:
+        ready: Hazır
     events:
       comments:
         comment_by_followed_user:
@@ -1234,6 +1345,212 @@ tr:
           notification_title: <a href="%{proposal_path}">%{proposal_title}</a> önerisini
             içeren <a href="%{resource_path}">%{resource_title}</a> sonucu artık %{progress}%
             tamamlandı.
+      amendments:
+        amendment_accepted:
+          affected_user:
+            email_intro: "%{amendable_title} için bir değişiklik önerisi kabul edildi.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: "%{emendation_author_name} tarafından %{amendable_title}
+              için kabul edilen değişiklik önerisi"
+            notification_title: <a href="%{emendation_author_path}">%{emendation_author_name}</a>
+              tarafından oluşturulan <a href="%{emendation_path}">değişiklik önerisi</a>
+              <a href="%{amendable_path}">%{amendable_title}</a> için kabul edildi.
+          follower:
+            email_intro: "%{amendable_title} için bir değişiklik önerisi kabul edildi.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} takip ettiğiniz için aldınız.
+              Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+            email_subject: "%{emendation_author_name} tarafından %{amendable_title}
+              için kabul edilen değişiklik önerisi"
+            notification_title: <a href="%{emendation_author_path}">%{emendation_author_name}</a>
+              tarafından oluşturulan <a href="%{emendation_path}">değişiklik önerisi</a>
+              <a href="%{amendable_path}">%{amendable_title}</a> için kabul edildi.
+        amendment_created:
+          affected_user:
+            email_intro: "%{amendable_title} için yeni bir değişiklik önerisi oluşturuldu.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: "%{amendable_title} için yeni değişiklik önerisi"
+            notification_title: <a href="%{amendable_path}">%{amendable_title}</a>
+              için yeni bir değişiklik önerisi oluşturuldu.
+          follower:
+            email_intro: "%{amendable_title} için yeni bir değişiklik önerisi oluşturuldu.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} takip ettiğiniz için aldınız.
+              Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+            email_subject: "%{amendable_title} için yeni değişiklik önerisi"
+            notification_title: <a href="%{amendable_path}">%{amendable_title}</a>
+              için yeni bir değişiklik önerisi oluşturuldu.
+        amendment_promoted:
+          affected_user:
+            email_intro: "%{amendable_title} için reddedilen bir değişiklik önerisi
+              yeni bir %{amendable_type} olarak yayınlandı. Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: "%{emendation_author_name} tarafından bir değişiklik önerisi
+              yeni bir %{amendable_type} olarak yayınlandı"
+            notification_title: <a href="%{amendable_path}">%{amendable_title}</a>
+              için <a href="%{emendation_path}">reddedilen bir değişiklik önerisi</a>,
+              <a href="%{emendation_author_path}">%{emendation_author_name}</a> tarafından
+              yeni bir %{amendable_type} olarak yayınlandı.
+          follower:
+            email_intro: "%{amendable_title} için reddedilen bir değişiklik önerisi
+              yeni bir %{amendable_type} olarak yayınlandı. Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} takip ettiğiniz için aldınız.
+              Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+            email_subject: "%{emendation_author_name} tarafından bir değişiklik önerisi
+              yeni bir %{amendable_type} olarak yayınlandı"
+            notification_title: <a href="%{amendable_path}">%{amendable_title}</a>
+              için <a href="%{emendation_path}">reddedilen bir değişiklik önerisi</a>,
+              <a href="%{emendation_author_path}">%{emendation_author_name}</a> tarafından
+              yeni bir %{amendable_type} olarak yayınlandı.
+        amendment_rejected:
+          affected_user:
+            email_intro: "%{amendable_title} için bir değişiklik önerisi reddedildi.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: "%{emendation_author_name} tarafından %{amendable_title}
+              için reddedilen değişiklik önerisi"
+            notification_title: <a href="%{emendation_author_path}">%{emendation_author_name}</a>
+              tarafından oluşturulan <a href="%{emendation_path}">değişiklik önerisi</a>
+              <a href="%{amendable_path}">%{amendable_title}</a> için reddedildi.
+          follower:
+            email_intro: "%{amendable_title} için bir değişiklik önerisi reddedildi.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} takip ettiğiniz için aldınız.
+              Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+            email_subject: "%{emendation_author_name} tarafından %{amendable_title}
+              için reddedilen değişiklik önerisi"
+            notification_title: <a href="%{emendation_author_path}">%{emendation_author_name}</a>
+              tarafından oluşturulan <a href="%{emendation_path}">değişiklik önerisi</a>
+              <a href="%{amendable_path}">%{amendable_title}</a> için reddedildi.
+        emendation_promoted:
+          follower:
+            email_intro: "%{amendable_title} için bir değişiklik önerisi yayınlandı.
+              Şu sayfadan görebilirsiniz:"
+            email_outro: Bu bildirimi %{amendable_title} içeriğinin yazarı olduğunuz
+              için aldınız.
+            email_subject: "%{emendation_author_name} tarafından bir değişiklik önerisi
+              yeni bir %{amendable_type} olarak yayınlandı"
+      attachments:
+        attachment_created:
+          email_intro: "%{resource_title} içine yeni bir belge eklendi. Şu sayfadan
+            görebilirsiniz:"
+          email_outro: Bu bildirimi %{resource_title} takip ettiğiniz için aldınız.
+            Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{resource_title} için bir güncelleme"
+          notification_title: <a href="%{attached_to_url}">%{resource_title}</a> içine
+            <a href="%{resource_path}">yeni bir belge</a> eklendi
+      components:
+        component_published:
+          email_intro: "%{resource_title} bileşeni artık %{participatory_space_title}
+            için etkin. Şu sayfadan görebilirsiniz:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} için bir güncelleme"
+          notification_title: '%{resource_title} bileşeni artık <a href="%{resource_path}">%{participatory_space_title}</a>
+            için etkin'
+      email_event:
+        email_greeting: Merhaba %{user_name},
+        email_intro: '"%{resource_title}" içeriğinde bir güncelleme oldu. Şu sayfadan
+          görebilirsiniz:'
+        email_outro: Bu bildirimi "%{resource_title}" takip ettiğiniz için aldınız.
+          Önceki bağlantıdan takipten çıkabilirsiniz.
+        email_subject: "%{resource_title} için bir güncelleme"
+      gamification:
+        badge_earned:
+          email_intro: Tebrikler! <a href="%{resource_url}">%{badge_name} rozetini</a>
+            (seviye %{current_level}) kazandınız.
+          email_outro: Bu bildirimi web sitemizde etkinlik gösterdiğiniz için aldınız.
+          email_subject: 'Yeni bir rozet kazandınız: %{badge_name}!'
+          notification_title: Tebrikler! <a href="%{resource_path}">%{badge_name}
+            rozetini</a> (seviye %{current_level}) kazandınız.
+        level_up:
+          email_intro: Tebrikler! <a href="%{resource_url}">%{badge_name} rozetinde</a>
+            %{current_level} seviyesine ulaştınız!
+          email_outro: Bu bildirimi web sitemizde etkinlik gösterdiğiniz için aldınız.
+          email_subject: "%{badge_name} rozetinde %{current_level} seviyesine ulaştınız!"
+          notification_title: Tebrikler! <a href="%{resource_path}">%{badge_name}
+            rozetinde</a> %{current_level} seviyesine ulaştınız!
+      nickname_event:
+        notification_body: Takma adların kullanılma biçimini, tekrar olmaması için
+          düzelttik ve bu nedenle büyük-küçük harf duyarlılığı kuralını kaldırdık.
+          <br/> Takma adınız aynı ada sahip başka biri oluşturulduktan sonra oluşturuldu,
+          bu yüzden onu otomatik olarak yeniden adlandırdık. Bunu <a href="%{link_to_account_settings}">hesap
+          ayarlarınızdan</a> değiştirebilirsiniz.
+      notification_event:
+        notification_title: <a href="%{resource_path}">%{resource_title}</a> için
+          bir olay gerçekleşti.
+      participatory_space:
+        member_added:
+          published:
+            email_intro: Bir katılım alanına üye olarak eklendiniz.
+            email_outro: Bu bildirimi bir yönetici sizi <a href="%{resource_url}">%{resource_title}</a>
+              alanına eklediği için aldınız. Bu alana erişim kısıtlıysa, hesabınızla
+              erişebileceksiniz.<br> Profiliniz, alanın <a href="%{members_page}">üyeler
+              listesinde</a> görünecektir.
+            email_subject: Artık %{resource_title} alanına erişiminiz var.
+            notification_title: Artık <a href="%{resource_url}">%{resource_title}</a>
+              alanına erişiminiz var.
+          unpublished:
+            email_intro: Bir katılım alanına üye olarak eklendiniz.
+            email_outro: Bu bildirimi bir yönetici sizi <a href="%{resource_url}">%{resource_title}</a>
+              alanına eklediği için aldınız. Bu alana erişim kısıtlıysa, hesabınızla
+              erişebileceksiniz.
+            email_subject: Artık %{resource_title} alanına erişiminiz var.
+            notification_title: Artık <a href="%{resource_url}">%{resource_title}</a>
+              alanına erişiminiz var.
+      reports:
+        parent_hidden:
+          email_intro: |-
+            %{resource_type} öğeniz artık görünür değil.<br>
+            Bu, yanıtladığınız öneri, toplantı, tartışma veya yorum denetlendiği için gerçekleşti. Yeniden kullanılabilir hâle gelirse, yorumunuz otomatik olarak geri getirilecektir.
+          email_outro: Bu bildirimi, etkilenen %{resource_type} öğesinin yazarı olduğunuz
+            için aldınız.
+          email_subject: "%{resource_type} öğeniz artık görünür değil"
+          notification_title: |-
+            %{resource_type} öğeniz artık görünür değil.<br>
+            Bu, yanıtladığınız öneri, toplantı, tartışma veya yorum denetlendiği için gerçekleşti. Yeniden kullanılabilir hâle gelirse, yorumunuz otomatik olarak geri getirilecektir.
+            <i>%{resource_content}</i>
+        resource_hidden:
+          email_intro: Bir yönetici, %{report_reasons} olarak bildirildiği için %{resource_type}
+            öğenizi kaldırdı.
+          email_outro: Bu bildirimi, kaldırılan içeriğin yazarı olduğunuz için aldınız.
+          email_subject: "%{resource_type} öğeniz kaldırıldı"
+          notification_title: |-
+            Bir yönetici, %{report_reasons} olarak bildirildiği için %{resource_type} öğenizi kaldırdı.</br>
+            <i>%{resource_content}</i>
+      resource_liked:
+        email_intro: 'Takip ettiğiniz %{liker_name}, az önce "%{resource_title}" içeriğini
+          beğendi ve sizin için ilginç olabileceğini düşünüyoruz. Göz atın ve katkıda
+          bulunun:'
+        email_outro: Bu bildirimi %{liker_name} kullanıcısını takip ettiğiniz için
+          aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+        email_subject: "%{liker_name} yeni bir beğeni gerçekleştirdi"
+        notification_title: <a href="%{resource_path}">%{resource_title}</a> %{resource_type}
+          öğesi <a href="%{liker_path}">%{liker_name}</a> tarafından beğenildi.
+      resources:
+        soft_deleted:
+          notification_title: Bir yönetici "%{resource_type}" "%{resource_title}"
+            öğenizi sildi.
+      users:
+        profile_updated:
+          email_intro: Takip ettiğiniz %{name} kişisinin <a href="%{resource_url}">profil
+            sayfası</a> güncellendi.
+          email_outro: Bu bildirimi %{name} kullanıcısını takip ettiğiniz için aldınız.
+            Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{name} profilini güncelledi"
+          notification_title: Takip ettiğiniz %{name} kişisinin <a href="%{resource_path}">profil
+            sayfası</a> güncellendi.
+        user_officialized:
+          email_intro: "%{name} katılımcısı resmileştirildi."
+          email_outro: Bu bildirimi kuruluşun yöneticisi olduğunuz için aldınız.
+          email_subject: "%{name} resmileştirildi"
+          notification_title: "%{name} katılımcısı resmileştirildi."
     debates:
       actions:
         close: Kapat
@@ -1732,6 +2049,124 @@ tr:
           title: Sonucun başlığı
           updated_at: Bu sonucun son güncellendiği tarih
           url: Bu sonucun bulunabileceği URL
+        core:
+          components: Bileşenler
+          description: Bu ZIP dosyası, bu katılım platformu hakkında inceleme ve araştırma
+            yapmak için dosyalar içerir.
+          generated_on_date: "%{date} tarihinde oluşturuldu"
+          main: Çekirdek
+          resources:
+            one: "%{count} kaynak"
+            other: "%{count} kaynak"
+          spaces: Alanlar
+          title: "%{organization} için Açık Veri dosyaları"
+        moderated_users:
+          about: Kullanıcının hakkında alanı
+          block_reasons: Yönetici kullanıcının kullanıcıyı engelleme nedeni
+          blocked_at: Kullanıcının engellendiği tarih ve saat
+          blocking_user: Engellemeyi gerçekleştiren kullanıcının adı
+          details: Raporların ayrıntıları
+          reasons: Profilin bildirilme nedenlerinin listesi
+          user_id: Bildirilen kullanıcının benzersiz kimliği
+        moderations:
+          hidden_at: İçeriğin gizlendiği tarih ve saat
+          id: Denetimin benzersiz tanımlayıcısı
+          report_count: Kaç kez bildirildiği
+          reportable_id: Bildirilebilir öğenin benzersiz kimliği
+          reportable_type: Bildirilebilir öğenin türü
+          reported_content: Bildirilen içerik
+          reported_url: Bildirilen kaynağın URL'si
+          reports: Kaynağın bildirilme nedenlerinin listesi
+        taxonomies:
+          children_count: Bu taksonominin sahip olduğu alt öğe sayısı
+          created_at: Bu taksonominin oluşturulduğu tarih
+          filter_items_count: Bu taksonomiyi kullanan öğe filtrelerinin sayısı
+          filters_count: Bu taksonomiyi kullanan filtrelerin sayısı
+          id: Bu taksonominin benzersiz tanımlayıcısı
+          is_root: Bu taksonominin üst öğesi yoksa doğrudur
+          name: Bu taksonominin adı
+          parent_id: Varsa bu taksonominin üst öğesinin benzersiz tanımlayıcıları
+          part_of: Bu taksonominin başka bir taksonominin parçası olup olmadığını
+            tespit etmek için kullanılır
+          taxonomizations_count: Bu taksonomiyi kullanan kaynakların sayısı
+          updated_at: Bu taksonominin son güncellendiği tarih
+          weight: Bu taksonominin gösterildiği sıra
+        users:
+          about: Kullanıcının hakkında metni
+          avatar_url: Kullanıcının avatarı
+          badge: Kullanıcının rozeti
+          deleted: Kullanıcının silinip silinmediği
+          direct_messages_enabled: Kullanıcının doğrudan mesajlara izin verip vermediği
+          groups: Kullanıcı grubunun kimliği ve adı
+          id: Kullanıcının benzersiz tanımlayıcısı
+          name: Kullanıcının görünen adı
+          nickname: Kullanıcının kullanıcı adı
+          profile_url: Profil URL'si
+      index:
+        description: "%{organization_name} Açık Veri sayfasına hoş geldiniz. Burada,
+          %{organization_name} içindeki çeşitli müzakere ve yönetişim süreçlerinden
+          düzenli olarak oluşturulan veri dosyalarını bulacaksınız. Bu dosyalar şeffaflığı,
+          erişilebilirliği ve iş birliğini teşvik etmek için erişime sunulmuştur.
+          Aşağıda, bu dosyaların ne olduğu, nasıl açılıp kullanılacağı ve her dosyanın
+          içeriği ile yapısına dair ayrıntılı bilgi bulacaksınız."
+        detailed:
+          body_1: 'Aşağıda, şeması (yapısı) ve içerdiği bilgi türü dâhil olmak üzere
+            her veri kümesinin bir açıklaması yer almaktadır:'
+          components: Bileşenler
+          spaces: Katılım alanları
+          title: Her dosyanın ayrıntılı açıklaması
+        download:
+          components: Bileşenler
+          core: Çekirdek
+          spaces: Katılım alanları
+          title: Kaynakları indir
+        download_open_data: Tüm Açık Veri dosyalarını indir
+        download_resource: "%{resource_name} öğesini CSV biçiminde indir"
+        explanation:
+          body_1: Bu dosyalar, öneriler, yorumlar ve toplantılar gibi %{organization_name}
+            katılım süreçlerinden dışa aktarılan veri kümeleridir. Analiz, araştırma
+            veya diğer araçlarla entegrasyon için kullanılabilecek ham, yapılandırılmış
+            veriler sağlarlar. Veriler her 24 saatte bir otomatik olarak güncellenir;
+            böylece en güncel bilgilere erişebilirsiniz.
+          body_2: Bu dosyalar CSV (Virgülle Ayrılmış Değerler) biçimindedir; bu, elektronik
+            tablo programları, metin düzenleyiciler ve veri analiz araçları dâhil
+            olmak üzere çeşitli yazılım uygulamalarıyla açılıp işlenebilen yaygın
+            kullanılan bir dosya biçimidir.
+          title: Bu dosyalar nedir?
+        how_to:
+          step_1:
+            body_html: CSV dosyalarını bilgisayarınıza indirmek için aşağıda verilen
+              bağlantılara tıklayın.
+            title: 1. Dosyaları indirin
+          step_2:
+            body_html: |-
+              <ul>
+                <li><b>Elektronik Tablo Uygulamaları</b>: CSV dosyalarını Microsoft Excel, Google E-Tablolar veya LibreOffice Calc gibi uygulamalarla açabilirsiniz. Uygulamayı açın, Dosya menüsünden "Aç"ı seçin ve indirilen CSV dosyasını seçin.</li>
+                <li><b>Metin Düzenleyiciler</b>: CSV dosyaları Not Defteri veya Sublime Text gibi herhangi bir metin düzenleyicide de açılabilir. Bu, her satırın bir satırı ve her değerin virgülle ayrıldığı ham veriyi gösterir.</li>
+                <li><b>Veri Analiz Araçları</b>: Python (pandas ile), R veya SQL veritabanları gibi veri analiz araçlarına aşinaysanız, bu CSV dosyalarını işleme ve analiz için doğrudan içe aktarabilirsiniz.</li>
+              </ul>
+            title: 2. Dosyaları açın
+          step_3:
+            body_html: |-
+              <ul>
+                <li><b>Filtreleme ve Sıralama</b>: Elektronik tablo uygulamalarında, belirli veri alt kümelerine odaklanmak için verileri filtreleyip sıralayabilirsiniz.</li>
+                <li><b>Analiz</b>: Öneri sayısını saymak, yorumlardaki eğilimleri incelemek veya toplantılara katılımı değerlendirmek gibi çeşitli analizler yapmak için verileri kullanın.</li>
+                <li><b>Görselleştirme</b>: Verileri yorumlamaya yardımcı olmak için grafikler, çizelgeler ve diğer görselleştirmeler oluşturabilirsiniz.</li>
+              </ul>
+            title: 3. Verilerle çalışma
+          title: Bu dosyaları nasıl açıp kullanırsınız
+        license:
+          body_1_html: Bu %{organization_name} veritabanı, %{link_database} kapsamında
+            erişime sunulmuştur. Veritabanının bireysel içeriklerine ilişkin her türlü
+            hak, %{link_contents} kapsamında lisanslanmıştır.
+          license_contents_link: https://opendatacommons.org/licenses/dbcl/1.0/
+          license_contents_name: Veritabanı İçeriği Lisansı
+          license_database_link: https://opendatacommons.org/licenses/odbl/1.0/
+          license_database_name: Açık Veritabanı Lisansı
+          title: Lisans
+        title: Açık Veri
+      not_available_yet: Açık Veri dosyaları henüz hazır değil, lütfen birkaç dakika
+        sonra tekrar deneyin.
     statistics:
       debates_count: Tartışmalar
       debates_count_tooltip: Yapılan tartışmaların sayısı.
@@ -2750,6 +3185,157 @@ tr:
           kaldırdı"
         update: "%{user_name}, %{space_name} meclisinde %{resource_name} kişisinin
           rolünü değiştirdi"
+      area:
+        create: "%{user_name}, %{resource_name} alanını oluşturdu"
+        delete: "%{user_name}, %{resource_name} alanını sildi"
+        update: "%{user_name}, %{resource_name} alanını güncelledi"
+      area_type:
+        create: "%{user_name}, %{resource_name} alan türünü oluşturdu"
+        delete: "%{user_name}, %{resource_name} alan türünü sildi"
+        update: "%{user_name}, %{resource_name} alan türünü güncelledi"
+      attachment:
+        create: "%{user_name}, %{resource_name} ekini oluşturdu"
+        delete: "%{user_name}, %{resource_name} ekini sildi"
+        update: "%{user_name}, %{resource_name} ekini güncelledi"
+      attachment_collection:
+        create: "%{user_name}, %{resource_name} ek koleksiyonunu oluşturdu"
+        delete: "%{user_name}, %{resource_name} ek koleksiyonunu sildi"
+        update: "%{user_name}, %{resource_name} ek koleksiyonunu güncelledi"
+      category:
+        create: "%{user_name}, %{space_name} alanına %{resource_name} kategorisini
+          ekledi"
+        delete: "%{user_name}, %{space_name} alanından %{resource_name} kategorisini
+          sildi"
+        update: "%{user_name}, %{space_name} alanında %{resource_name} kategorisini
+          güncelledi"
+      component:
+        create: "%{user_name}, %{space_name} alanına %{resource_name} bileşenini ekledi"
+        delete: "%{user_name}, %{space_name} alanından %{resource_name} bileşenini
+          kaldırdı"
+        export_component: "%{user_name}, %{space_name} içindeki %{resource_name} %{component_name}
+          bileşenini %{format_name} olarak dışa aktardı"
+        publish: "%{user_name}, %{space_name} alanında %{resource_name} bileşenini
+          yayınladı"
+        restore: "%{user_name}, %{space_name} alanında %{resource_name} bileşenini
+          geri getirdi"
+        soft_delete: "%{user_name}, %{space_name} alanındaki %{resource_name} bileşenini
+          çöp kutusuna taşıdı"
+        unpublish: "%{user_name}, %{space_name} alanından %{resource_name} bileşeninin
+          yayınını kaldırdı"
+        update_permissions_with_space: "%{user_name}, %{space_name} içinde %{resource_name}
+          izinlerini güncelledi"
+      contextual_help_section:
+        update: "%{user_name}, %{resource_name} yardım bölümünü güncelledi"
+      helpers:
+        answers: yanıt
+        comments: yorum
+        projects: proje
+        results: sonuç
+      impersonation_log:
+        manage: "%{user_name}, %{reason} nedeniyle %{resource_name} kişisini yönetti"
+      member:
+        create: "%{user_name}, %{resource_name} kişisini üye olmaya davet etti"
+        create_via_csv: "%{user_name}, %{resource_name} kişisini CSV ile üye olmaya
+          davet etti"
+        delete: "%{user_name}, %{resource_name} katılımcısını üyelikten çıkardı"
+      moderation:
+        bulk_hide: "%{user_name}, %{reported_count} kaynağı gizledi"
+        bulk_unhide: "%{user_name}, %{reported_count} kaynağın gizlemesini kaldırdı"
+        bulk_unreport: "%{user_name}, %{reported_count} kaynağın bildirimini kaldırdı"
+        hide: "%{user_name}, %{space_name} alanında %{resource_type} türünde bir kaynağı
+          gizledi"
+        unreport: "%{user_name}, %{space_name} alanında %{resource_type} türünde bir
+          kaynağın bildirimini kaldırdı"
+      newsletter:
+        create: "%{user_name}, %{resource_name} bültenini oluşturdu"
+        delete: "%{user_name}, %{resource_name} bültenini sildi"
+        deliver: "%{user_name}, %{resource_name} bültenini gönderdi"
+        update: "%{user_name}, %{resource_name} bültenini güncelledi"
+      oauth_application:
+        create: "%{user_name}, %{resource_name} OAuth uygulamasını oluşturdu"
+        delete: "%{user_name}, %{resource_name} OAuth uygulamasını sildi"
+        update: "%{user_name}, %{resource_name} OAuth uygulamasını güncelledi"
+      organization:
+        update: "%{user_name}, kuruluş ayarlarını güncelledi"
+        update_external_domain: "%{user_name}, kuruluş harici alan adlarını güncelledi"
+      scope:
+        create: "%{user_name}, %{resource_name} kapsamını oluşturdu"
+        create_with_parent: "%{user_name}, %{parent_scope} kapsamı içinde %{resource_name}
+          kapsamını oluşturdu"
+        delete: "%{user_name}, %{resource_name} kapsamını sildi"
+        delete_with_parent: "%{user_name}, %{parent_scope} kapsamı içinde %{resource_name}
+          kapsamını sildi"
+        update: "%{user_name}, %{resource_name} kapsamını güncelledi"
+        update_with_parent: "%{user_name}, %{parent_scope} kapsamı içinde %{resource_name}
+          kapsamını güncelledi"
+      scope_type:
+        create: "%{user_name}, %{resource_name} kapsam türünü oluşturdu"
+        delete: "%{user_name}, %{resource_name} kapsam türünü sildi"
+        update: "%{user_name}, %{resource_name} kapsam türünü güncelledi"
+      share_token:
+        create: "%{user_name}, %{space_name} içinde bir erişim bağlantısı oluşturdu"
+        create_with_space: "%{user_name}, %{space_name} içinde %{resource_name} için
+          bir erişim bağlantısı oluşturdu"
+        delete: "%{user_name}, %{space_name} içinde bir erişim bağlantısını sildi"
+        delete_with_space: "%{user_name}, %{space_name} içinde %{resource_name} için
+          bir erişim bağlantısını sildi"
+        update: "%{user_name}, %{space_name} içinde bir erişim bağlantısını güncelledi"
+        update_with_space: "%{user_name}, %{space_name} içinde %{resource_name} için
+          bir erişim bağlantısını güncelledi"
+      static_page:
+        create: "%{user_name}, %{resource_name} statik sayfasını oluşturdu"
+        delete: "%{user_name}, %{resource_name} statik sayfasını sildi"
+        update: "%{user_name}, %{resource_name} statik sayfasını güncelledi"
+      taxonomy:
+        create: "%{user_name}, %{resource_name} taksonomisini oluşturdu"
+        create_with_parent: "%{user_name}, %{parent_taxonomy} taksonomisi içinde %{resource_name}
+          taksonomisini oluşturdu"
+        delete: "%{user_name}, %{resource_name} taksonomisini sildi"
+        delete_with_parent: "%{user_name}, %{parent_taxonomy} taksonomisi içinde %{resource_name}
+          taksonomisini sildi"
+        update: "%{user_name}, %{resource_name} taksonomisini güncelledi"
+        update_with_parent: "%{user_name}, %{parent_taxonomy} taksonomisi içinde %{resource_name}
+          taksonomisini güncelledi"
+      taxonomy_filter:
+        create: "%{user_name}, %{resource_name} filtresini oluşturdu"
+        create_with_filter_info: '%{user_name}, "%{taxonomy_name}" taksonomisine dayalı
+          %{resource_name} filtresini %{filter_items_count} öğeyle oluşturdu'
+        delete: "%{user_name}, %{resource_name} filtresini sildi"
+        delete_with_filter_info: '%{user_name}, "%{taxonomy_name}" taksonomisine dayalı
+          %{resource_name} filtresini %{filter_items_count} öğeyle sildi'
+        update: "%{user_name}, %{resource_name} filtresini güncelledi"
+        update_with_filter_info: '%{user_name}, "%{taxonomy_name}" taksonomisine dayalı
+          %{resource_name} filtresini %{filter_items_count} öğeyle güncelledi'
+      user:
+        block: "%{user_name}, %{resource_name} kullanıcısını engelledi"
+        bulk_block: "%{user_name}, %{blocked_count} kullanıcıyı engelledi"
+        bulk_ignore: "%{user_name}, %{unreported_users_count} kullanıcının bildirimini
+          kaldırdı"
+        bulk_unblock: "%{user_name}, %{unblocked_count} kullanıcının engelini kaldırdı"
+        invite: "%{user_name}, %{resource_name} katılımcısını %{role} rolüyle davet
+          etti"
+        officialize: "%{user_name}, %{resource_name} katılımcısını resmileştirdi"
+        promote: "%{user_name}, %{resource_name} kişisini yükseltti"
+        remove_from_admin: "%{user_name}, %{resource_name} katılımcısını %{role} rolüyle
+          kaldırdı"
+        show_email: "%{user_name}, %{resource_name} katılımcısının e-postasını görüntüledi"
+        transfer: "%{user_name}, %{resource_name} katılımcısını aktardı"
+        unblock: "%{user_name}, %{resource_name} kullanıcısının engelini kaldırdı"
+        unofficialize: "%{user_name}, %{resource_name} katılımcısının resmiyetini
+          kaldırdı"
+      user_group:
+        block: "%{user_name}, %{resource_name} kullanıcı grubunu engelledi"
+        bulk_block: "%{user_name}, %{blocked_count} kullanıcıyı engelledi"
+        bulk_ignore: "%{user_name}, %{unreported_users_count} kullanıcının bildirimini
+          kaldırdı"
+        bulk_unblock: "%{user_name}, %{unblocked_count} kullanıcının engelini kaldırdı"
+        reject: "%{user_name}, %{resource_name} grup doğrulamasını reddetti"
+        unblock: "%{user_name}, %{resource_name} kullanıcı grubunun engelini kaldırdı"
+        verify: "%{user_name}, %{resource_name} grubunu doğruladı"
+        verify_via_csv: "%{user_name}, %{resource_name} grubunu bir CSV dosyasıyla
+          doğruladı"
+      user_moderation:
+        unreport: "%{user_name}, bir %{resource_type} bildirimini kaldırdı - %{unreported_user_name}"
     help:
       participatory_spaces:
         participatory_processes:
