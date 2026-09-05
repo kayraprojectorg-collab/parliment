@@ -1,0 +1,14 @@
+// Kurultay admin branding: replace the Decidim fallback mark in the sidebar
+// with a "Kurultay" wordmark. When an organization logo is uploaded it is used
+// instead (the :not(:has(img)) guard keeps the wordmark from doubling it).
+.layout-nav .logo svg {
+  display: none;
+}
+
+.layout-nav .logo:not(:has(img))::after {
+  content: "Kurultay";
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+}

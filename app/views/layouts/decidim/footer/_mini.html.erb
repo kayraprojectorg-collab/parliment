@@ -1,0 +1,15 @@
+<div class="mini-footer">
+  <div class="mini-footer__content">
+    <div>
+      <p class="text-xs [&_a]:underline">
+        © <%= Time.current.year %> <%= current_organization_name %>
+      </p>
+    </div>
+    <a class="flex gap-1 hover:opacity-50" rel="license noopener noreferrer" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" data-external-link="text-only">
+      <span class="sr-only"><%= t("layouts.decidim.footer.cc_by_license") %></span>
+      <%= icon "creative-commons-line", class: "w-6 h-6 fill-current" %>
+      <%= icon "creative-commons-by-line", class: "w-6 h-6 fill-current" %>
+      <%= icon "creative-commons-sa-line", class: "w-6 h-6 fill-current" %>
+    </a>
+  </div>
+</div>

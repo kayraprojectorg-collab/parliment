@@ -1,0 +1,9 @@
+tr:
+  decidim:
+    system:
+      titles:
+        decidim: Kurultay
+  layouts:
+    decidim:
+      footer:
+        decidim_logo: Kurultay

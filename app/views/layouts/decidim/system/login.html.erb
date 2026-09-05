@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kurultay - Log in</title>
+    <%= render partial: "layouts/decidim/system/header" %>
+  </head>
+
+  <body class="text-black text-md form-defaults bg-gray-3 h-screen w-screen grid place-items-center">
+    <%= render layout: "layouts/decidim/shared/layout_center" do %>
+
+      <div class="space-y-8 my-10">
+        <h1 class="h1 decorator"><%= t("decidim", scope: "decidim.system.titles") %></h1>
+      </div>
+
+      <%= render "decidim/system/shared/notices" %>
+
+      <%= yield %>
+    <% end %>
+  </body>
+</html>

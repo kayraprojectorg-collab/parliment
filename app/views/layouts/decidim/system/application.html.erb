@@ -1,0 +1,40 @@
+<% add_decidim_page_title("Kurultay - System") %>
+<!DOCTYPE html>
+<html dir="<%= rtl_direction %>">
+<head>
+  <title><%= decidim_page_title %></title>
+  <%= render partial: "layouts/decidim/system/header" %>
+</head>
+
+<body class="text-black text-md form-defaults min-h-screen flex items-stretch">
+  <aside id="aside-system">
+    <%= render partial: "layouts/decidim/system/sidebar" %>
+  </aside>
+
+  <main class="grow" role="main">
+    <div class="flex md:hidden items-center gap-2 bg-primary p-4 text-white font-bold text-lg">
+      <button id="aside-trigger" class="flex-none md:hidden" data-controller="dropdown" data-target="aside-system" data-disabled-md="true">
+        <%= icon "menu-line", class: "w-6 h-6 text-white fill-current" %>
+      </button>
+
+      <%= link_to root_path, class: "block" do %>
+        <%= title %>
+      <% end %>
+    </div>
+
+    <div class="p-6 md:px-16 md:py-12 h-full w-full space-y-6">
+      <%= render "decidim/system/shared/notices" %>
+
+      <% if content_for?(:title) %>
+        <%= content_for :title %>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </main>
+
+  <%= render partial: "decidim/shared/confirm_modal" %>
+  <%= render partial: "layouts/decidim/system/js_configuration" %>
+  <%= render partial: "layouts/decidim/cors" if Decidim.cors_enabled %>
+</body>
+</html>
