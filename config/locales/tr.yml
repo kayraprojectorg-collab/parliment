@@ -244,6 +244,681 @@ tr:
         share: Paylaş
         share_link: Bağlantıyı paylaş
         share_to: "%{service} üzerinde paylaş"
+    comments:
+      comment_thread:
+        accessibility_label: "%{full_name} tarafından %{date} tarihinde başlatılan
+          yorum dizisi"
+      comments:
+        create:
+          error: Yorum oluşturulurken bir sorun oluştu.
+        delete:
+          error: Yorum silinemedi.
+        update:
+          error: Yorum güncellenirken bir sorun oluştu.
+      comments_title: Yorum
+      last_activity:
+        new_comment: 'Yeni yorum:'
+      votes:
+        create:
+          error: Yorum oylanırken bir sorun oluştu.
+    components:
+      add_comment_form:
+        account_message: Yorumunuzu eklemek için giriş yapın veya bir hesap oluşturun.
+        add_comment: Yorum ekle
+        form:
+          body:
+            label: Yorum
+            placeholder: Bu konuda ne düşünüyorsunuz?
+          form_error: Metin zorunludur ve %{length} karakterden uzun olamaz.
+          submit_reply: Yanıtı yayınla
+          submit_root_comment: Yorumu yayınla
+        opinion:
+          label: Bu konu hakkındaki görüşünüz
+          negative: Olumsuz
+          negative_selected: Bu konu hakkındaki görüşünüz olumsuz
+          neutral: Tarafsız
+          neutral_selected: Bu konu hakkındaki görüşünüz tarafsız
+          positive: Olumlu
+          positive_selected: Bu konu hakkındaki görüşünüz olumlu
+        remaining_characters: "%{count} karakter kaldı"
+        remaining_characters_1: "%{count} karakter kaldı"
+        title: Yorumunuzu ekleyin
+      comment:
+        alignment:
+          against: Karşı
+          in_favor: Lehte
+        cancel_reply: Yanıtı iptal et
+        comment_label: Yorum %{comment_id}
+        comment_label_reply: Yorum %{comment_id} (%{parent_comment_id} numaralı yoruma
+          yanıt)
+        confirm_destroy: Bu yorumu silmek istediğinizden emin misiniz?
+        controls_label: Yorum denetimleri
+        delete: Sil
+        deleted_at: Yorum %{date} tarihinde silindi
+        deleted_user: Silinmiş katılımcı
+        edit: Düzenle
+        edited: Düzenlendi
+        hide_replies:
+          one: Yanıtı gizle
+          other: "%{count} yanıtı gizle"
+        load_replies: Yanıtları yükle
+        moderated_at: Yorum %{date} tarihinde denetlendi
+        replies_count:
+          one: "%{count} yanıt"
+          other: "%{count} yanıt"
+        reply: Yanıtla
+        report:
+          action: Bildir
+          already_reported: Bu içerik zaten bildirildi ve bir yönetici tarafından
+            incelenecek.
+          close: Kapat
+          description: Bu içerik uygunsuz mu?
+          details: Ek yorumlar
+          reasons:
+            does_not_belong: Yasa dışı etkinlik, intihar tehdidi, kişisel bilgi veya
+              %{organization_name} üzerinde bulunmaması gerektiğini düşündüğünüz başka
+              bir şey içeriyor.
+            offensive: Irkçılık, cinsiyetçilik, hakaret, kişisel saldırı, ölüm tehdidi,
+              intihara teşvik veya herhangi bir nefret söylemi içeriyor.
+            spam: Tıklama tuzağı, reklam, dolandırıcılık veya bot içeriyor.
+          title: Uygunsuz içeriği bildir
+        show_replies:
+          one: Yanıtı göster
+          other: "%{count} yanıtı göster"
+        single_comment_link_title: Bağlantıyı al
+        sort_by: 'Sıralama ölçütü:'
+      comment_order_selector:
+        order:
+          best_rated: En çok beğenilen
+          most_discussed: En çok tartışılan
+          older: Daha eski
+          recent: Yeni
+        title: 'Sıralama ölçütü:'
+      comments:
+        against: Karşı
+        blocked_comments_for_unauthorized_user_warning: Şu anda yorum yapmak için
+          doğrulanmış olmanız gerekiyor, ancak öncekileri okuyabilirsiniz.
+        blocked_comments_for_user_warning: Şu anda yorum yapamıyorsunuz, ancak öncekileri
+          okuyabilirsiniz.
+        blocked_comments_warning: Yorumlar şu anda devre dışı; yalnızca yöneticiler
+          yanıtlayabilir veya yeni yorum gönderebilir.
+        comment_details_title: Yorum ayrıntıları
+        in_favor: Lehte
+        load_more_comments: Daha fazla yorum yükle
+        loading: Yorumlar yükleniyor ...
+        no_comments_yet: Henüz yorum yok
+        single_comment_warning: <a href="%{url}">Tüm yorumları görüntüle</a>
+        single_comment_warning_title: Tek bir yorumu görüntülüyorsunuz
+        title:
+          one: "%{count} yorum"
+          other: "%{count} yorum"
+        top_comment_label: En çok beğenilen
+      down_vote_button:
+        label:
+          one: Beğenmeme düğmesi. %{count} beğenmeme
+          other: Beğenmeme düğmesi. %{count} beğenmeme
+        text: Bu yoruma katılmıyorum
+      edit_comment_modal_form:
+        close: Kapat
+        form:
+          body:
+            label: Yorum
+            placeholder: Bu konuda ne düşünüyorsunuz?
+          submit: Gönder
+        title: Yorumunuzu düzenleyin
+      up_vote_button:
+        label:
+          one: Beğeni düğmesi. %{count} beğeni
+          other: Beğeni düğmesi. %{count} beğeni
+        text: Bu yoruma katılıyorum
+      debates:
+        actions:
+          comment: Yorum
+          create: Tartışma oluştur
+          like: Beğen
+          vote_comment: Yorumu oyla
+        name: Tartışmalar
+        settings:
+          global:
+            announcement: Duyuru
+            attachments_allowed: Eklere izin ver
+            clear_all: Tümünü temizle
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+          step:
+            announcement: Duyuru
+            comments_blocked: Yorumlar engellendi
+            creation_enabled: Katılımcılar tartışma oluşturabilir
+            likes_blocked: Beğeniler engellendi
+            likes_enabled: Beğeniler etkin
+      blogs:
+        actions:
+          comment: Yorum
+          create: Oluştur
+          destroy: Sil
+          like: Beğen
+          update: Güncelle
+          vote_comment: Yorumu oyla
+        name: Blog
+        settings:
+          global:
+            announcement: Duyuru
+            attachments_allowed: Eklere izin ver
+            comments_enabled: Yorumlar etkin
+            comments_max_length: Yorum başına maksimum karakter (varsayılan değer
+              için 0 bırakın)
+            creation_enabled_for_participants: Katılımcılar gönderi oluşturabilir
+            define_taxonomy_filters: Bu ayarı kullanmadan önce lütfen bu katılım alanı
+              için bazı filtreler tanımlayın.
+            no_taxonomy_filters_found: Taksonomi filtresi bulunamadı.
+            taxonomy_filters: Bileşen için filtreleri seçin
+            taxonomy_filters_add: Filtre ekle
+          step:
+            announcement: Duyuru
+            comments_blocked: Yorumlar engellendi
+            likes_blocked: Beğeniler engellendi
+            likes_enabled: Beğeniler etkin
+    download_your_data:
+      help:
+        comment_votes:
+          comment: Oylanan yorumun kimliği
+          created_at: Bu oyun oluşturulduğu tarih
+          id: Oyun kimliği
+          updated_at: Bu oyun son güncellendiği tarih
+          weight: Oyun ağırlığı (olumlu oy için 1, olumsuz oy için -1)
+        comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        responses:
+          id: Yanıtın benzersiz tanımlayıcısı
+          question: Yanıtlanan soru
+          questionnaire: Yanıtlanan anket
+          response: Soruya verilen yanıt
+          user: Anketi yanıtlayan kullanıcı
+      show:
+        debate_comments: Tartışma yorumları dışa aktarması
+        debates: Tartışmalar dışa aktarması
+        responses: Yanıtlar dışa aktarması
+        survey_user_responses: Anket kullanıcı yanıtları
+    events:
+      comments:
+        comment_by_followed_user:
+          email_intro: "%{author_name}, %{resource_title} içinde bir yorum bıraktı.
+            Bunu şu sayfada okuyabilirsiniz:"
+          email_outro: Bu bildirimi %{author_name} kullanıcısını takip ettiğiniz için
+            aldınız. Bu kullanıcıyı profil sayfasından takipten çıkabilirsiniz.
+          email_subject: "%{resource_title} içinde %{author_name} tarafından yeni
+            bir yorum var"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> içinde
+            <a href="%{author_path}">%{author_name}</a> tarafından yeni bir yorum
+            var.
+        comment_created:
+          email_intro: "%{resource_title} yorumlandı. Yorumu şu sayfada okuyabilirsiniz:"
+          email_outro: Bu bildirimi "%{resource_title}" veya yazarını takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: "%{resource_title} içinde %{author_name} tarafından yeni
+            bir yorum var"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> içinde
+            <a href="%{author_path}">%{author_name}</a> tarafından yeni bir yorum
+            var
+        comment_downvoted:
+          email_intro: '"%{resource_title}" içindeki yorumunuz olumsuz oylandı. Şu
+            anda toplam %{upvotes} olumlu ve %{downvotes} olumsuz oyu var.'
+          email_outro: Bu bildirimi bu yorumun yazarı olduğunuz için aldınız.
+          email_subject: '"%{resource_title}" içindeki yorumunuz olumsuz oylandı.'
+          notification_title: '"%{resource_title}" içindeki <a href="%{resource_path}">yorumunuz</a>
+            olumsuz oylandı. Şu anda toplam %{upvotes} olumlu ve %{downvotes} olumsuz
+            oyu var.'
+        comment_upvoted:
+          email_intro: '"%{resource_title}" içindeki yorumunuz olumlu oylandı. Şu
+            anda toplam %{upvotes} olumlu ve %{downvotes} olumsuz oyu var.'
+          email_outro: Bu bildirimi bu yorumun yazarı olduğunuz için aldınız.
+          email_subject: '"%{resource_title}" içindeki yorumunuz olumlu oylandı.'
+          notification_title: '"%{resource_title}" içindeki <a href="%{resource_path}">yorumunuz</a>
+            olumlu oylandı. Şu anda toplam %{upvotes} olumlu ve %{downvotes} olumsuz
+            oyu var.'
+        reply_created:
+          email_intro: "%{author_name}, %{resource_title} içindeki yorumunuzu yanıtladı.
+            Bunu şu sayfada okuyabilirsiniz:"
+          email_outro: Bu bildirimi yorumunuz yanıtlandığı için aldınız.
+          email_subject: "%{author_name}, %{resource_title} içindeki yorumunuzu yanıtladı"
+          notification_title: <a href="%{author_path}">%{author_name}</a>, <a href="%{resource_path}">%{resource_title}</a>
+            içindeki yorumunuzu yanıtladı
+        user_mentioned:
+          email_intro: Sizden bahsedildi
+          email_outro: Bu bildirimi %{resource_title} içinde sizden bahsedildiği için
+            aldınız.
+          email_subject: "%{resource_title} içinde sizden bahsedildi"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> içinde
+            <a href="%{author_path}">%{author_name}</a> sizden bahsetti
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Merhaba,
+              %{participatory_space_title} katılım alanında yeni bir "%{resource_title}" tartışması oluşturuldu, göz atın ve katkıda bulunun:
+            email_outro: Bu bildirimi %{participatory_space_title} katılım alanını
+              takip ettiğiniz için aldınız. Önceki bağlantıyı takip ederek bildirim
+              almayı durdurabilirsiniz.
+            email_subject: '%{participatory_space_title} üzerinde yeni tartışma "%{resource_title}"'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması
+              <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+              üzerinde oluşturuldu.
+          user_followers:
+            email_intro: |-
+              Merhaba,
+              Takip ettiğiniz %{author_name}, yeni bir "%{resource_title}" tartışması oluşturdu. Göz atın ve katkıda bulunun:
+            email_outro: Bu bildirimi %{author_name} kullanıcısını takip ettiğiniz
+              için aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+            email_subject: '%{author_name} tarafından yeni tartışma "%{resource_title}"'
+            notification_title: <a href="%{author_path}">%{author_name}</a>, <a href="%{resource_path}">%{resource_title}</a>
+              tartışmasını oluşturdu.
+        creation_disabled:
+          email_intro: "%{participatory_space_title} içinde tartışma oluşturma artık
+            etkin değil. Yine de açık tartışmalara şu sayfadan katılabilirsiniz:"
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} içinde tartışma oluşturma devre
+            dışı"
+          notification_title: <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içinde tartışma oluşturma artık devre dışı
+        creation_enabled:
+          email_intro: 'Artık %{participatory_space_title} içinde yeni tartışmalar
+            başlatabilirsiniz! Şu sayfada katılmaya başlayın:'
+          email_outro: Bu bildirimi %{participatory_space_title} takip ettiğiniz için
+            aldınız. Önceki bağlantıyı takip ederek bildirim almayı durdurabilirsiniz.
+          email_subject: "%{participatory_space_title} içinde tartışmalar artık kullanılabilir"
+          notification_title: Artık <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            içinde <a href="%{resource_path}">yeni tartışmalar</a> başlatabilirsiniz.
+        debate_closed:
+          affected_user:
+            email_intro: '"%{resource_title}" tartışması kapatıldı. Sonuçları sayfasından
+              okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" tartışmasını takip ettiğiniz
+              için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+            email_subject: '"%{resource_title}" tartışması kapatıldı'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması
+              kapatıldı.
+          follower:
+            email_intro: '"%{resource_title}" tartışması kapatıldı. Sonuçları sayfasından
+              okuyabilirsiniz:'
+            email_outro: Bu bildirimi "%{resource_title}" tartışmasını takip ettiğiniz
+              için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+            email_subject: '"%{resource_title}" tartışması kapatıldı'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması
+              kapatıldı.
+      blogs:
+        post_created:
+          email_intro: '"%{resource_title}" gönderisi, takip ettiğiniz "%{participatory_space_title}"
+            içinde yayınlandı.'
+          email_outro: Bu bildirimi "%{participatory_space_title}" takip ettiğiniz
+            için aldınız. Önceki bağlantıdan takipten çıkabilirsiniz.
+          email_subject: "%{participatory_space_title} içinde yeni gönderi yayınlandı"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> gönderisi
+            %{participatory_space_title} içinde yayınlandı
+    debates:
+      actions:
+        close: Kapat
+        confirm_delete_debate: Bu tartışmayı silmek istediğinizden emin misiniz?
+        deleted_debate_info: Silinen tartışma çöp kutusundan geri getirilebilir.
+        edit: Düzenle
+        new: Yeni tartışma
+        title: İşlemler
+        view_deleted_debates: Silinen tartışmaları görüntüle
+      admin_log:
+        debate:
+          close: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını
+            kapattı"
+          create: "%{user_name}, %{space_name} alanında %{resource_name} tartışmasını
+            oluşturdu"
+          restore: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını
+            çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını
+            güncelledi"
+      content_blocks:
+        highlighted_debates:
+          name: Tartışmalar
+          see_all: Tüm tartışmaları gör
+      debate_m:
+        commented_time_ago: "%{time} önce yorum yapıldı"
+      debates:
+        close:
+          invalid: Tartışma kapatılırken bir sorun oluştu.
+          success: Tartışma başarıyla kapatıldı.
+        close_debate_modal:
+          cancel: İptal
+          description: Bu tartışmanın özeti veya sonucu nedir?
+          send: Tartışmayı kapat
+        count:
+          debates_count:
+            one: "%{count} tartışma"
+            other: "%{count} tartışma"
+        create:
+          invalid: Tartışma oluşturulurken bir sorun oluştu.
+          success: Tartışma başarıyla oluşturuldu.
+        debates:
+          empty: Henüz tartışma yok.
+          empty_filters: Bu ölçütlere uyan tartışma yok.
+        edit:
+          back: Geri
+          save: Değişiklikleri kaydet
+          title: Tartışmayı düzenle
+        filters:
+          activity: Etkinliğim
+          all: Tümü
+          category: Kategori
+          category_prompt: Bir kategori seçin
+          commented: Yorum yapıldı
+          my_debates: Tartışmalarım
+          official: Resmi
+          origin: Köken
+          participants: Katılımcılar
+          search: Ara
+          state: Durum
+          state_values:
+            closed: Kapalı
+            ongoing: Devam ediyor
+        index:
+          new_debate: Yeni tartışma
+        new:
+          back: Geri
+          create: Oluştur
+          title: Yeni tartışma oluştur
+        orders:
+          label: Tartışmaları sırala
+          most_commented: En çok yorum yapılan
+          random: Rastgele sıralama
+          recent: En yeni
+          updated: Son güncellenen
+        show:
+          close_debate: Kapat
+          closed: Kapalı
+          debate_conclusions_are: 'Tartışma %{date} tarihinde şu sonuçlarla kapatıldı:'
+          edit_conclusions: Sonuçları düzenle
+          edit_debate: Düzenle
+          not_started: Başlamadı
+          ongoing: Devam ediyor
+          open_ended: Açık uçlu
+          participants_count: Katılımcılar
+        update:
+          invalid: Tartışma güncellenirken bir sorun oluştu.
+          success: Tartışma başarıyla güncellendi.
+      last_activity:
+        debate_updated: 'Tartışma güncellendi:'
+        new_debate: 'Yeni tartışma:'
+      models:
+        debate:
+          fields:
+            end: Bitiş
+            end_time: Bitiş tarihi
+            official_debate: Resmi tartışma
+            start: Başlangıç
+            start_time: Başlangıç tarihi
+            taxonomies: Taksonomiler
+            title: Başlık
+    gamification:
+      badges:
+        commented_debates:
+          description: Bu rozet, farklı tartışmalara yorum bırakarak etkin biçimde
+            katıldığınızda verilir.
+          description_another: Bu katılımcı %{score} tartışmaya katıldı.
+          description_own: "%{score} tartışmaya katıldınız."
+          name: Tartışmalar
+          next_level_in: Bir sonraki seviyeye ulaşmak için %{score} tartışmaya daha
+            katılın!
+          unearned_another: Bu katılımcı henüz hiçbir tartışmaya katılmadı.
+          unearned_own: Henüz hiçbir tartışmaya katılmadınız.
+    open_data:
+      help:
+        debate_comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        debates:
+          author: Bu tartışmanın yazarının verileri
+          closed_at: Bu tartışmanın kapatıldığı tarih
+          comments: Bu tartışmanın sahip olduğu yorum sayısı
+          comments_enabled: Bu tartışmanın yorumlarının etkin olup olmadığı
+          component: Tartışmanın ait olduğu bileşen
+          conclusions: Kapatıldıysa tartışmanın sonuçları
+          created_at: Tartışmanın oluşturulduğu tarih ve saat
+          description: Tartışma açıklaması
+          end_time: Açık bir tartışmaysa ve sınırlı süresi varsa bu tartışmanın ne
+            zaman bittiği
+          follows_count: Bu tartışmanın sahip olduğu takipçi sayısı
+          id: Tartışmanın benzersiz tanımlayıcısı
+          information_updates: Yazarın tartışmada yaptığı güncellemeler
+          instructions: Bu tartışmada yorum yapma talimatları
+          last_comment_at: Bu tartışmanın son yorumlandığı tarih
+          last_comment_by: Tartışmada yapılan son yorumun verileri
+          likes_count: Tartışmanın sahip olduğu beğeni sayısı
+          participatory_space: Bu tartışmanın hangi alana (ör. Katılım Süreci veya
+            Meclis) ait olduğu
+          reference: Kaynağın bu platformdaki benzersiz tanımlayıcısı
+          start_time: Açık bir tartışmaysa ve sınırlı süresi varsa bu tartışmanın
+            ne zaman başladığı
+          taxonomies: Projenin taksonomileri
+          title: Tartışma başlığı
+          updated_at: Tartışmanın son güncellendiği tarih
+          url: Bu tartışmanın bulunabileceği URL
+        post_comments:
+          alignment: Bu yorumun lehte, karşı veya tarafsız olup olmadığı
+          author: Bu yorumu yapan katılımcının adı
+          body: Yorumun kendisi
+          commentable_id: Yorum yapılabilir öğenin benzersiz kimliği
+          commentable_type: Yorum yapılabilir öğenin türü (bir sonuç, bir öneri vb.
+            olup olmadığı)
+          created_at: Bu yorumun oluşturulduğu tarih
+          depth: Bu yorumun yorum ağacındaki yeri (bir yanıt mı yoksa bir yanıtın
+            yanıtı mı)
+          id: Bu yorumun kimliği
+          locale: Katılımcının bu yorumu bırakırken kullandığı dil (yerel ayar)
+          root_commentable_url: Bu yoruma bağlı kaynağın URL'si
+        posts:
+          author: Yazarın bilgileri
+          body: Gönderinin içeriği
+          comments_count: Bu gönderinin sahip olduğu yorum sayısı
+          component: Gönderinin ait olduğu bileşen
+          created_at: Bu gönderinin oluşturulduğu tarih
+          follows_count: Bu gönderinin sahip olduğu takip sayısı
+          id: Bu gönderinin benzersiz tanımlayıcısı
+          likes_count: Bu gönderinin sahip olduğu beğeni sayısı
+          participatory_space: Bu gönderinin hangi alana (ör. Katılım Süreci veya
+            Meclis) ait olduğu
+          published_at: Bu gönderinin yayınlandığı tarih
+          reference: Gönderinin benzersiz referansı
+          title: Gönderinin başlığı
+          updated_at: Bu gönderinin son güncellendiği tarih
+          url: Bu gönderinin URL'si
+    statistics:
+      debates_count: Tartışmalar
+      debates_count_tooltip: Yapılan tartışmaların sayısı.
+      posts_count: Gönderiler
+      posts_count_tooltip: Yayınlanan güncelleme veya blog gönderilerinin sayısı.
+    blogs:
+      actions:
+        author_id: Gönderiyi şu adla oluştur
+        confirm_delete_post: Bu gönderiyi silmek istediğinizden emin misiniz?
+        deleted_posts_info: Silinen gönderiler çöp kutusundan geri getirilebilir.
+        edit: Düzenle
+        new: Yeni gönderi
+        title: İşlemler
+        view_deleted_posts: Silinen gönderileri görüntüle
+      admin_log:
+        post:
+          create: "%{user_name}, %{space_name} içinde %{resource_name} blog gönderisini
+            oluşturdu"
+          delete: "%{user_name}, %{space_name} içinden %{resource_name} blog gönderisini
+            sildi"
+          restore: "%{user_name}, %{space_name} içinde %{resource_name} blog gönderisini
+            geri getirdi"
+          soft_delete: "%{user_name}, %{space_name} içindeki %{resource_name} blog
+            gönderisini çöp kutusuna taşıdı"
+          update: "%{user_name}, %{space_name} içinde %{resource_name} blog gönderisini
+            güncelledi"
+      content_blocks:
+        highlighted_posts:
+          last_published: Son yayınlanan
+          name: Gönderiler
+          see_all: Tüm gönderileri gör
+      last_activity:
+        new_post: 'Yeni gönderi:'
+      models:
+        post:
+          fields:
+            author: Yazar
+            body: İçerik
+            official_blog_post: Resmi gönderi
+            published_at: Yayınlanma zamanı
+            taxonomies: Taksonomiler
+            title: Başlık
+      posts:
+        edit:
+          add_attachments: Ek ekle
+          back: Gönderiye dön
+          button: Güncelle
+          edit_attachments: Ekleri düzenle
+          title: Gönderiyi düzenle
+        form:
+          author_id: Yazar
+          body: İçerik
+          title: Başlık
+        index:
+          count:
+            one: "%{count} gönderi"
+            other: "%{count} gönderi"
+          empty: Henüz gönderi yok.
+          new_post: Yeni gönderi
+        menu_actions:
+          button_destroy: Gönderiyi sil
+          button_destroy_confirm: Bu gönderiyi silmek istediğinizden emin misiniz?
+          button_edit: Gönderiyi düzenle
+        new:
+          back: Gönderilere dön
+          button: Oluştur
+          title: Yeni gönderi oluştur
+        orders:
+          label: Gönderileri sırala
+          most_commented: En çok yorum yapılan
+          random: Rastgele sıralama
+          recent: En yeni
+    forms:
+      admin_log:
+        question:
+          publish_responses: "%{user_name}, %{space_name} alanında %{resource_name}
+            sorusunun yanıtlarını yayınladı"
+          unpublish_responses: "%{user_name}, %{space_name} alanında %{resource_name}
+            sorusunun yanıtlarının yayınını kaldırdı"
+        questionnaire:
+          update: "%{user_name}, %{resource_name} anketini güncelledi"
+      errors:
+        response:
+          body: İçerik boş olamaz
+      images:
+        dimensions: "%{width} x %{height} px"
+        processors:
+          resize_and_pad: Bu görsel %{dimensions} boyutuna yeniden boyutlandırılıp
+            doldurulacaktır.
+          resize_to_fit: Bu görsel %{dimensions} boyutuna sığacak şekilde yeniden
+            boyutlandırılacaktır.
+      question_types:
+        files: Dosyalar
+        long_response: Uzun yanıt
+        matrix_multiple: Matris (Çoklu seçenek)
+        matrix_single: Matris (Tek seçenek)
+        multiple_option: Çoklu seçenek
+        short_response: Kısa yanıt
+        single_option: Tek seçenek
+        sorting: Sıralama
+        title_and_description: Başlık ve açıklama
+      questionnaire_response_presenter:
+        download_attachment: Eki indir
+      questionnaires:
+        question:
+          max_choices: 'Maksimum seçim: %{n}'
+        response:
+          invalid: Form yanıtlanırken bir sorun oluştu.
+          max_choices_alert: Çok fazla seçenek seçildi
+          spam_detected: Form yanıtlanırken bir sorun oluştu. Belki çok hızlı davrandınız,
+            tekrar deneyebilir misiniz?
+          success: Form başarıyla yanıtlandı.
+        show:
+          current_step: Adım %{step}
+          empty: Bu form için henüz yapılandırılmış soru yok.
+          of_total_steps: "/ %{total_steps}"
+          questionnaire_closed:
+            body: Form kapalı ve yanıtlanamaz.
+            title: Form kapalı
+          questionnaire_for_members:
+            body: Form yalnızca üyeler için kullanılabilir
+            title: Form kapalı
+          questionnaire_js_disabled:
+            body: Bu formun bazı özellikleri devre dışı bırakılacaktır. Deneyiminizi
+              iyileştirmek için lütfen tarayıcınızda JavaScript'i etkinleştirin.
+            title: JavaScript devre dışı
+          questionnaire_not_published:
+            body: Bu form henüz yayınlanmadı.
+          questionnaire_responded:
+            body: Bu formu zaten yanıtladınız.
+            title: Zaten yanıtlandı
+          questionnaire_responded_edit:
+            body: Bu formu zaten yanıtladınız. %{link}
+            edit: Yanıtlarınızı düzenleyin
+          response_questionnaire:
+            already_have_an_account?: Zaten bir hesabınız var mı?
+            are_you_new?: Yeni kullanıcı mısınız?
+            sign_in_description: Ankete katılmak için giriş yapın
+            sign_up_description: Ankete katılmak için bir katılımcı hesabı oluşturun
+            title: Formu yanıtla
+          tos_agreement: Katılarak Hizmet Şartlarını kabul edersiniz
+      step_navigation:
+        show:
+          are_you_sure_edit_guest: Yanıtlarınızı daha sonra düzenleyebilmek istiyorsanız
+            giriş yapmanız veya bir hesap oluşturmanız gerekir.
+          are_you_sure_no_edit: Bu işlem geri alınamaz ve yanıtlarınızı düzenleyemezsiniz.
+            Emin misiniz?
+          back: Geri
+          continue: Devam et
+          disallowed: Yanıtlarınızı düzenleme izniniz yok.
+          submit: Gönder
+      user_responses_serializer:
+        body: Yanıt
+        completion: Tamamlanma
+        created_at: Yanıtlanma tarihi
+        id: Yanıt kimliği
+        ip_hash: IP Karması
+        question: Soru
+        registered: Kayıtlı
+        session_token: Kullanıcı tanımlayıcısı
+        unregistered: Kayıtsız
+        user_status: Kullanıcı durumu
   devise:
     confirmations:
       confirmed: E-posta adresiniz başarıyla onaylandı.
@@ -557,3 +1232,70 @@ tr:
         notifications_settings: Bildirim ayarları
         profile: Profil
         title: Katılımcı ayarları
+  activemodel:
+    models:
+      decidim/comments/comment_by_followed_user_event: Yorum
+      decidim/comments/comment_created_event: Yorum
+      decidim/comments/comment_upvoted_event: Yorum beğenildi
+      decidim/comments/reply_created_event: Yorum yanıtı
+      decidim/comments/user_mentioned_event: Bahsetme
+      decidim/debates/close_debate_event: Tartışma kapatıldı
+      decidim/debates/create_debate_event: Tartışma
+      decidim/debates/creation_disabled_event: Tartışmalar devre dışı
+      decidim/debates/creation_enabled_event: Tartışma oluşturma etkin
+      decidim/blogs/create_post_event: Yeni blog gönderisi
+    attributes:
+      debate:
+        closed_at: Kapatılma zamanı
+        conclusions: Sonuçlar
+        description: Açıklama
+        end_time: Bitiş zamanı
+        information_updates: Bilgi güncellemeleri
+        instructions: Katılım talimatları
+        start_time: Başlangıç zamanı
+        title: Başlık
+      post:
+        body: İçerik
+        decidim_author_id: Yazar
+        published_at: Yayınlanma zamanı
+        title: Başlık
+      question:
+        max_choices: Maksimum seçim sayısı
+        question_type: Tür
+      questionnaire_question:
+        mandatory: Zorunlu
+        max_characters: Karakter sınırı (sınır yoksa 0 bırakın)
+      response:
+        body: Yanıt
+        choices: Seçenekler
+        selected_choices: Seçilen seçenekler
+    errors:
+      models:
+        questionnaire:
+          request_invalid: İstek işlenirken bir sorun oluştu. Lütfen tekrar deneyin.
+        response:
+          attributes:
+            add_documents:
+              needs_to_be_reattached: Yeniden eklenmesi gerekiyor
+            body:
+              too_long: çok uzun
+            choices:
+              missing: tamamlanmadı
+              too_many: En fazla %{count} seçebilirsiniz.
+  activerecord:
+    models:
+      decidim/comments/comment:
+        one: Yorum
+        other: Yorumlar
+      decidim/comments/comment_vote:
+        one: Oy
+        other: Oylar
+      decidim/debates/debate:
+        one: Tartışma
+        other: Tartışmalar
+      decidim/blogs/post:
+        one: Gönderi
+        other: Gönderiler
+  errors:
+    messages:
+      cannot_have_comments: yorum içeremez
