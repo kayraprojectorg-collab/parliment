@@ -15,11 +15,66 @@
     </button>
   </div>
 
-  <div class="kur-sidebar__section">
-    <%= main_menu.render %>
+  <div class="kur-sidebar__scroll">
+    <div class="kur-sidebar__section">
+      <p class="kur-sidebar__label"><%= t("decidim.menu.home") %></p>
+      <nav aria-label="<%= t("layouts.decidim.header.main_menu") %>">
+        <ul>
+          <li><%= link_to decidim.root_path do %><%= icon "home-4-line" %><%= t("decidim.menu.home") %><% end %></li>
+        </ul>
+        <%= main_menu.render %>
+      </nav>
+    </div>
+
+    <% pages = Decidim::StaticPage.where(organization: current_organization).order(:weight) %>
+    <% if pages.any? %>
+      <div class="kur-sidebar__section">
+        <p class="kur-sidebar__label"><%= t("layouts.decidim.footer.resources") %></p>
+        <nav aria-label="<%= t("layouts.decidim.footer.resources") %>">
+          <ul>
+            <% pages.each do |page| %>
+              <li><%= link_to translated_attribute(page.title), decidim.page_path(page) %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    <% end %>
+
+    <div class="kur-sidebar__section">
+      <p class="kur-sidebar__label"><%= t("layouts.decidim.user_menu.title") %></p>
+      <nav aria-label="<%= t("layouts.decidim.user_menu.title") %>">
+        <ul>
+          <% if current_user %>
+            <li><%= link_to decidim.account_path do %><%= icon "user-line" %><%= t("layouts.decidim.user_menu.configuration") %><% end %></li>
+            <li><%= link_to decidim.notifications_path do %><%= icon "notification-3-line" %><%= t("layouts.decidim.user_menu.notifications") %><% end %></li>
+            <li><%= link_to decidim.conversations_path do %><%= icon "mail-line" %><%= t("layouts.decidim.user_menu.conversations") %><% end %></li>
+            <% if allowed_to?(:read, :admin_dashboard) %>
+              <li><%= link_to decidim_admin.root_path do %><%= icon "settings-3-line" %><%= t("layouts.decidim.user_menu.admin_dashboard") %><% end %></li>
+            <% end %>
+            <li><%= link_to t("layouts.decidim.user_menu.log_out"), decidim.destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to decidim.new_user_session_path do %><%= icon "login-box-line" %><%= t("layouts.decidim.footer.log_in") %><% end %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+
+    <% if available_locales.length > 1 %>
+      <div class="kur-sidebar__section">
+        <p class="kur-sidebar__label"><%= t("layouts.decidim.language_chooser.choose_language") %></p>
+        <nav class="kur-sidebar__langs" aria-label="<%= t("layouts.decidim.language_chooser.choose_language") %>">
+          <% available_locales.each do |locale| %>
+            <%= link_to locale_name(locale), decidim.locale_path(locale:), method: :post, lang: locale,
+                        class: (I18n.locale.to_s == locale.to_s ? "is-active" : nil) %>
+          <% end %>
+        </nav>
+      </div>
+    <% end %>
   </div>
 
   <% unless current_user %>
-    <%= link_to t("sign_up", scope: "decidim.login_modal"), decidim.new_user_registration_path, class: "kur-sidebar__cta" %>
+    <% if current_organization.sign_up_enabled? %>
+      <%= link_to t("sign_up", scope: "decidim.login_modal"), decidim.new_user_registration_path, class: "kur-sidebar__cta" %>
+    <% end %>
   <% end %>
 </aside>

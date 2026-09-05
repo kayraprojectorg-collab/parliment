@@ -93,6 +93,19 @@ header .main-bar__search button[type="submit"] svg {
   fill: var(--kur-gold);
 }
 
+// Language chooser trigger — its label and icons default to grey; make it match
+// the search box on the dark header (translucent surface, white text/icons).
+header .main-bar__language-chooser-desktop .main-bar__language-chooser-trigger {
+  background-color: rgb(255 255 255 / 12%);
+  border-color: rgb(255 255 255 / 25%);
+}
+
+header .main-bar__language-chooser-desktop .main-bar__language-chooser-trigger span,
+header .main-bar__language-chooser-desktop .main-bar__language-chooser-trigger svg {
+  color: #fff;
+  fill: #fff;
+}
+
 // Breadcrumb bar: its links and arrows are white by design, so paint the bar
 // deep teal (not the mid-tone primary) for a strong, legible contrast.
 #menu-bar-container .menu-bar__container {
@@ -165,7 +178,13 @@ header .main-bar__search button[type="submit"] svg {
   color: #fff;
   box-shadow: var(--kur-shadow-lg);
   animation: kur-slide-in 0.25s ease;
+}
+
+.kur-sidebar__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
+  padding-bottom: 0.5rem;
 }
 
 [dir="rtl"] .kur-sidebar {
@@ -209,7 +228,11 @@ header .main-bar__search button[type="submit"] svg {
 }
 
 .kur-sidebar__section {
-  padding: 1rem 0.75rem;
+  padding: 0.85rem 0.75rem;
+}
+
+.kur-sidebar__section + .kur-sidebar__section {
+  border-top: 1px solid rgb(255 255 255 / 10%);
 }
 
 .kur-sidebar__label {
@@ -249,8 +272,43 @@ header .main-bar__search button[type="submit"] svg {
   box-shadow: inset 3px 0 0 var(--kur-gold);
 }
 
+.kur-sidebar nav a svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentcolor;
+  flex: none;
+  opacity: 0.85;
+}
+
+.kur-sidebar__langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 0.25rem;
+}
+
+.kur-sidebar__langs a {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  color: rgb(255 255 255 / 90%);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kur-sidebar__langs a:hover {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.kur-sidebar__langs a.is-active {
+  background-color: var(--kur-gold);
+  border-color: var(--kur-gold);
+  color: var(--kur-deep);
+}
+
 .kur-sidebar__cta {
-  margin: auto 0.75rem 1.25rem;
+  margin: 0.75rem 0.75rem 1.25rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   background-color: var(--kur-green);
